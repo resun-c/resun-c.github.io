@@ -1,0 +1,329 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Saif Resun</title>
+
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <div class="main _flex_row">
+            <nav class="main_left _left">
+
+                <div class="self_image" id="self_image">
+                    <img src="resun.jpg" alt="Resun"/>
+                </div>
+
+                <div class="navigation _container">
+                    <p class="_button _noselect _fill_available" onclick="goat('about_me')">
+                        About Me
+                    </p>
+                    <p class="_button _noselect _fill_available" onclick="goat('my_skills')">
+                        My Skills
+                    </p>
+                    <p class="_button _noselect _fill_available" onclick="goat('my_projects')">
+                        My projects
+                    </p>
+                    <p class="_button _noselect _fill_available" onclick="goat('interesting_other_things')">
+                        Interesting other things
+                    </p>
+                    <p class="_button _noselect _fill_available" onclick="goat('links_ive_gathered')">
+                        Links I've gathered
+                    </p>
+                </div>
+            </nav>
+            <div class="main_right _right _container">
+                
+                <header>
+                    <h1 class="title _centerH">
+                        Resun
+                    </h1>
+                
+                    <div class="greating _container" id ="greating">
+                        <p class="greating_text _centerH">
+                            hello, world\n
+                        </p>
+    
+                        <p class="_button _centerH">
+                            <i class="fa fa-download"></i>
+                            Download Resume
+                        </p>
+                    
+                        <div class="account_links _container _flex_row _centerH_items">
+                            <p>
+                                <a href="https://www.facebook.com/r3sun/" target="_blank">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </a>
+                            </p>
+                            <p>
+                                <a href="https://github.com/r3sun" target="_blank">
+                                    <i class="fa fa-github" aria-hidden="true"></i>
+                                </a>
+                            </p>
+                            <p>
+                                <a href="https://www.linkedin.com/in/saif-resun-68b006222" target="_blank">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                            </p>
+                            <p>
+                                <a href="mailto:saif.resun@outlook.com">
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                </a>
+                            </p>
+                            <p>
+                                <a href="https://twitter.com/_resun" target="_blank">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+    
+                </header>
+
+                <div class="about_me _container _container_out" id="about_me">
+                    <h2>
+                        About Me
+                    </h2>
+        
+                    <p>
+                        I am Saif. I am a programmer. I am passionately curious about computing.
+                    </p>
+                </div>
+                <div class="my_skills _container _container_out" id="my_skills">
+                    <h2>
+                        My Skills
+                    </h2>
+        
+                    <h3>
+                        Programming Languages
+                    </h3>
+                    <p>
+                        Some programming languages I have dealt with. They are organized by my interest
+                    </p>
+        
+                    <ul>
+                        <p>
+                            <li>
+                                C
+                            </li>
+                        </p>
+                        <p>
+                            <li>
+                                Assembly
+                            </li>
+                        </p>
+                        <p>
+                            <li>
+                                Python
+                            </li>
+                        </p>
+                        <p>
+                            <li>
+                                JavaScript
+                            </li>
+                        </p>
+                    </ul>
+        
+                    <p>
+                        There are also some other skills that I have achieved. They are organized by category.
+                    </p>
+        
+                    <h3>
+                        Markup Languages, Style Sheet Languages, Frameworkks
+                    </h3>
+                    <ul>
+                        <p>
+                            <li>
+                                HTML
+                            </li>
+                        </p>
+                        <p>
+                            <li>
+                                XML
+                            </li>
+                        </p>
+                        <p>
+                            <li>
+                                CSS
+                            </li>
+                        </p>
+                        <p>
+                            <li>
+                                Django
+                            </li>
+                        </p>
+                        <p>
+                            <li>
+                                Firebase Firestore API: Python, JS
+                            </li>
+                        </p>
+                        <p>
+                            <li>
+                                Unity
+                            </li>
+                        </p>
+                        <p>
+                            <li>
+                                node.js
+                            </li>
+                        </p>
+                        <p>
+                            <li>
+                                PyOt5
+                            </li>
+                        </p>
+                    </ul>
+        
+                </div>
+                <div class="my_projects _container _container_out" id="my_projects">
+                    <h2>
+                        My projects
+                    </h2>
+        
+                    <p>
+                        I have worked on different prjects along with my friends. Most of them are in C and in Python with Django. They are organized chronologically.
+                    </p>
+        
+                    <div class="_container _sub">
+                        <div class="_container">
+                            <h4 class="_cursor_pointer _noselect _fill_available" onclick="toggle_state(this.nextElementSibling, this.querySelector('i'))">
+                                CMS
+                                <i style="font-size:24px" class="fa _right">&#xf107;</i>
+                            </h4>
+                            <div class="_expandable _container _sub">
+                                <p>
+                                    I made this to manage my own website
+                                </p>
+                            </div>
+                        </div>
+                        <div class="_container">
+                            <h4 class="_cursor_pointer _noselect _fill_available" onclick="toggle_state(this.nextElementSibling, this.querySelector('i'))">
+                                Map Researcher System of Spacend Digital
+                                <i style="font-size:24px" class="fa _right">&#xf107;</i>
+                            </h4>
+                            <div class="_expandable _container _sub">
+                                <p>
+                                    I made this to manage my own website
+                                </p>
+                            </div>
+                        </div>
+                        <div class="_container">
+                            <h4 class="_cursor_pointer _noselect _fill_available" onclick="toggle_state(this.nextElementSibling, this.querySelector('i'))">
+                                NASA Space App Challenge
+                                <i style="font-size:24px" class="fa _right">&#xf107;</i>
+                            </h4>
+                            <div class="_expandable _container _sub">
+                                <p>
+                                    I made this to manage my own website.
+                                </p>
+                                <p>
+                                    <a class="_link" href="https://road-to-complexity.web.app/" target="_blank">
+                                        Link
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="_container">
+                            <h4 class="_cursor_pointer _noselect _fill_available" onclick="toggle_state(this.nextElementSibling, this.querySelector('i'))">
+                                PC Price Tracker BD
+                                <i style="font-size:24px" class="fa _right">&#xf107;</i>
+                            </h4>
+                            <div class="_expandable _container _sub">
+                                <p>
+                                    I made this to track the price of different computer component.
+                                </p>
+                                <p>
+                                    <a class="_link" href="http://pcpricetracker.co/" target="_blank">
+                                        Link
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+                <div class="interesting_other_things _container _container_out" id="interesting_other_things">
+                    <h2>
+                        Interesting other things
+                    </h2>
+        
+                    <p>
+                        I have done some other things that are not usefull in day to day life but maybe
+                        they are the best source of experience. They are organized randomly and link to the respective GitHub file.
+                    </p>
+        
+                    <div class="_container _sub">
+                        <div class="_container">
+                            <h4>
+                                Django Template Parser in C
+                            </h4>
+                        </div>
+                        <div class="_container">
+                            <h4>
+                                CSV file Parser in C
+                            </h4>
+                        </div>
+                        <div class="_container">
+                            <h4>
+                                Some C functions to deal with precise Time
+                            </h4>
+                            <p class="_note _sub">I took inspiration from Guido Van Russom's python time module</p>
+                        </div>
+                        <div class="_container">
+                            <h4>
+                                Wintar.c to read and write DEC tape and magtape files from Research UNIX V7
+                            </h4>
+                        </div>
+                        <div class="_container">
+                            <h4>
+                                Winrk.c to read and write RK05 devices from Research UNIX V5, V6, V7
+                            </h4>
+                        </div>
+                        <div class="_container">
+                            <h4>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="links_ive_gathered _container _container_out" id="links_ive_gathered">
+                    <h2>
+                        Links I've gathered
+                    </h2>
+        
+                    <div class="_container _sub">
+                        <p>
+                            <a href="https://www.bell-labs.com/usr/dmr/www/" class="_link">
+                                Dennis Ritchie's Home Page
+                            </a>
+                        </p>
+                        <p>
+                            <a href="https://www.tuhs.org/" class="_link">
+                                The Unix Heritage Society
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+
+        </footer>
+
+        <!-- Load external JavaScript -->
+        <script src="scripts.js"></script>
+        
+    </body>
+
+</html>

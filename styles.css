@@ -1,0 +1,274 @@
+/* Place your CSS styles in this file */
+
+:root {
+    font-size: 15px;
+    --font_0: "Source Sans Pro", sans-serif;
+    --button_font_family: var(--font_0);
+    --note_color: #000000;
+    --heading_font_family: var(--font_0);
+    --text_font: 200 1.5rem var(--font_0);
+
+    --title_font: 400 4rem var(--font_0);
+    --greating_text_font: 1.2rem Courier;
+
+    --navigation_element_font: 1.2rem Arial;
+
+    --content_font_family: var(--font_0);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --body_bg_color: #000000;
+        --text_color: #fff;
+        --nav_bg_color: #2a2a2a;
+        --button_bg_color: #2a2a2a;
+        --button_text_color: #ffffff;
+        --button_hover_bg_color: #fff;
+        --button_hover_text_color: #2a2a2a;
+        --note_background_color: #f6f884;
+        --note_background_color: #e1e1e1;
+    }
+}
+@media (prefers-color-scheme: light) {
+    :root {
+        --body_bg_color: #ffffff85;
+        --text_color: #000000;
+        --nav_bg_color: #e1e1e1;
+        --button_bg_color: #e1e1e1;
+        --button_text_color: #000;
+        --button_hover_bg_color: #d1d1d1;
+        --button_hover_text_color: #fff;
+        --note_background_color: #e1e1e1;
+    }
+}
+::-webkit-scrollbar {
+    width: 0.8rem;
+}
+::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border: 0.15rem solid #ccc;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ccc;
+    border: 0.15rem solid transparent;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #ccc;
+    border: 0.15rem solid #ccc;
+}
+::-webkit-scrollbar-button {
+    display: none;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--body_bg_color);
+    margin: 0;
+}
+body * {
+    color: var(--text_color);
+}
+h1, h2, h3, h4, h5, h6, p {
+    font-weight: normal;
+    width: fit-content;
+    width: -moz-fit-content;
+    margin: 1rem 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading_font_family);
+}
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2.5rem;
+}
+h3{
+    font-size: 2rem;
+}
+h4{
+    font-size: 1.5rem;
+}
+h5 {
+    font-size: 1.25rem;
+}
+h6 {
+    font-size: 1rem;
+}
+p {
+    font: var(--text_font);
+}
+._noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+  }
+._centerV {
+    margin-top: auto!important;
+    margin-bottom: auto!important;
+}
+._centerH {
+    margin-left: auto!important;
+    margin-right: auto!important;
+}
+
+._centerV_items {
+    display: flex;
+    align-items: center;
+}
+._centerH_items {
+    display: flex;
+    justify-content: center;
+}
+._space_between_items {
+    display: flex;
+    justify-content: space-between;
+}
+._flex_column {
+    display: flex;
+    flex-direction: column;
+}
+._flex_row {
+    display: flex;
+    flex-direction: row;
+}
+._fill_available {
+    width: -webkit-fill-available!important;
+}
+._left {
+    margin-left: 0;
+    margin-right: auto;
+    float: left;
+}
+._right {
+    margin-left: auto;
+    margin-right: 0;
+    float: right;
+}
+._container {
+    padding: 0.1rem 0.75rem;
+}
+._container_out {
+    margin: 1rem 0rem;
+}
+._container::before , ._container:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+._expandable {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+._sub {
+    margin-left: 2rem;
+}
+._button {
+    font-family: var(--button_font_family)!important;
+    cursor: pointer;
+}
+._button, ._button i {
+    background-color: var(--button_bg_color);
+    padding: 0.5rem 1rem;
+    color: var(--button_text_color);
+}
+._button:hover, ._button:hover i {
+    background-color: var(--button_hover_bg_color);
+    color: var(--button_hover_text_color);
+}
+._cursor_pointer {
+    cursor: pointer;
+}
+._note {
+    background-color: var(--note_background_color);
+    font: var(--note_font);
+    padding: 0.5rem;
+    color: var(--note_color);
+    border: 0;
+    border-left: 0.2rem solid #1e90ff;
+}
+._link {
+	color: #1e90ff;
+}
+._link:hover {
+	color: #ccc;
+}
+._not_link {
+    color: inherit;
+    text-decoration: none;
+}
+._not_link:hover {
+    color: inherit;
+}
+._not_link:active {
+    color: inherit;
+}
+._rotation_active {
+    transform: rotate(180deg);
+}
+
+.title {
+    font: var(--title_font);
+}
+
+
+.greating_text {
+    font: var(--greating_text_font)!important;
+    margin: 1.5rem;
+}
+
+
+.main_left {
+    background-color: var(--nav_bg_color);
+    height: 100%;
+    width: 15%;
+    position: fixed;
+    top: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.self_image {
+    width: 100%;
+    overflow: hidden;
+}
+.self_image img {
+    height: 100%;
+    width: 100%;
+}
+
+.navigation p {
+    font: var(--navigation_element_font);
+    cursor: pointer;
+}
+
+.main_right {
+    width: 85%;
+}
+.about_me, .my_skills, .my_projects, .interesting_other_things, .links_ive_gathered {
+    font-family: var(--content_font_family);
+}
+
+.account_links p {
+    height: 2rem;
+    width: 2rem;
+    margin: 0 0.5rem;
+}
+.account_links p img {
+    height: 100%!important;
+    width: 100%!important;
+}
+.account_links p svg {
+    height: 100%;
+    width: 100%;
+}
+
+footer {
+    height: 20rem;
+}
