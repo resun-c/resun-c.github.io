@@ -195,6 +195,7 @@ p {
     border-left: 0.2rem solid #1e90ff;
 }
 ._link {
+    font: var(--text_font);
 	color: #1e90ff;
 }
 ._link:hover {
@@ -209,6 +210,10 @@ p {
 }
 ._not_link:active {
     color: inherit;
+}
+._rotatable {
+    transform: rotate(0deg);
+    transition: all 0.3s;
 }
 ._rotation_active {
     transform: rotate(180deg);

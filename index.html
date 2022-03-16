@@ -7,6 +7,8 @@
 
         <title>Saif Resun</title>
 
+	<link rel="icon" type="image/png" href="favicon.png">
+
         <!-- Load external CSS styles -->
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -34,6 +36,9 @@
                     </p>
                     <p class="_button _noselect _fill_available" onclick="goat('my_projects')">
                         My projects
+                    </p>
+                    <p class="_button _noselect _fill_available" onclick="goat('books_i_found_interesting')">
+                        Books I Found Interesting
                     </p>
                     <p class="_button _noselect _fill_available" onclick="goat('interesting_other_things')">
                         Interesting other things
@@ -97,7 +102,7 @@
                     </h2>
         
                     <p>
-                        I am Saif. I am a programmer. I am passionately curious about computing.
+                        I am Saif. I am a programmer, and I love the C programming language.
                     </p>
                 </div>
                 <div class="my_skills _container _container_out" id="my_skills">
@@ -186,6 +191,34 @@
                     </ul>
         
                 </div>
+                <div class="books_i_found_interesting _container _container_out" id="books_i_found_interesting">
+                    <h2>
+                        Books I Found Interesting
+                    </h2>
+        
+                    <div class="_container _sub">
+                        <div class="_container">
+                            <h4 class="_cursor_pointer _noselect _fill_available" onclick="toggle_state(this.nextElementSibling, this.querySelector('i'))">
+                                The C Programming Language by K&R
+                                <i style="font-size:24px" class="fa _rotatable _right">&#xf107;</i>
+                            </h4>
+                            <div class="_expandable _container _sub">
+                                <p>This is the best book to learn C.</p>
+                                <a class="_link" href="http://s3-us-west-2.amazonaws.com/belllabs-microsite-dritchie/cbook/index.html" target="_blank">Link</a>
+                            </div>
+                        </div>
+                        <div class="_container">
+                            <h4 class="_cursor_pointer _noselect _fill_available" onclick="toggle_state(this.nextElementSibling, this.querySelector('i'))">
+                                The Art of Assembly Language by Randall Hyde
+                                <i style="font-size:24px" class="fa _rotatable _right">&#xf107;</i>
+                            </h4>
+                            <div class="_expandable _container _sub">
+                                <p>This book is informative.</p>
+                                <a class="_link" href="https://www.goodreads.com/book/show/1063680.The_Art_of_Assembly_Language" target="_blank">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="my_projects _container _container_out" id="my_projects">
                     <h2>
                         My projects
@@ -199,18 +232,30 @@
                         <div class="_container">
                             <h4 class="_cursor_pointer _noselect _fill_available" onclick="toggle_state(this.nextElementSibling, this.querySelector('i'))">
                                 CMS
-                                <i style="font-size:24px" class="fa _right">&#xf107;</i>
+                                <i style="font-size:24px" class="fa _rotatable _right">&#xf107;</i>
                             </h4>
                             <div class="_expandable _container _sub">
                                 <p>
-                                    I made this to manage my own website
+                                    I made this to manage my website. In mid-2020, I was learning Django, and it seemed very
+                                    easy to make a <b>C</b>ontent <b>M</b>anagement <b>S</b>ystem with Django. So I started
+                                    designing one, but after successfully making the plan and writing some code, I moved on to
+                                    another work, and in 2021 I started working on it again and completed this CMS in mid-2021.
+                                    It is currently hosted on Heroku free server but not managing any website. You can follow
+                                    the link to use it.
+                                </p>
+                                <p>
+                                    Use username: root and password: root to login.
+                                </p>
+
+                                <p>
+                                    Heroku Server: <a class="_link" href="https://road-to-complexity.web.app/" target="_blank">Link</a>
                                 </p>
                             </div>
                         </div>
                         <div class="_container">
                             <h4 class="_cursor_pointer _noselect _fill_available" onclick="toggle_state(this.nextElementSibling, this.querySelector('i'))">
                                 Map Researcher System of Spacend Digital
-                                <i style="font-size:24px" class="fa _right">&#xf107;</i>
+                                <i style="font-size:24px" class="fa _rotatable _right">&#xf107;</i>
                             </h4>
                             <div class="_expandable _container _sub">
                                 <p>
@@ -221,7 +266,7 @@
                         <div class="_container">
                             <h4 class="_cursor_pointer _noselect _fill_available" onclick="toggle_state(this.nextElementSibling, this.querySelector('i'))">
                                 NASA Space App Challenge
-                                <i style="font-size:24px" class="fa _right">&#xf107;</i>
+                                <i style="font-size:24px" class="fa _rotatable _right">&#xf107;</i>
                             </h4>
                             <div class="_expandable _container _sub">
                                 <p>
@@ -237,7 +282,7 @@
                         <div class="_container">
                             <h4 class="_cursor_pointer _noselect _fill_available" onclick="toggle_state(this.nextElementSibling, this.querySelector('i'))">
                                 PC Price Tracker BD
-                                <i style="font-size:24px" class="fa _right">&#xf107;</i>
+                                <i style="font-size:24px" class="fa _rotatable _right">&#xf107;</i>
                             </h4>
                             <div class="_expandable _container _sub">
                                 <p>
@@ -265,6 +310,24 @@
         
                     <div class="_container _sub">
                         <div class="_container">
+                            <h4 class="_cursor_pointer _noselect _fill_available" onclick="toggle_state(this.nextElementSibling, this.querySelector('i'))">
+                                dump.c
+                                <i style="font-size:24px" class="fa _rotatable _right">&#xf107;</i>
+                            </h4>
+                            <div class="_expandable _container _sub">
+                                <p>
+                                    This is a converter of different numeral systems. I started the program with dozens of functions
+                                    working separately to perform the conversion. Then one of my friends Clem Cole guided me to improve
+                                    the code. Eventually, I ended up writing a short program. The program is now working more smartly.
+                                </p>
+
+                                <p>A more detailed description is in the README.md file of the GitHub repository</p>
+
+                                <p>GitHub repository: <a class="_link" href="https://github.com/r3sun/dump.c" target="_blank">Link</a></p>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="_container">
                             <h4>
                                 Django Template Parser in C
                             </h4>
@@ -275,24 +338,13 @@
                             </h4>
                         </div>
                         <div class="_container">
-                            <h4>
+                            <h4 class="_cursor_pointer _noselect _fill_available" onclick="toggle_state(this.nextElementSibling, this.querySelector('i'))">
                                 Some C functions to deal with precise Time
+                                <i style="font-size:24px" class="fa _rotatable _right">&#xf107;</i>
                             </h4>
-                            <p class="_note _sub">I took inspiration from Guido Van Russom's python time module</p>
-                        </div>
-                        <div class="_container">
-                            <h4>
-                                Wintar.c to read and write DEC tape and magtape files from Research UNIX V7
-                            </h4>
-                        </div>
-                        <div class="_container">
-                            <h4>
-                                Winrk.c to read and write RK05 devices from Research UNIX V5, V6, V7
-                            </h4>
-                        </div>
-                        <div class="_container">
-                            <h4>
-                            </h4>
+                            <div class="_expandable _container _sub">
+                                <p>I took inspiration from Guido Van Russom's python time module</p>
+                            </div>
                         </div>
                     </div>
                 </div>
