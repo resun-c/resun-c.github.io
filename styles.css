@@ -3,15 +3,19 @@
 :root {
     font-size: 15px;
     --font_0: "Source Sans Pro", sans-serif;
-    --button_font_family: var(--font_0);
+    --button_font: 1rem var(--font_0);
+    --button_padding: 0.25rem 0.5rem;
     --note_color: #000000;
     --heading_font_family: var(--font_0);
     --text_font: 200 1.5rem var(--font_0);
 
+    --nav_height: fit-content;
+    --nav_width: 100%;
+    --main_width: 100%;
     --title_font: 400 4rem var(--font_0);
     --greating_text_font: 1.2rem Courier;
 
-    --navigation_element_font: 1.2rem Arial;
+    --navigation_element_font: 1rem Arial;
 
     --content_font_family: var(--font_0);
 }
@@ -39,6 +43,20 @@
         --button_hover_bg_color: #d1d1d1;
         --button_hover_text_color: #fff;
         --note_background_color: #e1e1e1;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    :root {
+        --nav_height: 100%;
+        --nav_width: 15%;
+        --main_width: 85%;
+        --button_padding: 0.5rem 1rem;
+        --button_font: 1.2rem var(--font_0);
+        --navigation_element_font: 1.2rem Arial;
+    }
+    ._sub {
+        margin-left: 2rem!important;
     }
 }
 ::-webkit-scrollbar {
@@ -75,6 +93,11 @@ h1, h2, h3, h4, h5, h6, p {
     width: fit-content;
     width: -moz-fit-content;
     margin: 1rem 0;
+}
+ul li {
+    margin: 1rem 0;
+    width: fit-content;
+    width: -moz-fit-content;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading_font_family);
@@ -168,15 +191,15 @@ p {
     transition: all 0.3s;
 }
 ._sub {
-    margin-left: 2rem;
+    margin-left: 0rem;
 }
 ._button {
-    font-family: var(--button_font_family)!important;
+    font: var(--button_font)!important;
     cursor: pointer;
 }
 ._button, ._button i {
     background-color: var(--button_bg_color);
-    padding: 0.5rem 1rem;
+    padding: var(--button_padding);
     color: var(--button_text_color);
 }
 ._button:hover, ._button:hover i {
@@ -219,6 +242,45 @@ p {
     transform: rotate(180deg);
 }
 
+
+@media only screen and (min-width: 768px) {
+    .main {
+        width: var(--main_width);
+    }
+    nav {
+        position: fixed!important;
+        top: 0;
+    }
+    .nav_large {
+        display: block!important;
+    }
+    
+    .nav_small {
+        display: none!important;
+    }
+    .self_image_small {
+        display: none;
+    }
+    .self_image {
+        overflow: hidden;
+    }
+    .navigation {
+        display: block!important;
+        padding: 0.1rem 0.75rem!important;
+    }
+    .navigation p {
+        width: -webkit-fill-available!important;
+        margin: 0.5rem 1rem;
+    }
+
+}
+
+
+header {
+    width: 100%;
+    margin: 1rem 0;
+}
+
 .title {
     font: var(--title_font);
 }
@@ -228,33 +290,50 @@ p {
     font: var(--greating_text_font)!important;
     margin: 1.5rem;
 }
-
-
-.main_left {
+nav {
     background-color: var(--nav_bg_color);
-    height: 100%;
-    width: 15%;
-    position: fixed;
+    height: var(--nav_height);
+    width: var(--nav_width);
+}
+.nav_large {
+    display: none;
+}
+.nav_small {
+    display: block;
+    position: sticky;
     top: 0;
-    padding: 0;
+    padding: 0 1rem;
     overflow: hidden;
+    z-index: 6;
 }
-.self_image {
+.nav_small_content {
+
+}
+.nav_small .navigation {
+    height: 0;
+    transition: all 0.3s;
+}
+.self_image, .self_image_small {
     width: 100%;
     overflow: hidden;
 }
-.self_image img {
+.self_image img, .self_image_small img {
     height: 100%;
     width: 100%;
 }
-
+.navigation {
+    padding: 0;
+}
 .navigation p {
-    font: var(--navigation_element_font);
-    cursor: pointer;
+    font: var(--navigation_element_font)!important;
+    width: fit-content;
+    height: fit-content;
+    margin: 0.25rem 0;
+    padding-left: 0;
 }
 
-.main_right {
-    width: 85%;
+.main_content {
+    width: 100%;
 }
 .about_me, .my_skills, .my_projects, .interesting_other_things, .links_ive_gathered {
     font-family: var(--content_font_family);

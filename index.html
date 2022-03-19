@@ -20,82 +20,111 @@
     </head>
 
     <body>
-        <div class="main _flex_row">
-            <nav class="main_left _left">
+        <nav class="nav_large">
+            <div class="self_image" id="self_image">
+                <img src="resun.jpg" alt="Resun"/>
+            </div>
+    
+            <div class="navigation _container">
+                <p class="_button _noselect" onclick="goat('about_me')">
+                    About Me
+                </p>
+                <p class="_button _noselect" onclick="goat('my_skills')">
+                    My Skills
+                </p>
+                <p class="_button _noselect" onclick="goat('books_i_found_interesting')">
+                    Books I Found Interesting
+                </p>
+                <p class="_button _noselect" onclick="goat('my_projects')">
+                    My projects
+                </p>
+                <p class="_button _noselect" onclick="goat('interesting_other_things')">
+                    Interesting other things
+                </p>
+                <p class="_button _noselect" onclick="goat('links_ive_gathered')">
+                    Links I've gathered
+                </p>
+            </div>
+        </nav>
 
-                <div class="self_image" id="self_image">
-                    <img src="resun.jpg" alt="Resun"/>
+        <div class="main _right">
+            <header>
+                <h1 class="title _centerH">
+                    Resun
+                </h1>
+            
+                <div class="greating _container" id ="greating">
+                    <p class="greating_text _centerH">
+                        hello, world\n
+                    </p>
+    
+                    <p class="_button _centerH">
+                        <i class="fa fa-download"></i>
+                        Download Resume
+                    </p>
+                
+                    <div class="account_links _container _flex_row _centerH_items">
+                        <p>
+                            <a href="https://www.facebook.com/r3sun/" target="_blank">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </p>
+                        <p>
+                            <a href="https://github.com/r3sun" target="_blank">
+                                <i class="fa fa-github" aria-hidden="true"></i>
+                            </a>
+                        </p>
+                        <p>
+                            <a href="https://www.linkedin.com/in/saif-resun-68b006222" target="_blank">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                        </p>
+                        <p>
+                            <a href="mailto:saif.resun@outlook.com">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            </a>
+                        </p>
+                        <p>
+                            <a href="https://twitter.com/_resun" target="_blank">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        </p>
+                    </div>
                 </div>
-
+    
+            </header>
+            <nav class="nav_small _flex_column" id="nav_small">
+                <div class="nav_small_content _centerV_items">
+                    <a class="_link" href="#">MNIT</a>
+                    <p class="navigation_toggle _right" onclick="taggle_state(this.parentElement.nextElementSibling)">
+                        <i style="font-size:24px" class="fa">&#xf0c9;</i>
+                    </p>
+                </div>
                 <div class="navigation _container">
-                    <p class="_button _noselect _fill_available" onclick="goat('about_me')">
+                    <p class="_button _noselect" onclick="small_goat('about_me', this.parentElement)">
                         About Me
                     </p>
-                    <p class="_button _noselect _fill_available" onclick="goat('my_skills')">
+                    <p class="_button _noselect" onclick="small_goat('my_skills', this.parentElement)">
                         My Skills
                     </p>
-                    <p class="_button _noselect _fill_available" onclick="goat('my_projects')">
-                        My projects
-                    </p>
-                    <p class="_button _noselect _fill_available" onclick="goat('books_i_found_interesting')">
+                    <p class="_button _noselect" onclick="small_goat('books_i_found_interesting', this.parentElement)">
                         Books I Found Interesting
                     </p>
-                    <p class="_button _noselect _fill_available" onclick="goat('interesting_other_things')">
+                    <p class="_button _noselect" onclick="small_goat('my_projects', this.parentElement)">
+                        My projects
+                    </p>
+                    <p class="_button _noselect" onclick="small_goat('interesting_other_things', this.parentElement)">
                         Interesting other things
                     </p>
-                    <p class="_button _noselect _fill_available" onclick="goat('links_ive_gathered')">
+                    <p class="_button _noselect" onclick="small_goat('links_ive_gathered', this.parentElement)">
                         Links I've gathered
                     </p>
                 </div>
             </nav>
-            <div class="main_right _right _container">
-                
-                <header>
-                    <h1 class="title _centerH">
-                        Resun
-                    </h1>
-                
-                    <div class="greating _container" id ="greating">
-                        <p class="greating_text _centerH">
-                            hello, world\n
-                        </p>
-    
-                        <p class="_button _centerH">
-                            <i class="fa fa-download"></i>
-                            Download Resume
-                        </p>
-                    
-                        <div class="account_links _container _flex_row _centerH_items">
-                            <p>
-                                <a href="https://www.facebook.com/r3sun/" target="_blank">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                </a>
-                            </p>
-                            <p>
-                                <a href="https://github.com/r3sun" target="_blank">
-                                    <i class="fa fa-github" aria-hidden="true"></i>
-                                </a>
-                            </p>
-                            <p>
-                                <a href="https://www.linkedin.com/in/saif-resun-68b006222" target="_blank">
-                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                </a>
-                            </p>
-                            <p>
-                                <a href="mailto:saif.resun@outlook.com">
-                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                                </a>
-                            </p>
-                            <p>
-                                <a href="https://twitter.com/_resun" target="_blank">
-                                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-    
-                </header>
-
+            <div class="self_image_small" id="self_image">
+                <img src="resun.jpg" alt="Resun"/>
+            </div>
+            <div class="main_content _container">
                 <div class="about_me _container _container_out" id="about_me">
                     <h2>
                         About Me
@@ -117,27 +146,19 @@
                         Some programming languages I have dealt with. They are organized by my interest
                     </p>
         
-                    <ul>
-                        <p>
-                            <li>
-                                C
-                            </li>
-                        </p>
-                        <p>
-                            <li>
-                                Assembly
-                            </li>
-                        </p>
-                        <p>
-                            <li>
-                                Python
-                            </li>
-                        </p>
-                        <p>
-                            <li>
-                                JavaScript
-                            </li>
-                        </p>
+                    <ul class="_sub">
+                        <li>
+                            C
+                        </li>
+                        <li>
+                            Assembly
+                        </li>
+                        <li>
+                            Python
+                        </li>
+                        <li>
+                            JavaScript
+                        </li>
                     </ul>
         
                     <p>
@@ -147,47 +168,31 @@
                     <h3>
                         Markup Languages, Style Sheet Languages, Frameworkks
                     </h3>
-                    <ul>
-                        <p>
-                            <li>
-                                HTML
-                            </li>
-                        </p>
-                        <p>
-                            <li>
-                                XML
-                            </li>
-                        </p>
-                        <p>
-                            <li>
-                                CSS
-                            </li>
-                        </p>
-                        <p>
-                            <li>
-                                Django
-                            </li>
-                        </p>
-                        <p>
-                            <li>
-                                Firebase Firestore API: Python, JS
-                            </li>
-                        </p>
-                        <p>
-                            <li>
-                                Unity
-                            </li>
-                        </p>
-                        <p>
-                            <li>
-                                node.js
-                            </li>
-                        </p>
-                        <p>
-                            <li>
-                                PyOt5
-                            </li>
-                        </p>
+                    <ul class="_sub">
+                        <li>
+                            HTML
+                        </li>
+                        <li>
+                            XML
+                        </li>
+                        <li>
+                            CSS
+                        </li>
+                        <li>
+                            Django
+                        </li>
+                        <li>
+                            Firebase Firestore API: Python, JS
+                        </li>
+                        <li>
+                            Unity
+                        </li>
+                        <li>
+                            node.js
+                        </li>
+                        <li>
+                            PyOt5
+                        </li>
                     </ul>
         
                 </div>
@@ -198,7 +203,7 @@
         
                     <div class="_container _sub">
                         <div class="_container">
-                            <h4 class="_cursor_pointer _noselect _fill_available" onclick="toggle_state(this.nextElementSibling, this.querySelector('i'))">
+                            <h4 class="_cursor_pointer _noselect _fill_available" onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
                                 The C Programming Language by K&R
                                 <i style="font-size:24px" class="fa _rotatable _right">&#xf107;</i>
                             </h4>
@@ -208,7 +213,7 @@
                             </div>
                         </div>
                         <div class="_container">
-                            <h4 class="_cursor_pointer _noselect _fill_available" onclick="toggle_state(this.nextElementSibling, this.querySelector('i'))">
+                            <h4 class="_cursor_pointer _noselect _fill_available" onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
                                 The Art of Assembly Language by Randall Hyde
                                 <i style="font-size:24px" class="fa _rotatable _right">&#xf107;</i>
                             </h4>
@@ -230,7 +235,7 @@
         
                     <div class="_container _sub">
                         <div class="_container">
-                            <h4 class="_cursor_pointer _noselect _fill_available" onclick="toggle_state(this.nextElementSibling, this.querySelector('i'))">
+                            <h4 class="_cursor_pointer _noselect _fill_available" onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
                                 CMS
                                 <i style="font-size:24px" class="fa _rotatable _right">&#xf107;</i>
                             </h4>
@@ -244,16 +249,16 @@
                                     the link to use it.
                                 </p>
                                 <p>
-                                    Use username: root and password: root to login.
+                                    Use username: root and password: root; to login.
                                 </p>
-
+    
                                 <p>
                                     Heroku Server: <a class="_link" href="https://road-to-complexity.web.app/" target="_blank">Link</a>
                                 </p>
                             </div>
                         </div>
                         <div class="_container">
-                            <h4 class="_cursor_pointer _noselect _fill_available" onclick="toggle_state(this.nextElementSibling, this.querySelector('i'))">
+                            <h4 class="_cursor_pointer _noselect _fill_available" onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
                                 Map Researcher System of Spacend Digital
                                 <i style="font-size:24px" class="fa _rotatable _right">&#xf107;</i>
                             </h4>
@@ -264,7 +269,7 @@
                             </div>
                         </div>
                         <div class="_container">
-                            <h4 class="_cursor_pointer _noselect _fill_available" onclick="toggle_state(this.nextElementSibling, this.querySelector('i'))">
+                            <h4 class="_cursor_pointer _noselect _fill_available" onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
                                 NASA Space App Challenge
                                 <i style="font-size:24px" class="fa _rotatable _right">&#xf107;</i>
                             </h4>
@@ -280,7 +285,7 @@
                             </div>
                         </div>
                         <div class="_container">
-                            <h4 class="_cursor_pointer _noselect _fill_available" onclick="toggle_state(this.nextElementSibling, this.querySelector('i'))">
+                            <h4 class="_cursor_pointer _noselect _fill_available" onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
                                 PC Price Tracker BD
                                 <i style="font-size:24px" class="fa _rotatable _right">&#xf107;</i>
                             </h4>
@@ -310,7 +315,7 @@
         
                     <div class="_container _sub">
                         <div class="_container">
-                            <h4 class="_cursor_pointer _noselect _fill_available" onclick="toggle_state(this.nextElementSibling, this.querySelector('i'))">
+                            <h4 class="_cursor_pointer _noselect _fill_available" onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
                                 dump.c
                                 <i style="font-size:24px" class="fa _rotatable _right">&#xf107;</i>
                             </h4>
@@ -320,9 +325,9 @@
                                     working separately to perform the conversion. Then one of my friends Clem Cole guided me to improve
                                     the code. Eventually, I ended up writing a short program. The program is now working more smartly.
                                 </p>
-
+    
                                 <p>A more detailed description is in the README.md file of the GitHub repository</p>
-
+    
                                 <p>GitHub repository: <a class="_link" href="https://github.com/r3sun/dump.c" target="_blank">Link</a></p>
                                 </p>
                             </div>
@@ -338,7 +343,7 @@
                             </h4>
                         </div>
                         <div class="_container">
-                            <h4 class="_cursor_pointer _noselect _fill_available" onclick="toggle_state(this.nextElementSibling, this.querySelector('i'))">
+                            <h4 class="_cursor_pointer _noselect _fill_available" onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
                                 Some C functions to deal with precise Time
                                 <i style="font-size:24px" class="fa _rotatable _right">&#xf107;</i>
                             </h4>
