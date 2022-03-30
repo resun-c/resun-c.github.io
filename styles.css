@@ -5,6 +5,7 @@
     --font_0: "Source Sans Pro", sans-serif;
     --button_font: 1rem var(--font_0);
     --button_padding: 0.25rem 0.5rem;
+    --note_font: 1rem var(--font_0);
     --note_color: #000000;
     --heading_font_family: var(--font_0);
     --text_font: 200 1.5rem var(--font_0);
@@ -37,11 +38,11 @@
     :root {
         --body_bg_color: #ffffff85;
         --text_color: #000000;
-        --nav_bg_color: #e1e1e1;
-        --button_bg_color: #e1e1e1;
-        --button_text_color: #000;
-        --button_hover_bg_color: #d1d1d1;
-        --button_hover_text_color: #fff;
+        --nav_bg_color: #000000;
+        --button_bg_color: var(--nav_bg_color);
+        --button_text_color: #fff;
+        --button_hover_bg_color: #fff;
+        --button_hover_text_color: #000;
         --note_background_color: #e1e1e1;
     }
 }
@@ -217,6 +218,9 @@ p {
     border: 0;
     border-left: 0.2rem solid #1e90ff;
 }
+._note p {
+    color: var(--note_color);
+}
 ._link {
     font: var(--text_font);
 	color: #1e90ff;
@@ -242,7 +246,12 @@ p {
     transform: rotate(180deg);
 }
 
+@media only screen and (max-width: 768px) {
 
+    .navigation p {
+        padding-left: 0;
+    }
+}
 @media only screen and (min-width: 768px) {
     .main {
         width: var(--main_width);
@@ -329,13 +338,12 @@ nav {
     width: fit-content;
     height: fit-content;
     margin: 0.25rem 0;
-    padding-left: 0;
 }
 
 .main_content {
     width: 100%;
 }
-.about_me, .my_skills, .my_projects, .interesting_other_things, .links_ive_gathered {
+.about_me, .languages_i_have_dealt_with, .some_of_the_projects_i_have_worked_on, .interesting_other_things, .links_ive_gathered {
     font-family: var(--content_font_family);
 }
 
