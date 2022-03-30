@@ -29,14 +29,14 @@
                 <p class="_button _noselect" onclick="goat('about_me')">
                     About Me
                 </p>
-                <p class="_button _noselect" onclick="goat('my_skills')">
-                    My Skills
+                <p class="_button _noselect" onclick="goat('languages_i_have_dealt_with')">
+                    Languages I have dealt with
                 </p>
                 <p class="_button _noselect" onclick="goat('books_i_found_interesting')">
                     Books I Found Interesting
                 </p>
-                <p class="_button _noselect" onclick="goat('my_projects')">
-                    My projects
+                <p class="_button _noselect" onclick="goat('some_of_the_projects_i_have_worked_on')">
+                    Some of the projects I have worked on
                 </p>
                 <p class="_button _noselect" onclick="goat('interesting_other_things')">
                     Interesting other things
@@ -50,17 +50,12 @@
         <div class="main _right">
             <header>
                 <h1 class="title _centerH">
-                    Resun
+                    _resun
                 </h1>
             
                 <div class="greating _container" id ="greating">
                     <p class="greating_text _centerH">
                         hello, world\n
-                    </p>
-    
-                    <p class="_button _centerH">
-                        <i class="fa fa-download"></i>
-                        Download Resume
                     </p>
                 
                     <div class="account_links _container _flex_row _centerH_items">
@@ -104,14 +99,14 @@
                     <p class="_button _noselect" onclick="small_goat('about_me', this.parentElement)">
                         About Me
                     </p>
-                    <p class="_button _noselect" onclick="small_goat('my_skills', this.parentElement)">
-                        My Skills
+                    <p class="_button _noselect" onclick="small_goat('languages_i_have_dealt_with', this.parentElement)">
+                        Languages I have dealt with
                     </p>
                     <p class="_button _noselect" onclick="small_goat('books_i_found_interesting', this.parentElement)">
                         Books I Found Interesting
                     </p>
-                    <p class="_button _noselect" onclick="small_goat('my_projects', this.parentElement)">
-                        My projects
+                    <p class="_button _noselect" onclick="small_goat('some_of_the_projects_i_have_worked_on', this.parentElement)">
+                        Some of the projects I have worked on
                     </p>
                     <p class="_button _noselect" onclick="small_goat('interesting_other_things', this.parentElement)">
                         Interesting other things
@@ -126,24 +121,21 @@
             </div>
             <div class="main_content _container">
                 <div class="about_me _container _container_out" id="about_me">
-                    <h2>
-                        About Me
-                    </h2>
-        
                     <p>
                         I am Saif. I am a programmer, and I love the C programming language.
                     </p>
                 </div>
-                <div class="my_skills _container _container_out" id="my_skills">
-                    <h2>
-                        My Skills
-                    </h2>
-        
+                <h2>Some Material</h2>
+                
+                <div class="languages_i_have_dealt_with _container _container_out" id="languages_i_have_dealt_with">
                     <h3>
-                        Programming Languages
+                        Languages I have dealt with
                     </h3>
                     <p>
-                        Some programming languages I have dealt with. They are organized by my interest
+                        I have written programs in many different languages. Some of them are very easy 
+                        to deal while others are harder. My intention to deal with those languages was
+                        not to write programs in them but to understand computing from the perspective 
+                        of that language. Here are some of them.
                     </p>
         
                     <ul class="_sub">
@@ -160,14 +152,19 @@
                             JavaScript
                         </li>
                     </ul>
-        
                     <p>
-                        There are also some other skills that I have achieved. They are organized by category.
+                        I learned the idea of dealing with different language and understand computing
+                        from their perspective from an interview of Computerphile with Brian Kernighan.
+                        Youtube Playlist:
+                        <a class="_link" href="https://youtube.com/playlist?list=PLzH6n4zXuckr7UDOdvPy2bDVsDlMBKTav" target="_blank">
+                            Link
+                        </a>
                     </p>
-        
-                    <h3>
-                        Markup Languages, Style Sheet Languages, Frameworkks
-                    </h3>
+                    
+                    <p>
+                        I have also used some other languages, libraries, frameworks, etc. Here are some of them.
+                    </p>
+
                     <ul class="_sub">
                         <li>
                             HTML
@@ -188,6 +185,9 @@
                             Unity
                         </li>
                         <li>
+                            C#
+                        </li>
+                        <li>
                             node.js
                         </li>
                         <li>
@@ -197,9 +197,9 @@
         
                 </div>
                 <div class="books_i_found_interesting _container _container_out" id="books_i_found_interesting">
-                    <h2>
+                    <h3>
                         Books I Found Interesting
-                    </h2>
+                    </h3>
         
                     <div class="_container _sub">
                         <div class="_container">
@@ -208,7 +208,14 @@
                                 <i style="font-size:24px" class="fa _rotatable _right">&#xf107;</i>
                             </h4>
                             <div class="_expandable _container _sub">
-                                <p>This is the best book to learn C.</p>
+                                <p>
+                                    This book is a great source to learn C as well as computing. The examples are very 
+                                    much helpful and generate sophisticated programs. After using Research UNIX, I think
+                                    most of the examples are the stripped-down source code of UNIX commands. As described 
+                                    by the book, pointers are central to C, and this book explains them clearly. Along with 
+                                    C, chapter 8 describes Research UNIX's system designs.
+                                    
+                                </p>
                                 <a class="_link" href="http://s3-us-west-2.amazonaws.com/belllabs-microsite-dritchie/cbook/index.html" target="_blank">Link</a>
                             </div>
                         </div>
@@ -218,16 +225,25 @@
                                 <i style="font-size:24px" class="fa _rotatable _right">&#xf107;</i>
                             </h4>
                             <div class="_expandable _container _sub">
-                                <p>This book is informative.</p>
+                                <p>
+                                    This book is very informative. The first chapter describes different numeral systems, which was
+                                    interesting to me. Chapter 2 and 3 explains how the system works and the later chapters explain
+                                    Intel 80x86 assembly language. The analogies of assembly and other high-level languages made the
+                                    assembly codes easy to understand.
+                                </p>
+                                <p class="_note">
+                                    I have not finished reading this book yet (moved to another assembly language). But, based on what
+                                    I have read so far, this book is awesome.
+                                </p>
                                 <a class="_link" href="https://www.goodreads.com/book/show/1063680.The_Art_of_Assembly_Language" target="_blank">Link</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="my_projects _container _container_out" id="my_projects">
-                    <h2>
-                        My projects
-                    </h2>
+                <div class="some_of_the_projects_i_have_worked_on _container _container_out" id="some_of_the_projects_i_have_worked_on">
+                    <h3>
+                        Some of the projects I have worked on
+                    </h3>
         
                     <p>
                         I have worked on different prjects along with my friends. Most of them are in C and in Python with Django. They are organized chronologically.
@@ -259,39 +275,15 @@
                         </div>
                         <div class="_container">
                             <h4 class="_cursor_pointer _noselect _fill_available" onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
-                                Map Researcher System of Spacend Digital
-                                <i style="font-size:24px" class="fa _rotatable _right">&#xf107;</i>
-                            </h4>
-                            <div class="_expandable _container _sub">
-                                <p>
-                                    I made this to manage my own website
-                                </p>
-                            </div>
-                        </div>
-                        <div class="_container">
-                            <h4 class="_cursor_pointer _noselect _fill_available" onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
-                                NASA Space App Challenge
-                                <i style="font-size:24px" class="fa _rotatable _right">&#xf107;</i>
-                            </h4>
-                            <div class="_expandable _container _sub">
-                                <p>
-                                    I made this to manage my own website.
-                                </p>
-                                <p>
-                                    <a class="_link" href="https://road-to-complexity.web.app/" target="_blank">
-                                        Link
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="_container">
-                            <h4 class="_cursor_pointer _noselect _fill_available" onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
                                 PC Price Tracker BD
                                 <i style="font-size:24px" class="fa _rotatable _right">&#xf107;</i>
                             </h4>
                             <div class="_expandable _container _sub">
                                 <p>
-                                    I made this to track the price of different computer component.
+                                    This program tracks the prices of PC parts as time goes on so that people can see the changes
+                                    over time and make their buying and selling decisions. The program that tracks the price
+                                    periodically is written in Python using BeautifulSoup. The font-end code is in JavaScript
+                                    and is hosted in blogger.
                                 </p>
                                 <p>
                                     <a class="_link" href="http://pcpricetracker.co/" target="_blank">
@@ -304,13 +296,13 @@
         
                 </div>
                 <div class="interesting_other_things _container _container_out" id="interesting_other_things">
-                    <h2>
+                    <h3>
                         Interesting other things
-                    </h2>
+                    </h3>
         
                     <p>
-                        I have done some other things that are not usefull in day to day life but maybe
-                        they are the best source of experience. They are organized randomly and link to the respective GitHub file.
+                        I have done some other things that are not parts of any projects but maybe they are the best source of
+                        experience. They are organized randomly and link to the respective GitHub repository.
                     </p>
         
                     <div class="_container _sub">
@@ -323,12 +315,36 @@
                                 <p>
                                     This is a converter of different numeral systems. I started the program with dozens of functions
                                     working separately to perform the conversion. Then one of my friends Clem Cole guided me to improve
-                                    the code. Eventually, I ended up writing a short program. The program is now working more smartly.
+                                    the code. I ended up writing a short program with fewer functions. The program is now
+                                    working more smartly.
                                 </p>
     
                                 <p>A more detailed description is in the README.md file of the GitHub repository</p>
     
-                                <p>GitHub repository: <a class="_link" href="https://github.com/r3sun/dump.c" target="_blank">Link</a></p>
+                                <p>
+                                    GitHub repository:
+                                    <a class="_link" href="https://github.com/r3sun/dump.c" target="_blank">
+                                        Link
+                                    </a>
+                                </p>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="_container">
+                            <h4 class="_cursor_pointer _noselect _fill_available" onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
+                                Evan's Studi.py
+                                <i style="font-size:24px" class="fa _rotatable _right">&#xf107;</i>
+                            </h4>
+                            <div class="_expandable _container _sub">
+                                <p>
+                                    Evan wrote a program to count the study time. It was a fun project but it taught him a lot. Especially
+                                    he learned that Python is not for <b>G</b>raphical <b>U</b>ser <b>I</b>nterface.
+                                </p>
+                                <p>
+                                    GitHub repository:
+                                    <a class="_link" href="https://github.com/iaevan/Studi" target="_blank">
+                                        Link
+                                    </a>
                                 </p>
                             </div>
                         </div>
@@ -354,9 +370,9 @@
                     </div>
                 </div>
                 <div class="links_ive_gathered _container _container_out" id="links_ive_gathered">
-                    <h2>
+                    <h3>
                         Links I've gathered
-                    </h2>
+                    </h3>
         
                     <div class="_container _sub">
                         <p>
