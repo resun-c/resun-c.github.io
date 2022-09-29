@@ -1,0 +1,241 @@
+/* some css that can be used to design pages more easilly */
+:root {
+	font-size: 15px;
+	--font_0: "Source Sans Pro", sans-serif;
+	--button_font: 1rem var(--font_0);
+	--button_padding: 0.25rem 0.5rem;
+	--note_font: 1rem var(--font_0);
+	--note_color: #000000;
+	--heading_font_family: var(--font_0);
+	--text_font: 200 1.5rem var(--font_0);
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+		--body_bg_color: #000000;
+		--text_color: #fff;
+		--nav_bg_color: #2a2a2a;
+		--button_bg_color: #2a2a2a;
+		--button_text_color: #ffffff;
+		--button_hover_bg_color: #fff;
+		--button_hover_text_color: #2a2a2a;
+		--note_background_color: #f6f884;
+		--note_background_color: #e1e1e1;
+	}
+}
+@media (prefers-color-scheme: light) {
+	:root {
+		--body_bg_color: #ffffff85;
+		--text_color: #000000;
+		--nav_bg_color: #000000;
+		--button_bg_color: var(--nav_bg_color);
+		--button_text_color: #fff;
+		--button_hover_bg_color: #fff;
+		--button_hover_text_color: #000;
+		--note_background_color: #e1e1e1;
+	}
+}
+@media only screen and (min-width: 768px) {
+	:root {
+		--nav_height: 100%;
+		--nav_width: 15%;
+		--main_width: 85%;
+		--button_padding: 0.5rem 1rem;
+		--button_font: 1.2rem var(--font_0);
+		--navigation_element_font: 1.2rem Arial;
+	}
+	._sub {
+		margin-left: 2rem!important;
+	}
+}
+::-webkit-scrollbar {
+	width: 0.8rem;
+}
+::-webkit-scrollbar-thumb {
+	background-color: transparent;
+	border: 0.15rem solid #ccc;
+}
+::-webkit-scrollbar-thumb:hover {
+	border: 0.15rem solid #fff;
+}
+::-webkit-scrollbar-thumb:active {
+	border: 0.15rem solid #fff;
+}
+::-webkit-scrollbar-button {
+	display: none;
+}
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--body_bg_color);
+	margin: 0;
+}
+body * {
+	color: var(--text_color);
+}
+h1, h2, h3, h4, h5, h6, p {
+	font-weight: normal;
+	width: fit-content;
+	width: -moz-fit-content;
+	margin: 1rem 0;
+}
+ul li {
+	margin: 1rem 0;
+	width: fit-content;
+	width: -moz-fit-content;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--heading_font_family);
+}
+h1 {
+	font-size: 3rem;
+}
+h2 {
+	font-size: 2.5rem;
+}
+h3{
+	font-size: 2rem;
+}
+h4{
+	font-size: 1.5rem;
+}
+h5 {
+	font-size: 1.25rem;
+}
+h6 {
+	font-size: 1rem;
+}
+p {
+	font: var(--text_font);
+}
+._noselect {
+	-webkit-touch-callout: none;	/* iOS Safari */
+	-webkit-user-select: none;	/* Safari */
+	-khtml-user-select: none;	/* Konqueror HTML */
+	-moz-user-select: none;		/* Firefox */
+	-ms-user-select: none;		/* Internet Explorer/Edge */
+	user-select: none;		/* Non-prefixed version, currently
+					supported by Chrome and Opera */
+  }
+._centerV {					/* center a element vertically */
+	margin-top: auto!important;
+	margin-bottom: auto!important;
+}
+._centerH {					/* center a element horizontally */
+	margin-left: auto!important;
+	margin-right: auto!important;
+}
+
+._centerV_items {				/* center all the elements inside a element vertically */
+	display: flex;
+	align-items: center;
+}
+._centerH_items {				/* center all the elements inside a element horizontally */
+	display: flex;
+	justify-content: center;
+}
+._space_between_items {				/*  */
+	display: flex;
+	justify-content: space-between;
+}
+._flex_column {					/* organize elements in column */
+	display: flex;
+	flex-direction: column;
+}
+._flex_row {					/* organize elements in row */
+	display: flex;
+	flex-direction: row;
+}
+._fill_availableV {				/* fill the available area vertically */
+	height: -webkit-fill-available!important;
+}
+._fill_availableH {				/* fill the available area horizontally */
+	width: -webkit-fill-available!important;
+}
+._left {					/* left align an element */
+	margin-left: 0;
+	margin-right: auto;
+	float: left;
+}
+._right {					/* right align an element */
+	margin-left: auto;
+	margin-right: 0;
+	float: right;
+}
+._force_left {					/* force an element to float at the left */
+	margin-left: 0!important;
+	margin-right: auto!important;
+	float: left;
+}
+._force_right {					/* force an element to float at the right  */
+	margin-left: auto!important;
+	margin-right: 0!important;
+	float: right;
+}
+._container {
+	padding: 0.1rem 0.75rem;
+}
+._container_out {
+	margin: 1rem 0rem;
+}
+._container::before , ._container:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+._expandable {
+	height: 0;
+	overflow: hidden;
+	transition: all 0.3s;
+}
+._sub {						/* design an element as a sub element of it's parent */
+	margin-left: 0rem;
+}
+._button {
+	font: var(--button_font)!important;
+	cursor: pointer;
+}
+._button, ._button i {
+	background-color: var(--button_bg_color);
+	padding: var(--button_padding);
+	color: var(--button_text_color);
+}
+._button:hover, ._button:hover i {
+	background-color: var(--button_hover_bg_color);
+	color: var(--button_hover_text_color);
+}
+._cursor_pointer {				/* set cursor to pointer */
+	cursor: pointer;
+}
+._note {					/* style a not  */
+	background-color: var(--note_background_color);
+	font: var(--note_font);
+	padding: 0.5rem;
+	color: var(--note_color);
+	border: 0;
+	border-left: 0.2rem solid #1e90ff;
+}
+._note p {
+	color: var(--note_color);
+}
+._link {					/* cool looking url */
+	font: var(--text_font);
+	color: #1e90ff;
+}
+._link:hover {
+	color: #ccc;
+}
+._link:active {
+	color: #ff1e1e;
+}
+._not_link {					/* remove all desing from a url */
+	color: inherit;
+	text-decoration: none;
+}
+._not_link:hover {
+	color: inherit;
+}
+._not_link:active {
+	color: inherit;
+}
