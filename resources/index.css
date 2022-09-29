@@ -153,6 +153,9 @@ p {
 ._fill_availableH {				/* fill the available area horizontally */
 	width: -webkit-fill-available!important;
 }
+._fill_available {				/* fill the available area horizontally and vertically */
+	height: -webkit-fill-available!important;
+	width: -webkit-fill-available!important;
 ._left {					/* left align an element */
 	margin-left: 0;
 	margin-right: auto;
