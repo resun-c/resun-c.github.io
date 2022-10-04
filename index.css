@@ -2,7 +2,7 @@
 
 :root {
 	font-size: 15px;
-	--font_0: "Jet Brains Mono", sans-serif;
+	--font_0: "JetBrains Mono", sans-serif;
 	--button_font: 1rem var(--font_0);
 	--button_padding: 0.25rem 0.5rem;
 	--note_font: 1rem var(--font_0);
@@ -19,7 +19,7 @@
 	--title1_font: 400 2rem var(--font_0);
 	--greating_text_font: 1.2rem Courier;
     
-	--navigation_element_font: 1rem Arial;
+	--navigation_element_font: 500 1rem var(--font_0);
     
 	--content_font_family: var(--font_0);
 }
@@ -49,15 +49,14 @@
 	    --note_background_color: #e1e1e1;
 	}
 }
-    
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 900px) {
 	:root {
 	    --nav_height: 100%;
 	    --nav_width: 15%;
 	    --main_width: 85%;
 	    --button_padding: 0.5rem 1rem;
 	    --button_font: 1.2rem var(--font_0);
-	    --navigation_element_font: 1.2rem Arial;
+	    --navigation_element_font: 500 1rem var(--font_0);
 	}
 	._sub {
 	    margin-left: 2rem!important;
@@ -246,13 +245,13 @@ p {
 	transform: rotate(180deg);
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
     
 	.navigation p {
 		padding-left: 0;
 	}
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 900px) {
 	.main {
 		width: var(--main_width);
 	}
