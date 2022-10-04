@@ -2,7 +2,7 @@
 
 :root {
 	font-size: 15px;
-	--font_0: "Source Sans Pro", sans-serif;
+	--font_0: "Jet Brains Mono", sans-serif;
 	--button_font: 1rem var(--font_0);
 	--button_padding: 0.25rem 0.5rem;
 	--note_font: 1rem var(--font_0);
@@ -13,7 +13,9 @@
 	--nav_height: fit-content;
 	--nav_width: 100%;
 	--main_width: 100%;
-	--title_font: 400 4rem var(--font_0);
+	--title_font_weight: 500;
+	--title_font_size: 5rem;
+	--title_font_family: var(--font_0);
 	--title1_font: 400 2rem var(--font_0);
 	--greating_text_font: 1.2rem Courier;
     
@@ -281,14 +283,30 @@ p {
 	}
     
 }
-    
+.typed-cursor {
+	opacity: 1;
+}
+.typed-cursor.typed-cursor--blink{
+	animation: typedjsBlink 0.7s infinite;
+	-webkit-animation: typedjsBlink 0.7s infinite;
+			animation: typedjsBlink 0.7s infinite;
+}
+@keyframes typedjsBlink{
+	50% { opacity: 0.0; }
+}
+@-webkit-keyframes typedjsBlink{
+	0% { opacity: 1; }
+	50% { opacity: 0.0; }
+	100% { opacity: 1; }
+}
     
 header {
 	width: 100%;
 	margin: 1rem 0;
 }
 .title {
-	font: var(--title_font);
+	font: var(--title_font_weight) var(--title_font_size) var(--title_font_family);
+	height: var(--title_font_size)
 }
 .title1 {
 	font: var(--title1_font);
