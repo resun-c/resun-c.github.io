@@ -1,19 +1,17 @@
 /* some css that can be used to design pages more easilly */
 :root {
 	font-size: 15px;
-	--font_0: "Source Sans Pro", sans-serif;
-	--button_font: 1rem var(--font_0);
+	--_font_0: "Source Sans Pro", sans-serif;
+	--button_font: 1rem var(--_font_0);
 	--button_padding: 0.25rem 0.5rem;
-	--note_font: 1rem var(--font_0);
+	--note_font: 1rem var(--_font_0);
 	--note_color: #000000;
-	--heading_font_family: var(--font_0);
-	--text_font: 200 1.5rem var(--font_0);
+	--heading_font_family: var(--_font_0);
+	--text_font: 200 1.5rem var(--_font_0);
 }
 @media (prefers-color-scheme: dark) {
 	:root {
 		--body_bg_color: #000000;
-		--text_color: #fff;
-		--nav_bg_color: #2a2a2a;
 		--button_bg_color: #2a2a2a;
 		--button_text_color: #ffffff;
 		--button_hover_bg_color: #fff;
@@ -24,9 +22,6 @@
 }
 @media (prefers-color-scheme: light) {
 	:root {
-		--body_bg_color: #ffffff85;
-		--text_color: #000000;
-		--nav_bg_color: #000000;
 		--button_bg_color: var(--nav_bg_color);
 		--button_text_color: #fff;
 		--button_hover_bg_color: #fff;
@@ -36,9 +31,6 @@
 }
 @media only screen and (min-width: 768px) {
 	:root {
-		--nav_height: 100%;
-		--nav_width: 15%;
-		--main_width: 85%;
 		--button_padding: 0.5rem 1rem;
 		--button_font: 1.2rem var(--font_0);
 		--navigation_element_font: 1.2rem Arial;
@@ -68,11 +60,7 @@
 }
 
 body {
-	background-color: var(--body_bg_color);
 	margin: 0;
-}
-body * {
-	color: var(--text_color);
 }
 h1, h2, h3, h4, h5, h6, p {
 	font-weight: normal;
@@ -84,9 +72,6 @@ ul li {
 	margin: 1rem 0;
 	width: fit-content;
 	width: -moz-fit-content;
-}
-h1, h2, h3, h4, h5, h6 {
-	font-family: var(--heading_font_family);
 }
 h1 {
 	font-size: 3rem;
@@ -105,9 +90,6 @@ h5 {
 }
 h6 {
 	font-size: 1rem;
-}
-p {
-	font: var(--text_font);
 }
 ._noselect {
 	-webkit-touch-callout: none;	/* iOS Safari */
@@ -151,6 +133,10 @@ p {
 	height: -webkit-fill-available!important;
 }
 ._fill_availableH {				/* fill the available area horizontally */
+	width: -webkit-fill-available!important;
+}
+._fill_available {				/* fill the available area horizontally and vertically */
+	height: -webkit-fill-available!important;
 	width: -webkit-fill-available!important;
 }
 ._left {					/* left align an element */
