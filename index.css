@@ -8,7 +8,8 @@
 	--note_font: 1rem var(--font_0);
 	--note_color: #000000;
 	--heading_font_family: var(--font_0);
-	--text_font: 200 1.5rem var(--font_0);
+	--text_font: 200 1.2rem var(--font_0);
+	--selected_text_color: #f44336;
     
 	--nav_height: fit-content;
 	--nav_width: 100%;
@@ -17,7 +18,8 @@
 	--title_font_size: 5rem;
 	--title_font_family: var(--font_0);
 	--title1_font: 400 2rem var(--font_0);
-	--greating_text_font: 1.2rem Courier;
+	--greating_text_font_size: 1.2rem;
+	--greating_text_font_familly: Courier;
     
 	--navigation_element_font: 500 1rem var(--font_0);
     
@@ -78,6 +80,16 @@
 ::-webkit-scrollbar-button {
 	display: none;
 }
+::-moz-selection {
+	color: var(--selected_text_color);
+	background: transparent;
+}
+
+::selection {
+	color: var(--selected_text_color);
+	background: transparent;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -102,24 +114,6 @@ ul li {
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: var(--heading_font_family);
-}
-h1 {
-	font-size: 3rem;
-}
-h2 {
-	font-size: 2.5rem;
-}
-h3{
-	font-size: 2rem;
-}
-h4{
-	font-size: 1.5rem;
-}
-h5 {
-	font-size: 1.25rem;
-}
-h6 {
-	font-size: 1rem;
 }
 p {
 	font: var(--text_font);
@@ -246,7 +240,6 @@ p {
 }
 
 @media only screen and (max-width: 900px) {
-    
 	.navigation p {
 		padding-left: 0;
 	}
@@ -254,6 +247,8 @@ p {
 @media only screen and (min-width: 900px) {
 	.main {
 		width: var(--main_width);
+		margin-left: auto;
+		margin-right: 0;
 	}
 	nav {
 		position: fixed!important;
@@ -301,18 +296,32 @@ p {
     
 header {
 	width: 100%;
+	height: 100vh;
 	margin: 1rem 0;
 }
 .title {
 	font: var(--title_font_weight) var(--title_font_size) var(--title_font_family);
-	height: var(--title_font_size)
+	min-height: 25%;
 }
 .title1 {
 	font: var(--title1_font);
 }
+.greating_container {
+	min-height: 25%;
+}
 .greating_text {
-	font: var(--greating_text_font)!important;
+	font: var(--greating_text_font_size) var(--greating_text_font_familly)!important;
 	margin: 1.5rem;
+	line-height: 1;
+	height: calc(var(--greating_text_font_size) + 1.5rem);
+}
+.account_links *{
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+.account_links.active * {
+	opacity: 1;
+	transition: opacity 0.3s;
 }
 nav {
 	background-color: var(--nav_bg_color);
@@ -371,5 +380,5 @@ nav {
 	width: 100%;
 }
 footer {
-	height: 20rem;
+	height: 5rem;
 }
