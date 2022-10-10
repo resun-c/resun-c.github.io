@@ -4,7 +4,15 @@
 :root {
 	font-size: 15px;
 	font-family: 'JetBrains Mono', monospace;;
-	--font_0: 'JetBrains Mono', monospace;;
+	--font_0: 'JetBrains Mono', monospace;
+	--body_bg_color: #0e0e0e;
+	--text_color: #e8e8e8;
+	--nav_bg_color: #1f1f1f;
+	--button_bg_color: #1f1f1f;
+	--button_text_color: #ffffff;
+	--button_hover_bg_color: #fff;
+	--button_hover_text_color: #1f1f1f;
+	--note_background_color: #e1e1e1;
 	--button_font: 1rem var(--font_0);
 	--button_padding: 0.25rem 0.5rem;
 	--note_font: 1rem var(--font_0);
@@ -16,14 +24,6 @@
 	--text_font: 200 1.2rem var(--font_0);
 	--link_font: 400 1.2rem var(--font_0);
 	--selected_text_color: #f44336;
-	--body_bg_color: #000000;
-	--text_color: #fff;
-	--nav_bg_color: #2a2a2a;
-	--button_bg_color: #2a2a2a;
-	--button_text_color: #ffffff;
-	--button_hover_bg_color: #fff;
-	--button_hover_text_color: #2a2a2a;
-	--note_background_color: #e1e1e1;
     
 	--nav_height: fit-content;
 	--nav_width: 100%;
