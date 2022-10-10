@@ -22,10 +22,15 @@ const selected_text_colors = [
 	"#1e90ff",	// dodger blue
 	"#f44336",	// red
 	"#00ffff",	// azure
+	"#7fffd4",	// aquamarine
 ]
 const selected_text_colors_len = selected_text_colors.length;
+var current_selected_text_color_index;
 function change_selected_text_color() {
 	let i = Math.floor(Math.random() * (selected_text_colors_len));
+	while (i == current_selected_text_color_index) {
+		i = Math.floor(Math.random() * (selected_text_colors_len));
+	}
 	root.style.setProperty("--selected_text_color", selected_text_colors[i]);
 }
 function goat(tag) {
