@@ -8,6 +8,7 @@ window.onload = async () => {
 	
 	await sleep(500);
 	document.getElementById("account_links").className += " active";
+	await sleep(500);
 	document.getElementById("nav_small").className += " active";
 	document.getElementById("main_content").className += " active";
 	document.getElementById("self_image").className += " active";
