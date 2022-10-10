@@ -16,6 +16,14 @@
 	--text_font: 200 1.2rem var(--font_0);
 	--link_font: 400 1.2rem var(--font_0);
 	--selected_text_color: #f44336;
+	--body_bg_color: #000000;
+	--text_color: #fff;
+	--nav_bg_color: #2a2a2a;
+	--button_bg_color: #2a2a2a;
+	--button_text_color: #ffffff;
+	--button_hover_bg_color: #fff;
+	--button_hover_text_color: #2a2a2a;
+	--note_background_color: #e1e1e1;
     
 	--nav_height: fit-content;
 	--nav_width: 100%;
@@ -32,7 +40,7 @@
 	--content_font_family: var(--font_0);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 	:root {
 	    --body_bg_color: #000000;
 	    --text_color: #fff;
@@ -45,7 +53,7 @@
 	    --note_background_color: #e1e1e1;
 	}
 }
-/* @media (prefers-color-scheme: light) {
+ @media (prefers-color-scheme: light) {
 	:root {
 	    --body_bg_color: #ffffff85;
 	    --text_color: #000000;
