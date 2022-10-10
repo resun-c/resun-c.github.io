@@ -6,7 +6,6 @@
 	font-family: 'JetBrains Mono', monospace;;
 	--font_0: 'JetBrains Mono', monospace;
 	--body_bg_color: #0e0e0e;
-	--text_color: #e8e8e8;
 	--inverted_text_color: #1f1f1f;
 	--nav_bg_color: #1f1f1f;
 	--button_bg_color: transparent;
@@ -21,10 +20,13 @@
 	--heading_font_family: var(--font_0);
 	--text_font_weight: 200;
 	--semibold_text_font_weight: 600;
+	--bold_text_font_weight: 700;
 	--text_font_size: 1.2rem;
 	--text_font: 200 1.2rem var(--font_0);
+	--text_color: #e8e8e8;
+	--heading_text_color: #ffffff;
 	--link_font: 400 1.2rem var(--font_0);
-	--selected_text_color: #4dff4d;
+	--selected_text_color: #00ffff;
 	--nav_height: fit-content;
 	--nav_width: 100%;
 	--main_width: 100%;
@@ -114,7 +116,6 @@ body * {
 	color: var(--text_color);
 }
 h1, h2, h3, h4, h5, h6, p {
-	font-weight: var(--text_font_weight);
 	width: fit-content;
 	width: -moz-fit-content;
 	margin: 1rem 0;
@@ -126,6 +127,8 @@ ul li {
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: var(--heading_font_family);
+	font-weight: var(--bold_text_font_weight);
+	color: var(--heading_text_color)!important;
 }
 p {
 	font: var(--text_font);
