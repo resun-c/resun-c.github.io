@@ -1,27 +1,33 @@
 /* Place your CSS styles in this file */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;400;500;600;700&display=swap');
 
 :root {
 	font-size: 15px;
-	--font_0: "JetBrains Mono", sans-serif;
+	font-family: 'JetBrains Mono', monospace;;
+	--font_0: 'JetBrains Mono', monospace;;
 	--button_font: 1rem var(--font_0);
 	--button_padding: 0.25rem 0.5rem;
 	--note_font: 1rem var(--font_0);
 	--note_color: #000000;
 	--heading_font_family: var(--font_0);
+	--text_font_weight: 200;
+	--semibold_text_font_weight: 600;
+	--text_font_size: 1.2rem;
 	--text_font: 200 1.2rem var(--font_0);
+	--link_font: 400 1.2rem var(--font_0);
 	--selected_text_color: #f44336;
     
 	--nav_height: fit-content;
 	--nav_width: 100%;
 	--main_width: 100%;
-	--title_font_weight: 500;
+	--title_font_weight: 400;
 	--title_font_size: 5rem;
 	--title_font_family: var(--font_0);
 	--title1_font: 400 2rem var(--font_0);
 	--greating_text_font_size: 1.2rem;
 	--greating_text_font_familly: Courier;
     
-	--navigation_element_font: 500 1rem var(--font_0);
+	--navigation_element_font: 400 1rem var(--font_0);
     
 	--content_font_family: var(--font_0);
 }
@@ -39,7 +45,7 @@
 	    --note_background_color: #e1e1e1;
 	}
 }
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
 	:root {
 	    --body_bg_color: #ffffff85;
 	    --text_color: #000000;
@@ -50,7 +56,7 @@
 	    --button_hover_text_color: #000;
 	    --note_background_color: #e1e1e1;
 	}
-}
+} */
 @media only screen and (min-width: 900px) {
 	:root {
 	    --nav_height: 100%;
@@ -58,7 +64,7 @@
 	    --main_width: 85%;
 	    --button_padding: 0.5rem 1rem;
 	    --button_font: 1.2rem var(--font_0);
-	    --navigation_element_font: 500 1rem var(--font_0);
+	    --navigation_element_font: 400 1.1rem var(--font_0);
 	}
 	._sub {
 	    margin-left: 2rem!important;
@@ -102,7 +108,7 @@ body * {
 	color: var(--text_color);
 }
 h1, h2, h3, h4, h5, h6, p {
-	font-weight: normal;
+	font-weight: var(--text_font_weight);
 	width: fit-content;
 	width: -moz-fit-content;
 	margin: 1rem 0;
@@ -215,7 +221,7 @@ p {
 	color: var(--note_color);
 }
 ._link {
-	font: var(--text_font);
+	font: var(--link_font);
 	color: #1e90ff;
 }
 ._link:hover {
@@ -238,7 +244,9 @@ p {
 ._rotation_active {
 	transform: rotate(180deg);
 }
-
+i.fa {
+	font-size: 1rem;
+}
 @media only screen and (max-width: 900px) {
 	.navigation p {
 		padding-left: 0;
@@ -258,7 +266,7 @@ p {
 		display: block!important;
 	}
 	
-	.nav_small {
+	.nav_small, .nav_small.active {
 		display: none!important;
 	}
 	.self_image_small {
@@ -300,7 +308,9 @@ header {
 	margin: 1rem 0;
 }
 .title {
-	font: var(--title_font_weight) var(--title_font_size) var(--title_font_family);
+	font-weight: var(--title_font_weight);
+	font-size: var(--title_font_size);
+	font-family:  var(--title_font_family);
 	min-height: 25%;
 }
 .title1 {
@@ -310,7 +320,8 @@ header {
 	min-height: 25%;
 }
 .greating_text {
-	font: var(--greating_text_font_size) var(--greating_text_font_familly)!important;
+	font-size: var(--greating_text_font_size);
+	font-family:  var(--greating_text_font_familly);
 	margin: 1.5rem;
 	line-height: 1;
 	height: calc(var(--greating_text_font_size) + 1.5rem);
@@ -332,16 +343,25 @@ nav {
 	display: none;
 }
 .nav_small {
-	display: block;
+	display: none;
 	position: sticky;
 	top: 0;
 	padding: 0 1rem;
 	overflow: hidden;
 	z-index: 6;
 }
+.nav_small.active {
+	display: block;
+}
 .nav_small .navigation {
 	height: 0;
 	transition: all 0.3s;
+}
+.self_image {
+	display: none;
+}
+.self_image.active {
+	display: block;
 }
 .self_image, .self_image_small {
 	width: 100%;
@@ -356,12 +376,18 @@ nav {
 }
 .navigation p {
 	font: var(--navigation_element_font)!important;
+	width: -moz-fit-content;
 	width: fit-content;
+	height: -moz-fit-content;
 	height: fit-content;
 	margin: 0.25rem 0;
 }
 .main_content {
+	display: none;
 	width: 100%;
+}
+.main_content.active {
+	display: block;
 }
 .about_me, .languages_i_have_dealt_with, .some_of_the_projects_i_have_worked_on, .interesting_other_things, .links_ive_gathered {
 	font-family: var(--content_font_family);

@@ -8,6 +8,9 @@ window.onload = async () => {
 	
 	await sleep(500);
 	document.getElementById("account_links").className += " active";
+	document.getElementById("nav_small").className += " active";
+	document.getElementById("main_content").className += " active";
+	document.getElementById("self_image").className += " active";
 }
 document.onmouseup = change_selected_text_color;
 document.onkeyup = change_selected_text_color;
