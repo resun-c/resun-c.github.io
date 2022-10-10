@@ -321,6 +321,7 @@ header {
 	font-size: var(--title_font_size);
 	font-family:  var(--title_font_family);
 	min-height: 25%;
+	color: var(--text_color)!important;
 }
 .title1 {
 	font: var(--title1_font);
