@@ -432,7 +432,7 @@ nav {
 .main_content.active {
 	height: fit-content!important;
 }
-.dropdown_header {
+.heading_3 {
 	font-size: 1.1rem;
 	font-weight: var(--medium_font_weight);
 }
