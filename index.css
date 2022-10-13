@@ -266,15 +266,29 @@ i.fa {
 		width: var(--main_width);
 		margin-left: auto;
 		margin-right: 0;
+		transition: width 0.3s;
+	}
+	.main.wide {
+		width: 100%!important;
 	}
 	nav {
+		overflow: hidden;
 		position: fixed!important;
 		top: 0;
 	}
 	.nav_large {
 		display: block!important;
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: transform 0.6s;
+		transition-timing-function: ease-in-out;
 	}
-	
+	.nav_large.active {
+		transform: scaleX(1);
+		transform-origin: left;
+		transition: transform 0.6s;
+		transition-timing-function: ease-in-out;
+	}
 	.nav_small, .nav_small.active {
 		display: none!important;
 	}
@@ -393,11 +407,13 @@ nav {
 	margin: 0.25rem 0;
 }
 .main_content {
-	display: none;
+	height: 0;
 	width: 100%;
+	overflow: hidden;
+	transition: height 0.3s;
 }
 .main_content.active {
-	display: block;
+	height: fit-content!important;
 }
 .about_me, .languages_i_have_dealt_with, .some_of_the_projects_i_have_worked_on, .interesting_other_things, .links_ive_gathered {
 	font-family: var(--content_font_family);

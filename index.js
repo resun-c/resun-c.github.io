@@ -9,9 +9,18 @@ window.onload = async () => {
 	await sleep(500);
 	document.getElementById("account_links").className += " active";
 	await sleep(500);
-	document.getElementById("nav_small").className += " active";
-	document.getElementById("main_content").className += " active";
-	document.getElementById("self_image").className += " active";
+	document.getElementById("nav_large").classList.add("active");
+	document.getElementById("nav_small").classList.add("active");
+
+	document.getElementById("main").classList.remove("wide");
+	await sleep(600);
+	let main_content = document.getElementById("main_content");
+	fit_height(main_content);
+	document.getElementById("self_image").classList.add("active");
+
+	await sleep(600);
+	main_content.style.height = null;
+	main_content.classList.add("active");
 }
 document.onmouseup = change_selected_text_color;
 document.onkeyup = change_selected_text_color;
