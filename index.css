@@ -319,6 +319,10 @@ i.fa {
 		width: -webkit-fill-available!important;
 		margin: 0.5rem 1rem;
 	}
+	.account_links p {
+		padding: 0.5rem!important;
+		margin: 0 0.5rem!important;
+	}
     
 }
 .typed-cursor {
@@ -443,8 +447,8 @@ nav {
 	font-family: var(--content_font_family);
 }
 .account_links p {
-	padding: 0.5rem;
-	margin: 0 0.5rem;
+	padding: 0.3rem;
+	margin: 0 0.3rem;
 }
 .account_links p img, .account_links p i {
 	height: 1.125rem;
