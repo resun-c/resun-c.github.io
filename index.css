@@ -446,9 +446,9 @@ nav {
 	padding: 0.5rem;
 	margin: 0 0.5rem;
 }
-.account_links p img {
-	height: 100%!important;
-	width: 100%!important;
+.account_links p img, .account_links p i {
+	height: 1.125rem;
+	width: 1.41rem;
 }
 .account_links p svg {
 	height: 100%;
