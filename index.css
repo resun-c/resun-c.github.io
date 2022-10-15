@@ -8,6 +8,9 @@
 	--body_bg_color: #0e0e0e;
 	--inverted_text_color: #1f1f1f;
 	--nav_bg_color: #1f1f1f;
+	--input_font: var(--font_0);
+	--input_text_color: #fff;
+	--input_border_color: #ccc;
 	--button_bg_color: transparent;
 	--button_text_color: var(--text_color);
 	--button_hover_bg_color: #fff;
@@ -215,6 +218,24 @@ p {
 ._sub {
 	margin-left: 0rem;
 }
+._input {
+	background-color: transparent;
+    width: 10rem;
+    height: 2rem;
+	border: 0;
+	outline: 0;
+	font: var(--input_font);
+	font-size: 1rem;
+    font-weight: 400!important;
+    color: var(--input_text_color);
+    outline: none;
+    border: 0.1rem solid var(--input_border_color);
+    border-radius: 0.2rem;
+}
+._date_input::-webkit-calendar-picker-indicator {
+	background-color: var(--text_color);
+	color: var(--text_color);
+}
 ._button {
 	font: var(--button_font)!important;
 	cursor: pointer;
@@ -275,6 +296,9 @@ i.fa {
 	}
 }
 @media only screen and (min-width: 900px) {
+	._input {
+		width: 25rem;
+	}
 	.main {
 		width: var(--main_width);
 		margin-left: auto;

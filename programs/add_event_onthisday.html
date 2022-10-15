@@ -1,0 +1,194 @@
+<html>
+<head>
+<title>Add event on this day</title>
+<link rel="stylesheet" href="../index.css">
+<style>
+    .add_event_form {
+        width: 60%;
+    }
+    .main {
+        width: 100%!important;
+    }
+    .login_fom {
+        display: none;
+    }
+    .add_event_form {
+        display: none;
+    }
+    #details {
+        width: 100%;
+        min-height: 20rem;
+    }
+</style>
+</head>
+<body>
+    <div class="main">
+        <div class="login_fom" id="login_fom">
+            <p>
+                <input class="_input" type="text" id="email" />
+            </p>
+            <p>
+                <input class="_input" type="password" id="pass" />
+            </p>
+            <p id="signin">Sign In</p>
+        </div>
+
+        <div class="add_event_form _flex_column _centerH" id="add_event_form">
+            <p class="_fill_available _flex_row">
+                <span class="_left">Date:</span>
+                <input class="_input _date_input _right" type="date" id="date" placeholder="date of the event"/>
+            </p>
+            <p class="_fill_available _flex_row">
+                <span class="_left">Event:</span>
+                <input class="_input _right" type="text" id="event" placeholder="name of the event"/>
+            </p>
+            <p class="_fill_available _flex_row">
+                <span class="_left">Author:</span>
+                <input class="_input _right" type="text" id="author" placeholder="the author who is writing this"/>
+            </p>
+            <p class="_fill_available _flex_row">
+                <span class="_left">Data Source:</span>
+                <input class="_input _right" type="text" id="data_source" placeholder="source of the details"/>
+            </p>
+            <div class="_fill_available">
+                <p>Details:</p>
+                <textarea class="_input" id="details" placeholder="details"></textarea>
+            </div>
+            <p class="_button" id="submit">Submit</p>
+        </div>
+        <script type="module">
+            document.getElementById("date").value = new Date().toISOString().split("T")[0];
+            const MONTHS = ["0", "JAN", "FEB", "MAR", "APR", "MAY", "JUNE", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+            const error_container = document.createElement("p");
+
+
+            function get_input() {
+                let date = document.getElementById("date");
+                let event = document.getElementById("event");
+                let author = document.getElementById("author");
+                let data_source = document.getElementById("data_source");
+                let details = document.getElementById("details");
+
+                if (event.value.length < 4) {
+                    error_container.innerHTML = "invalid name of event";
+                    event.parentElement.appendChild(error_container);
+                    event.addEventListener("change", () => {event.parentElement.removeChild(error_container)});
+                    return false;
+                }
+                if (author.value.length < 2) {
+                    error_container.innerHTML = "invalid name of author";
+                    author.parentElement.appendChild(error_container);
+                    author.addEventListener("change", () => {author.parentElement.removeChild(error_container)});
+                    return false;
+                }
+                if (data_source.value.length < 5) {
+                    error_container.innerHTML = "invalid data_source";
+                    data_source.parentElement.appendChild(error_container);
+                    data_source.addEventListener("change", () => {data_source.parentElement.removeChild(error_container)});
+                    return false;
+                }
+                if (details.value.length < 10) {
+                    error_container.innerHTML = "invalid details";
+                    details.parentElement.appendChild(error_container);
+                    details.addEventListener("change", () => {details.parentElement.removeChild(error_container)});
+                    return false;
+                }
+
+                let data = {
+                    "date": date.value,
+                    "event": event.value,
+                    "author": author.value,
+                    "data_source": data_source.value,
+                    "details": details.value
+                }
+
+                return data;
+            }
+
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
+            import { getFirestore, collection, addDoc} from "https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore.js"; 
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+                apiKey: "AIzaSyA96sr-icL9NClREwjvuFnGdSfS93nYMQ8",
+                authDomain: "temp-ece7f.firebaseapp.com",
+                projectId: "temp-ece7f",
+                storageBucket: "temp-ece7f.appspot.com",
+                messagingSenderId: "679636646287",
+                appId: "1:679636646287:web:82928e866dcaff5999b3fa"
+            };
+            import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js';
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const auth = getAuth(app);
+            const db = getFirestore(app);
+            const events_col = collection(db, "events");
+
+            var user = null;
+
+            document.getElementById("signin").onclick = () => {
+                let email = document.getElementById("email");
+                let pass = document.getElementById("pass");
+
+                if (email.value.length < 10) {
+                    error_container.innerHTML = "invalid email";
+                    email.parentElement.appendChild(error_container);
+                    email.addEventListener("change", () => {email.parentElement.removeChild(error_container)});
+                    return false;
+                }
+
+                if (pass.value.length < 10) {
+                    error_container.innerHTML = "invalid pass";
+                    pass.parentElement.appendChild(error_container);
+                    pass.addEventListener("change", () => {pass.parentElement.removeChild(error_container)});
+                    return false;
+                }
+                email = email.value;
+                pass = pass.value;
+                signInWithEmailAndPassword(auth, email, pass)
+                .then((userCredential) => {
+                    // Signed in 
+                    user = userCredential.user;
+                    document.getElementById("add_event_form").style.display = "block";
+                    document.getElementById("login_fom").style.display = "none";
+                    console.log("authenticated");
+                    // ...
+                })
+                .catch((error) => {
+                    alert(error.message);
+                    user = null;
+                });
+                return true;
+            }
+
+            onAuthStateChanged(auth, (usr) => {
+                if (usr) {
+                    // User is signed in, see docs for a list of available properties
+                    // https://firebase.google.com/docs/reference/js/firebase.User
+                    user = usr;
+                    document.getElementById("add_event_form").style.display = "block";
+                    document.getElementById("login_fom").style.display = "none";
+                    console.log("authenticated");
+                } else {
+                    document.getElementById("login_fom").style.display = "block";
+                }
+            });
+                
+            document.getElementById("submit").onclick = async () => {
+                let data = get_input();
+                if (user && data) {
+                    let docRef = await addDoc(events_col, data);
+                    if (docRef.id) {
+                        alert("successfully created event");
+                    }
+                } else if (!user) {
+                    alert("unauthenticated");
+                } else if (!data) {
+                    alert("invalid input");
+                }
+
+            }
+        </script>
+    </div>
+    <script src="../index.js"></script>
+</body>
+</html>
