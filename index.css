@@ -322,6 +322,7 @@ i.fa {
 	margin: var(--button_padding);
 	border: 0.1rem solid var(--text_color);
 	border-radius: 3px;
+	line-height: 1.5rem;
 }
 .animated_small_card .small_card {
 	opacity: 0;
