@@ -1,11 +1,13 @@
 /* Place your CSS styles in this file */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;400;500;600;700;800&display=swap');
 
 :root {
 	font-size: 15px;
 	font-family: 'JetBrains Mono', monospace;;
 	--font_0: 'JetBrains Mono', monospace;
 	--body_bg_color: #0e0e0e;
+	--inverted_body_bg_color: #fefefe;
+	--text_color: #cdcdcd;
 	--inverted_text_color: #1f1f1f;
 	--nav_bg_color: #1f1f1f;
 	--input_font: var(--font_0);
@@ -30,20 +32,16 @@
 	--bold_font_weight: 700;
 	--extrabold_font_weight: 800;
 	--text_font_size: 1.2rem;
-	--text_font: var(--extralight_font_weight) 1.2rem var(--font_0);
-	--text_color: #e8e8e8;
+	--text_font: var(--regular_font_weight) 1.2rem var(--font_0);
 	--heading_text_color: #ffffff;
 	--link_font: 400 1.2rem var(--font_0);
 	--selected_text_color: #00ffff;
 	--nav_height: fit-content;
 	--nav_width: 100%;
 	--main_width: 100%;
-	--title_font_weight: 400;
-	--title_font_size: 5rem;
-	--title_font_family: var(--font_0);
+	--title_font: var(--regular_font_weight) 4rem var(--font_0);
 	--title1_font: 400 2rem var(--font_0);
-	--greating_text_font_size: 1.2rem;
-	--greating_text_font_familly: Courier;
+	--greating_text_font: 1.2rem Courier;
 	--navigation_element_font: 400 1rem var(--font_0);
 	--content_font_family: var(--font_0);
 }
@@ -81,6 +79,7 @@
 	    --button_padding: 0.5rem 1rem;
 	    --button_font: 1.2rem var(--font_0);
 	    --navigation_element_font: 400 1.1rem var(--font_0);
+		--title_font: var(--regular_font_weight) 5rem var(--font_0);
 	}
 	._sub {
 	    margin-left: 2rem!important;
@@ -92,6 +91,8 @@
 ::-webkit-scrollbar-thumb {
 	background-color: transparent;
 	border: 0.15rem solid var(--selected_text_color);
+	transition: height 0.3s;
+	transition-timing-function: ease-in-out;
 }
 ::-webkit-scrollbar-thumb:hover {
 	border: 0.15rem solid #fff;
@@ -135,11 +136,12 @@ ul li {
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: var(--heading_font_family);
-	font-weight: var(--bold_text_font_weight);
 	color: var(--heading_text_color)!important;
 }
 p {
 	font: var(--text_font);
+	line-height: 2rem;
+	color: var(--text_color);
 }
 ._noselect {
 	-webkit-touch-callout: none; /* iOS Safari */
@@ -160,7 +162,9 @@ p {
 }
 ._centerV_items {
 	display: flex;
+    flex-wrap: wrap;
 	align-content: center;
+	align-items: center;
 }
 ._centerH_items {
 	display: flex;
@@ -177,6 +181,11 @@ p {
 ._flex_row {
 	display: flex;
 	flex-direction: row;
+}
+._flex_row_wrap {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 ._fill_available {
 	width: -webkit-fill-available!important;
@@ -232,6 +241,10 @@ p {
     border: 0.1rem solid var(--input_border_color);
     border-radius: 0.2rem;
 }
+._uppercase {
+	text-transform: uppercase;
+}
+
 ._date_input::-webkit-calendar-picker-indicator {
 	background-color: var(--text_color);
 	color: var(--text_color);
@@ -244,6 +257,7 @@ p {
 	background-color: var(--button_bg_color);
 	padding: var(--button_padding);
 	color: var(--button_text_color);
+	transition: all 0.3s;
 }
 ._button:hover, ._button:hover i {
 	background-color: var(--button_hover_bg_color);
@@ -289,6 +303,34 @@ p {
 }
 i.fa {
 	font-size: 1rem;
+}
+
+.underline_animator {
+	background-color: var(--text_color);
+	width: 0;
+	height: 0.01rem;
+	transition: width 0.6s;
+	transition-delay: 0.6s;
+	transition-timing-function: ease-in-out;
+}
+.underline_animator.active {
+	width: 100%;
+}
+.small_card {
+	padding: var(--button_padding);
+	/* color: var(--inverted_text_color); */
+	margin: var(--button_padding);
+	border: 0.1rem solid var(--text_color);
+	border-radius: 3px;
+}
+.animated_small_card .small_card {
+	opacity: 0;
+	transition: opacity 0.3s;
+	transition-delay: 0.6s;
+	transition-timing-function: ease-in-out;
+}
+.animated_small_card .small_card.active {
+	opacity: 1;
 }
 @media only screen and (max-width: 900px) {
 	.navigation p {
@@ -347,7 +389,19 @@ i.fa {
 		padding: 0.5rem!important;
 		margin: 0 0.5rem!important;
 	}
-    
+    .main_content {
+		margin-left: 1.2rem;
+	}
+	.main_languages_desc_container {
+		display: flex;
+		flex-direction: row!important;
+	}
+	.main_languages_desc {
+		width: 40%!important;
+	}
+	.main_languages_desc_container .language_list {
+		width: 40%!important;
+	}
 }
 .typed-cursor {
 	opacity: 1;
@@ -374,11 +428,9 @@ header {
 .title_container {
 	min-height: 25%;
 }
-.title {
-	font-weight: var(--title_font_weight);
-	font-size: var(--title_font_size);
-	font-family:  var(--title_font_family);
-	color: var(--text_color)!important;
+.title, .title * {
+	font: var(--title_font);
+	color: #e8e8e8!important;
 	width: fit-content;
 	height: fit-content;
 }
@@ -390,18 +442,17 @@ header {
 	min-height: 35%;
 }
 .greating_text {
-	font-size: var(--greating_text_font_size);
-	font-family:  var(--greating_text_font_familly);
+	font: var(--greating_text_font);
 	margin: 0;
 	line-height: 1;
 }
 .account_links *{
 	opacity: 0;
-	transition: opacity 0.3s;
+	transition: opacity 0.6s;
+    transition-timing-function: ease-in-out;
 }
 .account_links.active * {
 	opacity: 1;
-	transition: opacity 0.3s;
 }
 nav {
 	background-color: var(--nav_bg_color);
@@ -453,10 +504,9 @@ nav {
 }
 .main_content {
 	height: 0;
-	width: 100%;
+	width: -webkit-fill-available!important;
 	overflow: hidden;
 	transition: height 0.3s;
-	transform-origin: top;
 	transition-timing-function: ease-in-out;
 }
 .main_content.active {
@@ -465,12 +515,23 @@ nav {
 .heading_3 {
 	font-size: 1.1rem;
 	font-weight: var(--medium_font_weight);
+	text-transform: uppercase;
 }
 .about_me {
 	text-align: center;
 }
 .about_me, .languages_i_have_dealt_with, .some_of_the_projects_i_have_worked_on, .interesting_other_things, .links_ive_gathered {
 	font-family: var(--content_font_family);
+}
+.main_languages_desc_container {
+	display: flex;
+	flex-direction: column;
+}
+.main_languages_desc {
+	width: 100%;
+}
+.main_languages_desc_container .language_list {
+	width: 100%;
 }
 .account_links p {
 	padding: 0.3rem;
