@@ -487,18 +487,18 @@
 						tag.querySelectorAll(".underline_animator").forEach(async (underline_animator) =>{
 							if (!underline_animator.classList.contains("active")) {
 								underline_animator.classList.add("active");
+								await sleep(3000);
 							}
-							await sleep(800);
 						});
 					});
 				});
 				document.querySelectorAll(".animated_small_card").forEach((animated_small_card) => {
 					on_visibile(animated_small_card, (tag) => {
-						tag.querySelectorAll(".small_card").forEach(async (small_card) =>{
+					 tag.querySelectorAll(".small_card").forEach(async (small_card) =>{
 							if (!small_card.classList.contains("active")) {
 								small_card.classList.add("active");
+								await sleep(3000);
 							}
-							await sleep(800);
 						});
 					});
 				});
