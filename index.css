@@ -513,6 +513,7 @@ nav {
 	height: fit-content!important;
 }
 .heading_3 {
+	color: var(--heading_text_color);
 	font-size: 1.1rem;
 	font-weight: var(--medium_font_weight);
 	text-transform: uppercase;
