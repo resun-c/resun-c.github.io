@@ -7,7 +7,7 @@
 	--font_0: 'JetBrains Mono', monospace;
 	--body_bg_color: #0e0e0e;
 	--inverted_body_bg_color: #fefefe;
-	--text_color: #cdcdcd;
+	--text_color: #c0c0c0;
 	--inverted_text_color: #1f1f1f;
 	--nav_bg_color: #1f1f1f;
 	--input_font: var(--font_0);
@@ -39,7 +39,7 @@
 	--nav_height: fit-content;
 	--nav_width: 100%;
 	--main_width: 100%;
-	--title_font: var(--regular_font_weight) 4rem var(--font_0);
+	--title_font: var(--medium_font_weight) 4rem var(--font_0);
 	--title1_font: 400 2rem var(--font_0);
 	--greating_text_font: 1.2rem Courier;
 	--navigation_element_font: 400 1rem var(--font_0);
@@ -79,7 +79,7 @@
 	    --button_padding: 0.5rem 1rem;
 	    --button_font: 1.2rem var(--font_0);
 	    --navigation_element_font: 400 1.1rem var(--font_0);
-		--title_font: var(--regular_font_weight) 5rem var(--font_0);
+		--title_font: var(--medium_font_weight) 5rem var(--font_0);
 	}
 	._sub {
 	    margin-left: 2rem!important;
@@ -304,7 +304,9 @@ p {
 i.fa {
 	font-size: 1rem;
 }
-
+._white_text {
+	color: #ffffff;
+}
 .underline_animator {
 	background-color: var(--text_color);
 	width: 0;
@@ -320,9 +322,10 @@ i.fa {
 	padding: var(--button_padding);
 	/* color: var(--inverted_text_color); */
 	margin: var(--button_padding);
-	border: 0.1rem solid var(--text_color);
+	/* border: 0.1rem solid transparent; */
 	border-radius: 3px;
-	line-height: 1.5rem;
+	line-height: 1.6rem;
+	box-shadow: 0px 0px 3px 0px #ffffff7f;
 }
 .animated_small_card .small_card {
 	opacity: 0;
