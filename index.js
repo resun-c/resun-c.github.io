@@ -42,36 +42,12 @@ function fit_height(tag) {
 	tag.offsetHeight;
 	tag.style.height = actual_h;
 }
-// function continuously_fit_height(tag) {
-// 	// let observer = new MutationObserver((mutations) => {
-
-// 	// });
-// 	let current_h, actual_h;
-// 	current_h = tag.offsetHeight;
-// 	while (true) {
-// 		console.log(current_h, actual_h);
-// 		// tag.style.height = "fit-content";
-// 		actual_h = tag.scrollHeight;
-// 		// tag.style.height = current_h;
-
-// 		if ((actual_h > current_h) || (actual_h < current_h)) {
-// 			console.log("here:", current_h, actual_h);
-// 			// tag.offsetHeight;
-// 			tag.style.height = actual_h;
-// 			current_h = actual_h;
-// 		}
-// 	}
-// }
 function on_visibile(tag, callback) {
 
     let observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            let visibility = tag.checkVisibility({
-                checkOpacity: true,
-                checkVisibilityCSS: true
-            });
-            if ((entry.intersectionRatio > 0) && visibility){
+            if ((entry.intersectionRatio > 0)){
                 callback(tag);
             }
         }
