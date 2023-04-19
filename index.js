@@ -75,7 +75,16 @@ function taggle_state(tag) {
 		tag.classList.add("active");
 	}
 }
+function isElement(o){
+	return (
+	  typeof HTMLElement === "object" ? o instanceof HTMLElement : //DOM2
+	  o && typeof o === "object" && o !== null && o.nodeType === 1 && typeof o.nodeName==="string"
+  );
+}
 async function tw_print(ms, s, tag, keep_cursor=false) {
+	if (!isElement(tag) && (tag instanceof String)) {
+        	tag = document.getElementById(tag);
+    	}
 	const s_len = s.length;
 	tag.innerHTML = "";
 
