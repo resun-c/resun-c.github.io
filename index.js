@@ -82,7 +82,8 @@ function isElement(o){
   );
 }
 async function tw_print(ms, s, tag, keep_cursor=false) {
-	if (!isElement(tag) && (tag instanceof String)) {
+    	let tag_isElement = await isElement(tag);
+    	if (!tag_isElement) {
         	tag = document.getElementById(tag);
     	}
 	const s_len = s.length;
