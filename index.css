@@ -492,7 +492,7 @@ nav {
 }
 .self_image.active img.active {
 	animation-name: rotate_repeatedly;
-	animation-duration: 4s;
+	animation-duration: 8s;
 	animation-iteration-count: infinite;
 }
 .self_image, .self_image_small {
@@ -507,7 +507,7 @@ nav {
   0% {transform: rotateY(0deg);}
   25% {transform: rotateY(0deg);}
   50% {transform: rotateY(0deg);}
-  100% {transform: rotateY(180deg);}
+  100% {transform: rotateY(360deg);}
 }
 .navigation {
 	padding: 0;
