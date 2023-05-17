@@ -480,7 +480,11 @@
 				document.getElementById("main").classList.remove("wide");
 				await sleep(600);
 				let main_content = document.getElementById("main_content");
-				document.getElementById("self_image").classList.add("active");
+				let self_image = document.getElementById("self_image");
+				
+				self_image.classList.add("active");
+				await sleep(500);				
+				self_image.querySelector("img).classList.add("active");
 
 				await sleep(600);
 				//continuously_fit_height(main_content);
