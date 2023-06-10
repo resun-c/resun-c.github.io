@@ -42,7 +42,7 @@ function fit_height(tag) {
 	tag.offsetHeight;
 	tag.style.height = actual_h;
 }
-function on_visibile(tag, callback) {
+function on_visible(tag, callback) {
 
     let observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
