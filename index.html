@@ -491,7 +491,7 @@
 				main_content.classList.add("active");
 				
 				document.querySelectorAll(".underline_animator_group").forEach((underline_animator_group) => {
-					on_visibile(underline_animator_group, (tag) => {
+					on_visible(underline_animator_group, (tag) => {
 						tag.querySelectorAll(".underline_animator").forEach(async (underline_animator) =>{
 							if (!underline_animator.classList.contains("active")) {
 								underline_animator.classList.add("active");
@@ -501,7 +501,7 @@
 					});
 				});
 				document.querySelectorAll(".animated_small_card").forEach((animated_small_card) => {
-					on_visibile(animated_small_card, (tag) => {
+					on_visible(animated_small_card, (tag) => {
 					 tag.querySelectorAll(".small_card").forEach(async (small_card) =>{
 							if (!small_card.classList.contains("active")) {
 								small_card.classList.add("active");
