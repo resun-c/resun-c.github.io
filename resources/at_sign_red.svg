@@ -1,0 +1,15 @@
+<svg viewBox="0 0 15.16 21" xmlns="http://www.w3.org/2000/svg">
+	<style>
+	._at_sign_red {
+		margin: 0 3px;
+		width: -moz-fit-content;
+		width: fit-content;
+		font: 16px 'JetBrains Mono';
+		font-style: italic;
+		color: #fc4445;
+	}
+	</style>
+	<foreignObject x="0" y="0" width="15.16" height="21">
+		<p class="_at_sign_red" xmlns="http://www.w3.org/1999/xhtml">@</p>
+	</foreignObject>
+</svg>
