@@ -1,14 +1,15 @@
-<svg viewBox="0 0 350 60" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 282 75" xmlns="http://www.w3.org/2000/svg">
 	<style>
 	._happy_coding {
-		margin: 16px auto;
+		margin: 0;
+		padding: 16px;
 		width: -moz-fit-content;
 		width: fit-content;
-		font: 16px 'JetBrains Mono';
+		font: 32px 'JetBrains Mono';
 		color: #fc4445;
 	}
 	</style>
-	<foreignObject x="0" y="0" width="350px" height="60px">
-		<p class="_happy_coding" xmlns="http://www.w3.org/1999/xhtml">Happy Coding!</p>
+	<foreignObject xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="282" height="75">
+		<p xmlns="http://www.w3.org/1999/xhtml" class="_happy_coding">Happy Coding!</p>
 	</foreignObject>
 </svg>
