@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;400;500;600;700;800&display=swap');
 
 :root {
-	font-size: 15px;
+	font-size: 14px;
 	font-family: 'JetBrains Mono', monospace;;
 	--font_0: 'JetBrains Mono', monospace;
 	--body_bg_color: #0e0e0e;
@@ -31,10 +31,10 @@
 	--semibold_font_weight: 600;
 	--bold_font_weight: 700;
 	--extrabold_font_weight: 800;
-	--text_font_size: 1.2rem;
-	--text_font: var(--regular_font_weight) 1.2rem var(--font_0);
+	--text_font_size: 1rem;
+	--text_font: var(--regular_font_weight) var(--text_font_size) var(--font_0);
 	--heading_text_color: #ffffff;
-	--link_font: 400 1.2rem var(--font_0);
+	--link_font: var(--regular_font_weight) var(--text_font_size) var(--font_0);
 	--selected_text_color: #00ffff;
 	--nav_height: fit-content;
 	--nav_width: 100%;
