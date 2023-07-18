@@ -34,6 +34,7 @@
 	--text_font_size: 1rem;
 	--text_font: var(--regular_font_weight) var(--text_font_size) var(--font_0);
 	--heading_text_color: #ffffff;
+	--about_me_font: 1.2rem var(--content_font_family);
 	--link_font: var(--regular_font_weight) var(--text_font_size) var(--font_0);
 	--selected_text_color: #00ffff;
 	--nav_height: fit-content;
@@ -537,9 +538,10 @@ nav {
 	text-transform: uppercase;
 }
 .about_me {
+	font: var(--about_me_font);
 	text-align: center;
 }
-.about_me, .languages_i_have_dealt_with, .some_of_the_projects_i_have_worked_on, .interesting_other_things, .links_ive_gathered {
+.languages_i_have_dealt_with, .some_of_the_projects_i_have_worked_on, .interesting_other_things, .links_ive_gathered {
 	font-family: var(--content_font_family);
 }
 .main_languages_desc_container {
