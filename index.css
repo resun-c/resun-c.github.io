@@ -140,7 +140,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 p {
 	font: var(--text_font);
-	line-height: 2rem;
+	line-height: 1.5rem;
 	color: var(--text_color);
 }
 ._noselect {
