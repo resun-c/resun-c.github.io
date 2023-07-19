@@ -31,7 +31,7 @@
 	--semibold_font_weight: 600;
 	--bold_font_weight: 700;
 	--extrabold_font_weight: 800;
-	--text_font_size: 1rem;
+	--text_font_size: 1.2rem;
 	--text_font: var(--regular_font_weight) var(--text_font_size) var(--font_0);
 	--heading_text_color: #ffffff;
 	--about_me_font: 1.2rem var(--content_font_family);
@@ -128,7 +128,6 @@ body * {
 h1, h2, h3, h4, h5, h6, p {
 	width: fit-content;
 	width: -moz-fit-content;
-	margin: 1rem 0;
 }
 ul li {
 	margin: 1rem 0;
@@ -348,6 +347,7 @@ i.fa {
 	}
 	.main {
 		width: var(--main_width);
+		padding: 0 1rem;
 		margin-left: auto;
 		margin-right: 0;
 		transition: width 0.3s;
