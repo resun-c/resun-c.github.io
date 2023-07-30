@@ -152,6 +152,9 @@ p {
 		  user-select: none; /* Non-prefixed version, currently
 					supported by Chrome and Opera */
 }
+._justified_text {
+	text-align: justify;
+}
 ._centerV {
 	margin-top: auto!important;
 	margin-bottom: auto!important;
