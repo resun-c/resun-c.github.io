@@ -81,7 +81,10 @@ ul li {
 	-ms-user-select: none;		/* Internet Explorer/Edge */
 	user-select: none;		/* Non-prefixed version, currently
 					supported by Chrome and Opera */
-  }
+}
+._justified_text {
+	text-align: justify;
+}
 ._centerV {					/* center a element vertically */
 	margin-top: auto!important;
 	margin-bottom: auto!important;
