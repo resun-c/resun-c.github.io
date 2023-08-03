@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="../index.css">
+<script src="../index.js"></script>
+<style>
+    form input, form textarea {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        line-height: 2;
+        border: none;
+        background-color: transparent;
+        color: #c0c0c0;
+        font-family: inherit;
+    }
+    form input:focus, form textarea:focus {
+        border: none;
+        outline: 0;
+    }
+    form textarea[name="message"] {
+        height: 10rem;
+    }
+    form input[type="submit"] {
+        background: transparent;
+        color: #fff;
+        /* border: 0.1rem solid #fff; */
+    }
+    form .input_container {
+        margin: 1rem 2rem;
+    }
+</style>
+
+<form id="_contact_form" class="underline_animator_group" action="javascript:submit()">
+    <div class="input_container">
+        <input type="text" name="name" placeholder="Name" required/>
+        <p class="underline_animator"></p>
+    </div>
+    <div class="input_container">
+        <input type="email" name="email" placeholder="Email" required/>
+        <p class="underline_animator"></p>
+    </div>
+    <div class="input_container">
+        <input type="text" name="subject" placeholder="Subject" required/>
+        <p class="underline_animator"></p>
+    </div>
+    <div class="input_container">
+        <textarea type="text" name="message" placeholder="Message" required></textarea>
+        <p class="underline_animator"></p>
+    </div>
+    <div class="input_container">
+        <input class="_button" type="submit"/>
+    </div>
+</form>
+<script>
+    /* firebase */
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+    import { getFirestore, collection, addDoc} from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js"; 
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const _FIREBASECONFIR = {
+      apiKey: "AIzaSyA96sr-icL9NClREwjvuFnGdSfS93nYMQ8",
+      authDomain: "temp-ece7f.firebaseapp.com",
+      projectId: "temp-ece7f",
+      storageBucket: "temp-ece7f.appspot.com",
+      messagingSenderId: "679636646287",
+      appId: "1:679636646287:web:d943b1211a43b4a099b3fa"
+    };
+
+    // Initialize Firebase
+    const _APP = initializeApp(_FIREBASECONFIR);
+    const _DB = getFirestore(app);
+    const _MESSAGES_COL = collection(db, "");
+    async function submit() {
+        let fdata = new FormData(document.getElementById("_contact_form"));
+        let data = Object.fromEntries(fdata);
+        let docRef = await addDoc(_MESSAGES_COL, data);
+    }
+</script>
