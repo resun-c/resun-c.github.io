@@ -3,19 +3,25 @@
 
 :root {
 	font-size: 15px;
-	font-family: 'JetBrains Mono', monospace;;
+	font-family: 'JetBrains Mono', monospace;
 	--font_0: 'JetBrains Mono', monospace;
-	--body_bg_color: #0e0e0e;
-	--inverted_body_bg_color: #fefefe;
-	--text_color: #c0c0c0;
+	--site_color_0: #0e0e0e;
+	--site_color_1: #fefefe;
+	--site_color_2: #c0c0c0;
+
+
+	--body_bg_color: var(--site_color_0);
+	--text_color: var(--site_color_2);
 	--inverted_text_color: #1f1f1f;
 	--nav_bg_color: #1f1f1f;
 	--input_font: var(--font_0);
 	--input_text_color: #fff;
 	--input_border_color: #ccc;
+	
+	
 	--button_bg_color: transparent;
 	--button_text_color: var(--text_color);
-	--button_hover_bg_color: #fff;
+	--button_hover_bg_color: #e8e8e8;
 	--button_hover_text_color: var(--inverted_text_color);
 	--note_background_color: #e1e1e1;
 	--button_font: 1rem var(--font_0);
@@ -23,6 +29,7 @@
 	--note_font: 1rem var(--font_0);
 	--note_color: #000000;
 	--heading_font_family: var(--font_0);
+	--heading_text_color: var(--site_color_1);
 	--thin_font_weight: 100;
 	--extralight_font_weight: 200;
 	--light_font_weight: 300;
@@ -33,7 +40,6 @@
 	--extrabold_font_weight: 800;
 	--text_font_size: 1.2rem;
 	--text_font: var(--regular_font_weight) 1.2rem var(--font_0);
-	--heading_text_color: #ffffff;
 	--link_font: 400 1.2rem var(--font_0);
 	--selected_text_color: #00ffff;
 	--nav_height: fit-content;
@@ -124,148 +130,29 @@ body {
 body * {
 	color: var(--text_color);
 }
-h1, h2, h3, h4, h5, h6, p {
-	width: fit-content;
-	width: -moz-fit-content;
-	margin: 1rem 0;
-}
-ul li {
-	margin: 1rem 0;
-	width: fit-content;
-	width: -moz-fit-content;
-}
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: var(--heading_font_family);
-	color: var(--heading_text_color)!important;
-}
-p {
-	font: var(--text_font);
-	line-height: 2rem;
-	color: var(--text_color);
-}
-._noselect {
-	-webkit-touch-callout: none; /* iOS Safari */
-	  -webkit-user-select: none; /* Safari */
-	   -khtml-user-select: none; /* Konqueror HTML */
-	     -moz-user-select: none; /* Firefox */
-	      -ms-user-select: none; /* Internet Explorer/Edge */
-		  user-select: none; /* Non-prefixed version, currently
-					supported by Chrome and Opera */
-}
-._centerV {
-	margin-top: auto!important;
-	margin-bottom: auto!important;
-}
-._centerH {
-	margin-left: auto!important;
-	margin-right: auto!important;
-}
-._centerV_items {
-	display: flex;
-    flex-wrap: wrap;
-	align-content: center;
-	align-items: center;
-}
-._centerH_items {
-	display: flex;
-	justify-content: center;
-}
-._space_between_items {
-	display: flex;
-	justify-content: space-between;
-}
-._flex_column {
-	display: flex;
-	flex-direction: column;
-}
-._flex_row {
-	display: flex;
-	flex-direction: row;
-}
-._flex_row_wrap {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
-._fill_available {
-	width: -webkit-fill-available!important;
-}
-._top {
-	margin-top: 0!important;
-	margin-bottom: auto;
-}
-._left {
-	margin-left: 0;
-	margin-right: auto;
-	float: left;
-}
-._bottom {
-	margin-top: auto;
-	margin-bottom: 0!important;
-}
-._right {
-	margin-left: auto;
-	margin-right: 0;
-	float: right;
-}
-._container {
-	padding: 0.1rem 0.75rem;
-}
-._container_out {
-	margin: 1rem 0rem;
-}
-._container::before , ._container:after {
-	content: "";
-	display: block;
-	clear: both;
-}
-._expandable {
-	height: 0;
-	overflow: hidden;
-	transition: all 0.3s;
-}
-._sub {
-	margin-left: 0rem;
-}
-._input {
-	background-color: transparent;
-    width: 10rem;
-    height: 2rem;
-	border: 0;
-	outline: 0;
-	font: var(--input_font);
-	font-size: 1rem;
-    font-weight: 400!important;
-    color: var(--input_text_color);
-    outline: none;
-    border: 0.1rem solid var(--input_border_color);
-    border-radius: 0.2rem;
-}
-._uppercase {
-	text-transform: uppercase;
+	color: var(--heading_text_color);
 }
 
-._date_input::-webkit-calendar-picker-indicator {
-	background-color: var(--text_color);
-	color: var(--text_color);
-}
-._button {
-	font: var(--button_font)!important;
-	cursor: pointer;
-}
+
+
 ._button, ._button i {
 	background-color: var(--button_bg_color);
-	padding: var(--button_padding);
 	color: var(--button_text_color);
+	padding: var(--button_padding);
 	transition: all 0.3s;
 }
 ._button:hover, ._button:hover i {
 	background-color: var(--button_hover_bg_color);
 	color: var(--button_hover_text_color);
 }
-._cursor_pointer {
-	cursor: pointer;
+._date_input::-webkit-calendar-picker-indicator {
+	background-color: var(--text_color);
+	color: var(--text_color);
 }
+
 ._note {
 	background-color: var(--note_background_color);
 	font: var(--note_font);
@@ -276,23 +163,6 @@ p {
 }
 ._note p {
 	color: var(--note_color);
-}
-._link {
-	font: var(--link_font);
-	color: #1e90ff;
-}
-._link:hover {
-	 color: #ccc;
-}
-._not_link {
-	color: inherit;
-	text-decoration: none;
-}
-._not_link:hover {
-	color: inherit;
-}
-._not_link:active {
-	color: inherit;
 }
 ._rotatable {
 	transform: rotate(0deg);
@@ -311,6 +181,7 @@ i.fa {
 	background-color: var(--text_color);
 	width: 0;
 	height: 0.01rem;
+	margin: 0;
 	transition: width 0.6s;
 	transition-delay: 0.6s;
 	transition-timing-function: ease-in-out;
@@ -394,7 +265,7 @@ i.fa {
 		margin: 0 0.5rem!important;
 	}
     .main_content {
-		margin-left: 1.2rem;
+		/* margin-left: 1.2rem; */
 	}
 	.main_languages_desc_container {
 		display: flex;
