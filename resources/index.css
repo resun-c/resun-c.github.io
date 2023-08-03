@@ -1,77 +1,72 @@
 /* some css that can be used to design pages more easilly */
 :root {
-	font-size: 15px;
-	--_font_0: "Source Sans Pro", sans-serif;
-	--button_font: 1rem var(--_font_0);
+	--font_0: Helvetica, sans-serif;
+	font-size: 16px;
+	font-family: var(--font_0);
+
+	/* TEXT */
+	--heading_font_family: var(--font_0);
+	--heading_text_color: ;
+	--text_font: 200 1.5rem var(--font_0);
+
+	/* BUTTON */
 	--button_padding: 0.25rem 0.5rem;
-	--note_font: 1rem var(--_font_0);
-	--note_color: #000000;
-	--heading_font_family: var(--_font_0);
-	--text_font: 200 1.5rem var(--_font_0);
-}
-@media (prefers-color-scheme: dark) {
-	:root {
-		--body_bg_color: #000000;
-		--button_bg_color: #2a2a2a;
-		--button_text_color: #ffffff;
-		--button_hover_bg_color: #fff;
-		--button_hover_text_color: #2a2a2a;
-		--note_background_color: #f6f884;
-		--note_background_color: #e1e1e1;
-	}
-}
-@media (prefers-color-scheme: light) {
-	:root {
-		--button_bg_color: var(--nav_bg_color);
-		--button_text_color: #fff;
-		--button_hover_bg_color: #fff;
-		--button_hover_text_color: #000;
-		--note_background_color: #e1e1e1;
-	}
+
+	/* INPUT */
+	--input_font: var(--font_0);
+
+	/* LINK */
+	--link_font: var(--font_0);
+	--link_color: #1e90ff;
+	--link_hover_color: #ffffff;
+	--link_active_color: #cd2027;
+
+
 }
 @media only screen and (min-width: 768px) {
 	:root {
 		--button_padding: 0.5rem 1rem;
 		--button_font: 1.2rem var(--font_0);
-		--navigation_element_font: 1.2rem Arial;
 	}
 	._sub {
 		margin-left: 2rem!important;
 	}
-}
-::-webkit-scrollbar {
-	width: 0.8rem;
-}
-::-webkit-scrollbar-thumb {
-	background-color: transparent;
-	border: 0.15rem solid #ccc;
-}
-::-webkit-scrollbar-thumb:hover {
-	border: 0.15rem solid #fff;
-}
-::-webkit-scrollbar-thumb:active {
-	border: 0.15rem solid #fff;
-}
-::-webkit-scrollbar-button {
-	display: none;
+	
+	._container_in {
+		padding: 2rem!important;
+	}
+	._container_out {
+		margin: 2rem!important;
+	}
 }
 * {
 	box-sizing: border-box;
 }
-
 body {
 	margin: 0;
 }
 h1, h2, h3, h4, h5, h6, p {
-	font-weight: normal;
+	font-weight: bold;
 	width: fit-content;
 	width: -moz-fit-content;
 	margin: 1rem 0;
+}
+p {
+	font: var(--text_font);
+	line-height: 2rem;
 }
 ul li {
 	margin: 1rem 0;
 	width: fit-content;
 	width: -moz-fit-content;
+}
+
+/*
+ 								TEXT
+
+*/
+._cursor_pointer {				/* set cursor to pointer */
+	cursor: pointer;
 }
 ._noselect {
 	-webkit-touch-callout: none;	/* iOS Safari */
@@ -81,77 +76,185 @@ ul li {
 	-ms-user-select: none;		/* Internet Explorer/Edge */
 	user-select: none;		/* Non-prefixed version, currently
 					supported by Chrome and Opera */
-  }
-._centerV {					/* center a element vertically */
-	margin-top: auto!important;
-	margin-bottom: auto!important;
 }
-._centerH {					/* center a element horizontally */
-	margin-left: auto!important;
-	margin-right: auto!important;
+._uppercase {
+	text-transform: uppercase;
 }
+._lowercase {
+	text-transform: lowercase;
+}
+/*
 
-._centerV_items {				/* center all the elements inside a element vertically */
-	display: flex;
-	align-items: center;
-}
-._centerH_items {				/* center all the elements inside a element horizontally */
-	display: flex;
-	justify-content: center;
-}
-._space_between_items {				/*  */
-	display: flex;
-	justify-content: space-between;
-}
-._flex_column {					/* organize elements in column */
-	display: flex;
-	flex-direction: column;
-}
-._flex_row {					/* organize elements in row */
-	display: flex;
-	flex-direction: row;
-}
-._fill_availableV {				/* fill the available area vertically */
-	height: -webkit-fill-available!important;
-}
-._fill_availableH {				/* fill the available area horizontally */
-	width: -webkit-fill-available!important;
-}
-._fill_available {				/* fill the available area horizontally and vertically */
-	height: -webkit-fill-available!important;
-	width: -webkit-fill-available!important;
-}
-._left {					/* left align an element */
-	margin-left: 0;
-	margin-right: auto;
-	float: left;
-}
-._right {					/* right align an element */
-	margin-left: auto;
-	margin-right: 0;
-	float: right;
-}
-._force_left {					/* force an element to float at the left */
-	margin-left: 0!important;
-	margin-right: auto!important;
-	float: left;
-}
-._force_right {					/* force an element to float at the right  */
-	margin-left: auto!important;
-	margin-right: 0!important;
-	float: right;
-}
+								CONTAINER
+
+*/
+
 ._container {
-	padding: 0.1rem 0.75rem;
+	padding: 0rem;
+}
+._container_in {
+	padding: 1rem;
 }
 ._container_out {
-	margin: 1rem 0rem;
+	margin: 1rem;
 }
-._container::before , ._container:after {
+._container::before , ._container:after, ._container_in::before , ._container_in:after, ._container_out::before , ._container_out:after {
 	content: "";
 	display: block;
 	clear: both;
 }
+
+								/* container size */
+
+._fill_available_h {												/* fill the available area vertically */
+	height: -webkit-fill-available!important;
+}
+._fill_available_w {												/* fill the available area horizontally */
+	width: -webkit-fill-available!important;
+}
+._fill_available {												/* fill the available area horizontally and vertically */
+	height: -webkit-fill-available!important;
+	width: -webkit-fill-available!important;
+}
+._fit_h {
+	height: -moz-fit-content;
+	height: fit-content;
+}
+._fit_w {
+	width: -moz-fit-content;
+	width: fit-content;
+}
+._fit {
+	height: -moz-fit-content;
+	height: fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+}
+
+								/* container position */
+
+._top {															/* top align the element  */
+	margin-top: 0!important;
+	margin-bottom: auto;
+}
+._right {														/* right align the element */
+	margin-left: auto;
+	margin-right: 0;
+	float: right;
+}
+._force_right {													/* force the element to float at the right  */
+	margin-left: auto!important;
+	margin-right: 0!important;
+	float: right;
+}
+._bottom {														/* bottom align the element */
+	margin-top: auto;
+	margin-bottom: 0!important;
+}
+._left {														/* left align the element */
+	margin-left: 0;
+	margin-right: auto;
+	float: left;
+}
+._force_left {													/* force the element to float at the left */
+	margin-left: 0!important;
+	margin-right: auto!important;
+	float: left;
+}
+._center_v {													/* center the element vertically */
+	margin-top: auto!important;
+	margin-bottom: auto!important;
+}
+._center_h {													/* center the element horizontally */
+	margin-left: auto!important;
+	margin-right: auto!important;
+}
+
+
+								/* items of container */
+
+._flex_column {														/* organize elements in column */
+	display: flex;
+	flex-direction: column;
+}
+._flex_row {														/* organize elements in row */
+	display: flex;
+	flex-direction: row;
+}
+._flex_row_wrap {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+._flex_row_nowrap {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+._top_v_items {														/* top align all the elements horizontally */
+	display: flex;
+	align-items: flex-start;
+}
+._center_v_items {													/* center all the elements vertically */
+	display: flex;
+	align-items: center;
+}
+._bottom_v_items {													/* bottom align all the elements horizontally */
+	display: flex;
+	align-items: flex-end;
+}
+._left_h_items {													/* left align all the elements horizontally */
+	display: flex;
+	justify-content: flex-start;
+}
+._center_h_items {													/* center all the elements horizontally */
+	display: flex;
+	justify-content: center;
+}
+._center_items {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+._right_h_items {													/* right align all the elements horizontally */
+	display: flex;
+	justify-content: flex-end;
+}
+._space_between_items_h {												/* align items with space between thems */
+	display: flex;
+	justify-content: space-between;
+}
+._space_around_items_h {												/* align items with space around thems */
+	display: flex;
+	justify-content: space-around;
+}
+._space_evenly_items_h {												/* align items with space evenly */
+	display: flex;
+	justify-content: space-evenly;
+}
+._stretch_items_h {
+	display: flex;
+	justify-items: stretch;
+}
+._space_between_items_V {												/* align items with space between thems */
+	display: flex;
+	align-content: space-between;
+}
+._space_around_items_v {												/* align items with space around thems */
+	display: flex;
+	align-content: space-around;
+}
+._space_evenly_items_v {												/* align items with space evenly */
+	display: flex;
+	align-content: space-evenly;
+}
+._stretch_items_v {
+	display: flex;
+	align-items: stretch;
+}
+
+
+
 ._expandable {
 	height: 0;
 	overflow: hidden;
@@ -160,42 +263,44 @@ ul li {
 ._sub {						/* design an element as a sub element of it's parent */
 	margin-left: 0rem;
 }
+
+								/* BUTTONS */
 ._button {
 	font: var(--button_font)!important;
 	cursor: pointer;
 }
 ._button, ._button i {
-	background-color: var(--button_bg_color);
 	padding: var(--button_padding);
-	color: var(--button_text_color);
 }
-._button:hover, ._button:hover i {
-	background-color: var(--button_hover_bg_color);
-	color: var(--button_hover_text_color);
-}
-._cursor_pointer {				/* set cursor to pointer */
-	cursor: pointer;
-}
-._note {					/* style a not  */
-	background-color: var(--note_background_color);
-	font: var(--note_font);
-	padding: 0.5rem;
-	color: var(--note_color);
+
+								/* INPUT */
+
+._input {
+	background-color: transparent;
+	width: 10rem;
+	height: 2rem;
 	border: 0;
-	border-left: 0.2rem solid #1e90ff;
+	font: var(--input_font);
+	font-size: 1rem;
+	font-weight: 400!important;
+	outline: none;
+	border: 0.1rem solid #000;
+	border-radius: 0.2rem;
 }
-._note p {
-	color: var(--note_color);
-}
+
+
+								/* LINKS */
+
 ._link {					/* cool looking url */
-	font: var(--text_font);
-	color: #1e90ff;
+	font: var(--link_font);
+	color: var(--link_color);
+	transition: all 0.3s;
 }
 ._link:hover {
-	color: #ccc;
+	color: var(--link_hover_color);
 }
 ._link:active {
-	color: #ff1e1e;
+	color: var(--link_active_color);
 }
 ._not_link {					/* remove all desing from a url */
 	color: inherit;
