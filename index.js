@@ -11,6 +11,30 @@ const selected_text_colors = [
 ]
 const selected_text_colors_len = selected_text_colors.length;
 var current_selected_text_color_index;
+
+window.onload = async function () {
+	document.querySelectorAll(".underline_animator_group").forEach((underline_animator_group) => {
+		on_visibile(underline_animator_group, (tag) => {
+			tag.querySelectorAll(".underline_animator").forEach(async (underline_animator) =>{
+				if (!underline_animator.classList.contains("active")) {
+					underline_animator.classList.add("active");
+					await sleep(3000);
+				}
+			});
+		});
+	});
+	document.querySelectorAll(".animated_small_card").forEach((animated_small_card) => {
+		on_visibile(animated_small_card, (tag) => {
+		 tag.querySelectorAll(".small_card").forEach(async (small_card) =>{
+				if (!small_card.classList.contains("active")) {
+					small_card.classList.add("active");
+					await sleep(3000);
+				}
+			});
+		});
+	});
+}
+
 function change_selected_text_color() {
 	let i = Math.floor(Math.random() * (selected_text_colors_len));
 	while (i == current_selected_text_color_index) {
