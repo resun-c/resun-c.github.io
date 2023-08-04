@@ -134,7 +134,7 @@
 			</div>
 		</header>
 		<nav class="nav_small _flex_column" id="nav_small">
-			<div class="nav_small_content _center_items_v">
+			<div class="nav_small_content _center_items_v _space_between_items_h">
 				<p>_</p>
 				<p class="navigation_toggle _button _right"
 					onclick="taggle_state(this.parentElement.nextElementSibling)">
@@ -163,11 +163,64 @@
 					Links I've gathered
 				</p>
 			</div>
+
 		</nav>
-		<div class="self_image_small" id="self_image">
-			<!-- <img src="dp_image.jpg" alt="dp_image"/> -->
-		</div>
 		<div class="main_content _container" id="main_content">
+
+			<div class="self_image_small" id="self_image">
+				<img src="dp_image.png" alt="dp_image" />
+			</div>
+
+			<div class="account_links _small _fit_h _bottom _flex_row_wrap _center_items_h" id="account_links_small">
+				<p>
+					<a href="mailto:saif.resun@outlook.com">
+						<i class="fa-solid fa-envelope"></i>
+					</a>
+				</p>
+				<p>
+					<a href="https://github.com/resun-c" target="_blank">
+						<i class="fa-brands fa-github"></i>
+					</a>
+				</p>
+				<p>
+					<a href="https://twitter.com/_resun" target="_blank">
+						<i class="fa-brands fa-twitter"></i>
+					</a>
+				</p>
+				<p>
+					<a href="https://www.reddit.com/user/_resun" target="_blank">
+						<i class="fa-brands fa-reddit"></i>
+					</a>
+				</p>
+				<p>
+					<a href="https://www.facebook.com/r3sun/" target="_blank">
+						<i class="fa-brands fa-facebook-f"></i>
+					</a>
+				</p>
+				<p>
+					<a href="https://www.linkedin.com/in/resun-c" target="_blank">
+						<i class="fa-brands fa-linkedin-in"></i>
+					</a>
+				</p>
+				<p>
+					<a href="https://www.instagram.com/_resun.c/" target="_blank">
+						<i class="fa-brands fa-instagram"></i>
+					</a>
+				</p>
+				<p>
+					<a href="https://app.thestorygraph.com/stats/_resun" target="_blank">
+						<img alt="The StoryGraph logo, 4 white rectangles arranged to represent three books on a bookshelf"
+							class="h-6 w-auto"
+							src="https://www.thestorygraph.com/assets/logo-white-15cb57f7a4673cdf300bdcb013bb5330457e5551ce7b0021b5bd5b1aa4f87d58.png">
+					</a>
+				</p>
+				<p>
+					<a href="https://discord.com/users/_resun#2576" target="_blank">
+						<i class="fa-brands fa-discord"></i>
+					</a>
+				</p>
+			</div>
+			
 			<p class="some_material _heading _fit_h _center_h">Some Material</p>
 
 			<div class="languages_i_have_dealt_with main_content_section _full_w" id="languages_i_have_dealt_with">
@@ -583,6 +636,7 @@
 			document.getElementById("main").classList.remove("wide");
 			await sleep(600);
 			document.getElementById("account_links").classList.add("active");
+			document.getElementById("account_links_small").classList.add("active");
 
 			let main_content = document.getElementById("main_content");
 			let self_image = document.getElementById("self_image");

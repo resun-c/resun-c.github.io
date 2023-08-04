@@ -430,6 +430,10 @@ i.fa {
 		overflow: hidden;
 	}
 
+	.account_links._small {
+		display: none !important;
+	}
+	
 	.navigation {
 		display: block !important;
 		padding: 0.1rem 0rem !important;
@@ -681,6 +685,11 @@ nav {
 
 .account_links {
 	margin-bottom: 3rem;
+}
+
+.account_links._small {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 }
 
 .account_links * {
