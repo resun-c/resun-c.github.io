@@ -34,11 +34,11 @@
 			<p class="_fit_w _button  _uppercase _no_select" onclick="goat_id('languages_i_have_dealt_with')">
 				Languages I have dealt with
 			</p>
-			<p class="_fit_w _button  _uppercase _no_select" onclick="goat_id('books_i_found_interesting')">
-				Books I Found Interesting
-			</p>
 			<p class="_fit_w _button  _uppercase _no_select" onclick="goat_id('some_of_the_projects_i_have_worked_on')">
 				Projects I have worked on
+			</p>
+			<p class="_fit_w _button  _uppercase _no_select" onclick="goat_id('books_i_found_interesting')">
+				Books I Found Interesting
 			</p>
 			<p class="_fit_w _button  _uppercase _no_select" onclick="goat_id('interesting_other_things')">
 				Interesting other things
@@ -147,12 +147,12 @@
 					Languages I have dealt with
 				</p>
 				<p class="_button _white_text _uppercase _no_select"
-					onclick="small_goat('books_i_found_interesting', this.parentElement)">
-					Books I Found Interesting
-				</p>
-				<p class="_button _white_text _uppercase _no_select"
 					onclick="small_goat('some_of_the_projects_i_have_worked_on', this.parentElement)">
 					Projects I have worked on
+				</p>
+				<p class="_button _white_text _uppercase _no_select"
+					onclick="small_goat('books_i_found_interesting', this.parentElement)">
+					Books I Found Interesting
 				</p>
 				<p class="_button _white_text _uppercase _no_select"
 					onclick="small_goat('interesting_other_things', this.parentElement)">
@@ -288,84 +288,6 @@
 
 			</div>
 
-			<div class="books_i_found_interesting main_content_section _full_w" id="books_i_found_interesting">
-				<p class="main_content_section_heading _heading _uppercase">
-					Books I Found Interesting
-				</p>
-
-				<div class="_sub">
-					<p class="_justified_text">
-						Being a geek, I mostly read documentation and manuals primarily on Mathematics,
-						Physics and Computers (this one has the highest priority). I have not read many
-						books, but here are some that I have enjoyed reading.
-					</p>
-
-					<div class="_sub _container">
-						<div class="_expandable_container _container">
-							<p class="_fill_w _no_margin _expander _center_items_v _space_between_items_h _cursor_pointer _no_select"
-								onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
-								The C Programming Language - k & r
-								<i class="fa _rotatable _right">&#xf107;</i>
-							</p>
-							<div class="_expandable _container _sub">
-								<p class="_justified_text">
-									This book is a great source to learn C as well as computing. The examples are very
-									much helpful and generate sophisticated programs. After using Research UNIX, I think
-									most of the examples are the stripped-down source code of UNIX commands. As
-									described
-									the book, pointers are central to C, and this book explains them clearly. Along with
-									C, chapter 8 describes Research UNIX's system designs.
-
-								</p>
-								<a class="_link" href="https://en.wikipedia.org/wiki/The_C_Programming_Language"
-									target="_blank">CPL on Wikipedia</a>
-							</div>
-						</div>
-						<div class="_expandable_container _container">
-							<p class="_fill_w _no_margin _expander _center_items_v _space_between_items_h _cursor_pointer _no_select"
-								onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
-								The Unix Programming Environment - bwk & rob
-								<i class="fa _rotatable _right">&#xf107;</i>
-							</p>
-							<div class="_expandable _container _sub">
-								<p class="_justified_text">
-									An excellent book explaining Unix, as well as computing. While reading
-									this book, I mostly enjoyed knowing how Unix works and I was amazed by it.
-								</p>
-								<a class="_link" href="https://en.wikipedia.org/wiki/The_Unix_Programming_Environment"
-									target="_blank">UPE on Wikipedia</a>
-							</div>
-						</div>
-						<div class="_expandable_container _container">
-							<p class="_fill_w _no_margin _expander _center_items_v _space_between_items_h _cursor_pointer _no_select"
-								onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
-								The Art of Assembly Language - Randall Hyde
-								<i class="fa _rotatable _right">&#xf107;</i>
-							</p>
-							<div class="_expandable _container _sub">
-								<p class="_justified_text">
-									This book is very informative. The first chapter describes different numeral
-									systems, which was
-									interesting to me. Chapter 2 and 3 explains how the system works and the later
-									chapters explain
-									Intel 80x86 assembly language. The analogies of assembly and other high-level
-									languages made the
-									assembly codes are easy to understand.
-								</p>
-								<p class="_note">
-									I have not finished reading this book yet (moved to another assembly language). But,
-									based on what
-									I have read so far, this book is awesome.
-								</p>
-								<a class="_link"
-									href="https://www.goodreads.com/book/show/1063680.The_Art_of_Assembly_Language"
-									target="_blank">AAL on Goodreads</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
 			<div class="some_of_the_projects_i_have_worked_on main_content_section _full_w"
 				id="some_of_the_projects_i_have_worked_on">
 				<p class="main_content_section_heading _heading _uppercase">
@@ -472,6 +394,84 @@
 				</div>
 			</div>
 
+			<div class="books_i_found_interesting main_content_section _full_w" id="books_i_found_interesting">
+				<p class="main_content_section_heading _heading _uppercase">
+					Books I Found Interesting
+				</p>
+
+				<div class="_sub">
+					<p class="_justified_text">
+						Being a geek, I mostly read documentation and manuals primarily on Mathematics,
+						Physics and Computers (this one has the highest priority). I have not read many
+						books, but here are some that I have enjoyed reading.
+					</p>
+
+					<div class="_sub _container">
+						<div class="_expandable_container _container">
+							<p class="_fill_w _no_margin _expander _center_items_v _space_between_items_h _cursor_pointer _no_select"
+								onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
+								The C Programming Language - k & r
+								<i class="fa _rotatable _right">&#xf107;</i>
+							</p>
+							<div class="_expandable _container _sub">
+								<p class="_justified_text">
+									This book is a great source to learn C as well as computing. The examples are very
+									much helpful and generate sophisticated programs. After using Research UNIX, I think
+									most of the examples are the stripped-down source code of UNIX commands. As
+									described
+									the book, pointers are central to C, and this book explains them clearly. Along with
+									C, chapter 8 describes Research UNIX's system designs.
+
+								</p>
+								<a class="_link" href="https://en.wikipedia.org/wiki/The_C_Programming_Language"
+									target="_blank">CPL on Wikipedia</a>
+							</div>
+						</div>
+						<div class="_expandable_container _container">
+							<p class="_fill_w _no_margin _expander _center_items_v _space_between_items_h _cursor_pointer _no_select"
+								onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
+								The Unix Programming Environment - bwk & rob
+								<i class="fa _rotatable _right">&#xf107;</i>
+							</p>
+							<div class="_expandable _container _sub">
+								<p class="_justified_text">
+									An excellent book explaining Unix, as well as computing. While reading
+									this book, I mostly enjoyed knowing how Unix works and I was amazed by it.
+								</p>
+								<a class="_link" href="https://en.wikipedia.org/wiki/The_Unix_Programming_Environment"
+									target="_blank">UPE on Wikipedia</a>
+							</div>
+						</div>
+						<div class="_expandable_container _container">
+							<p class="_fill_w _no_margin _expander _center_items_v _space_between_items_h _cursor_pointer _no_select"
+								onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
+								The Art of Assembly Language - Randall Hyde
+								<i class="fa _rotatable _right">&#xf107;</i>
+							</p>
+							<div class="_expandable _container _sub">
+								<p class="_justified_text">
+									This book is very informative. The first chapter describes different numeral
+									systems, which was
+									interesting to me. Chapter 2 and 3 explains how the system works and the later
+									chapters explain
+									Intel 80x86 assembly language. The analogies of assembly and other high-level
+									languages made the
+									assembly codes are easy to understand.
+								</p>
+								<p class="_note">
+									I have not finished reading this book yet (moved to another assembly language). But,
+									based on what
+									I have read so far, this book is awesome.
+								</p>
+								<a class="_link"
+									href="https://www.goodreads.com/book/show/1063680.The_Art_of_Assembly_Language"
+									target="_blank">AAL on Goodreads</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<div class="interesting_other_things main_content_section _full_w" id="interesting_other_things">
 				<p class="main_content_section_heading _heading _uppercase">
 					Interesting other things
@@ -562,6 +562,7 @@
 				</div>
 
 			</div>
+
 			<div class="links_ive_gathered main_content_section _full_w" id="links_ive_gathered">
 				<p class="main_content_section_heading _heading _uppercase">
 					Links I've gathered
