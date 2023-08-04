@@ -1,5 +1,5 @@
-document.onmouseup = change_selected_text_color;
-document.onkeyup = change_selected_text_color;
+// document.onmouseup = change_selected_text_color;
+// document.onkeyup = change_selected_text_color;
 const root = document.querySelector(':root');
 const selected_text_colors = [
 	"#4dff4d",	// green
@@ -42,6 +42,7 @@ function change_selected_text_color() {
 	}
 	root.style.setProperty("--selected_text_color", selected_text_colors[i]);
 }
+
 function goat(tag) {
 	window.scroll({
 		top: tag.offsetTop,

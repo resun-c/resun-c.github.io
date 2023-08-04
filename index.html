@@ -1,156 +1,185 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<title>_resun</title>
 
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, height=device-hight, initial-scale=1.0">
-		<meta name="keywords" content="_resun, resun, r3sun, _r3sun, saif, saif resun, underscore resun">
-		<meta content="https://r3sun.github.io/favicon/favicon_180x180.png" property="og:image"/>
-		<meta content="I am Saif. I am an Optimist, and I love UNIX and C." property="og:description"/>
-		<meta content="https://r3sun.github.io/" property="og:url"/>
-		<meta content="_resun" property="og:title"/>
+<head>
+	<title>_resun</title>
 
-		<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon_96x96.png">
-		<link rel="icon" type="image/x-icon" sizes="96x96" href="favicon/favicon_96x96.ico">
-		<link rel="apple-touch-icon" type="image/png" sizes="167x167" href="favicon/favicon_167x167.png">
-		<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="favicon/favicon_180x180.png">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, height=device-hight, initial-scale=1.0">
+	<meta name="keywords" content="_resun, resun, r3sun, _r3sun, saif, saif resun, underscore resun">
+	<meta content="https://r3sun.github.io/favicon/favicon_180x180.png" property="og:image" />
+	<meta content="I am Saif. I am an Optimist, and I love UNIX and C." property="og:description" />
+	<meta content="https://r3sun.github.io/" property="og:url" />
+	<meta content="_resun" property="og:title" />
 
-		<script src="https://kit.fontawesome.com/11a5cfebd2.js" crossorigin="anonymous"></script>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link rel="stylesheet" href="index.css">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon_96x96.png">
+	<link rel="icon" type="image/x-icon" sizes="96x96" href="favicon/favicon_96x96.ico">
+	<link rel="apple-touch-icon" type="image/png" sizes="167x167" href="favicon/favicon_167x167.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="favicon/favicon_180x180.png">
 
-	</head>
+	<script src="https://kit.fontawesome.com/11a5cfebd2.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="index.css">
 
-	<body>
-		<nav class="nav_large" id="nav_large">
-			<div class="self_image" id="self_image">
-				<img src="dp_image.png" alt="dp_image" title="Give me some time to sleep!" />
+</head>
+
+<body class="_flex_column">
+	<nav class="nav_large _flex_column" id="nav_large">
+		<div class="self_image" id="self_image">
+			<img src="dp_image.png" alt="dp_image" title="Give me some time to sleep!" />
+		</div>
+
+		<div class="navigation _fit_h _container">
+			<p class="_fit_w _button  _uppercase _no_select" onclick="goat_id('languages_i_have_dealt_with')">
+				Languages I have dealt with
+			</p>
+			<p class="_fit_w _button  _uppercase _no_select" onclick="goat_id('books_i_found_interesting')">
+				Books I Found Interesting
+			</p>
+			<p class="_fit_w _button  _uppercase _no_select" onclick="goat_id('some_of_the_projects_i_have_worked_on')">
+				Projects I have worked on
+			</p>
+			<p class="_fit_w _button  _uppercase _no_select" onclick="goat_id('interesting_other_things')">
+				Interesting other things
+			</p>
+			<p class="_fit_w _button  _uppercase _no_select" onclick="goat_id('links_ive_gathered')">
+				Links I've gathered
+			</p>
+		</div>
+
+		<div class="account_links _fit_h _bottom _flex_row_wrap _center_items_h" id="account_links">
+			<p>
+				<a href="mailto:saif.resun@outlook.com">
+					<i class="fa-solid fa-envelope"></i>
+				</a>
+			</p>
+			<p>
+				<a href="https://github.com/resun-c" target="_blank">
+					<i class="fa-brands fa-github"></i>
+				</a>
+			</p>
+			<p>
+				<a href="https://twitter.com/_resun" target="_blank">
+					<i class="fa-brands fa-twitter"></i>
+				</a>
+			</p>
+			<p>
+				<a href="https://www.reddit.com/user/_resun" target="_blank">
+					<i class="fa-brands fa-reddit"></i>
+				</a>
+			</p>
+			<p>
+				<a href="https://www.facebook.com/r3sun/" target="_blank">
+					<i class="fa-brands fa-facebook-f"></i>
+				</a>
+			</p>
+			<p>
+				<a href="https://www.linkedin.com/in/resun-c" target="_blank">
+					<i class="fa-brands fa-linkedin-in"></i>
+				</a>
+			</p>
+			<p>
+				<a href="https://www.instagram.com/_resun.c/" target="_blank">
+					<i class="fa-brands fa-instagram"></i>
+				</a>
+			</p>
+			<p>
+				<a href="https://app.thestorygraph.com/stats/_resun" target="_blank">
+					<img alt="The StoryGraph logo, 4 white rectangles arranged to represent three books on a bookshelf"
+						class="h-6 w-auto"
+						src="https://www.thestorygraph.com/assets/logo-white-15cb57f7a4673cdf300bdcb013bb5330457e5551ce7b0021b5bd5b1aa4f87d58.png">
+				</a>
+			</p>
+			<p>
+				<a href="https://discord.com/users/_resun#2576" target="_blank">
+					<i class="fa-brands fa-discord"></i>
+				</a>
+			</p>
+		</div>
+	</nav>
+
+	<div class="main wide" id="main">
+		<header class="_flex_column _center_items">
+			<!-- <div class="title_container _center_items">
+					<h1 class="title _centerH _centerV" id="title">
+						
+					</h1>
+				</div> -->
+
+			<p class="greating_text" id="greating_text">
+			</p>
+
+			<p class="about_me" id="about_me">
+				I am Saif / _resun. I am an Optimist, and I love UNIX and C.
+			</p>
+
+			<div class="point_down_anim_container" id="point_down_anim_container">
+				<!-- <p class="point_down _bar_arrow">
+					<svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+						<path
+							d="M479.858-160Q460-160 446-174.142q-14-14.141-14-34Q432-228 446.142-242q14.141-14 34-14Q500-256 514-241.858q14 14.141 14 34Q528-188 513.858-174q-14.141 14-34 14Zm0-272Q460-432 446-446.142q-14-14.141-14-34Q432-500 446.142-514q14.141-14 34-14Q500-528 514-513.858q14 14.141 14 34Q528-460 513.858-446q-14.141 14-34 14Zm0-272Q460-704 446-718.142q-14-14.141-14-34Q432-772 446.142-786q14.141-14 34-14Q500-800 514-785.858q14 14.141 14 34Q528-732 513.858-718q-14.141 14-34 14Z" />
+					</svg>
+				</p> -->
+				<p class="point_down _arrow_1">
+					<svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+						<path d="M480-344 240-584l43-43 197 197 197-197 43 43-240 240Z" />
+					</svg>
+				</p>
+				<p class="point_down _arrow_2">
+					<svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+						<path d="M480-344 240-584l43-43 197 197 197-197 43 43-240 240Z" />
+					</svg>
+				</p>
 			</div>
-	
+		</header>
+		<nav class="nav_small _flex_column" id="nav_small">
+			<div class="nav_small_content _center_items_v">
+				<p>_</p>
+				<p class="navigation_toggle _button _right"
+					onclick="taggle_state(this.parentElement.nextElementSibling)">
+					<i class="fa">&#xf0c9;</i>
+				</p>
+			</div>
 			<div class="navigation _container">
-				<p class="_button _white_text _uppercase _noselect" onclick="goat_id('languages_i_have_dealt_with')">
+				<p class="_button _white_text _uppercase _no_select"
+					onclick="small_goat('languages_i_have_dealt_with', this.parentElement)">
 					Languages I have dealt with
 				</p>
-				<p class="_button _white_text _uppercase _noselect" onclick="goat_id('books_i_found_interesting')">
+				<p class="_button _white_text _uppercase _no_select"
+					onclick="small_goat('books_i_found_interesting', this.parentElement)">
 					Books I Found Interesting
 				</p>
-				<p class="_button _white_text _uppercase _noselect" onclick="goat_id('some_of_the_projects_i_have_worked_on')">
+				<p class="_button _white_text _uppercase _no_select"
+					onclick="small_goat('some_of_the_projects_i_have_worked_on', this.parentElement)">
 					Projects I have worked on
 				</p>
-				<p class="_button _white_text _uppercase _noselect" onclick="goat_id('interesting_other_things')">
+				<p class="_button _white_text _uppercase _no_select"
+					onclick="small_goat('interesting_other_things', this.parentElement)">
 					Interesting other things
 				</p>
-				<p class="_button _white_text _uppercase _noselect" onclick="goat_id('links_ive_gathered')">
+				<p class="_button _white_text _uppercase _no_select"
+					onclick="small_goat('links_ive_gathered', this.parentElement)">
 					Links I've gathered
 				</p>
 			</div>
 		</nav>
+		<div class="self_image_small" id="self_image">
+			<!-- <img src="dp_image.jpg" alt="dp_image"/> -->
+		</div>
+		<div class="main_content _container" id="main_content">
+			<p class="some_material _heading _fit_h _center_h">Some Material</p>
 
-		<div class="main wide" id="main">
-			<header>
-				<div class="title_container _centerV_items _centerH_items">
-					<h1 class="title _centerH _centerV" id="title">
-						
-					</h1>
-				</div>
-			
-				<div class="greating_container _flex_column _container" id ="greating_container">
-					<p class="greating_text _centerH" id="greating_text">
-						
-					</p>
-				
-					<div class="account_links _container _flex_row _centerH_items" id="account_links">
-						<p>
-							<a href="mailto:saif.resun@outlook.com">
-								<i class="fa-solid fa-envelope"></i>
-							</a>
-						</p>
-						<p>
-							<a href="https://github.com/resun-c" target="_blank">
-								<i class="fa-brands fa-github"></i>
-							</a>
-						</p>
-						<p>
-							<a href="https://twitter.com/_resun" target="_blank">
-								<i class="fa-brands fa-twitter"></i>
-							</a>
-						</p>
-						<p>
-							<a href="https://www.facebook.com/r3sun/" target="_blank">
-								<i class="fa-brands fa-facebook-f"></i>
-							</a>
-						</p>
-						<p>
-							<a href="https://www.linkedin.com/in/resun-c" target="_blank">
-								<i class="fa-brands fa-linkedin-in"></i>
-							</a>
-						</p>
-						<p>
-							<a href="https://www.instagram.com/_resun.c/" target="_blank">
-								<i class="fa-brands fa-instagram"></i>
-							</a>
-						</p>
-						<p>
-							<a href="https://app.thestorygraph.com/stats/_resun" target="_blank">
-								<img alt="The StoryGraph logo, 4 white rectangles arranged to represent three books on a bookshelf" class="h-6 w-auto" src="https://www.thestorygraph.com/assets/logo-white-15cb57f7a4673cdf300bdcb013bb5330457e5551ce7b0021b5bd5b1aa4f87d58.png">
-							</a>
-						</p>
-						<p>
-							<a href="https://discord.com/users/_resun#2576" target="_blank">
-								<i class="fa-brands fa-discord"></i>
-							</a>
-						</p>
-					</div>
-				</div>
-	
-				<div class="about_me_container _container _container_out _centerH_items _centerV_items">
-					<p class="about_me _centerH _centerV"  id="about_me">
-						
-					</p>
-				</div>
-			</header>
-			<nav class="nav_small _flex_column" id="nav_small">
-				<div class="nav_small_content _centerV_items">
-					<p>_</p>
-					<p class="navigation_toggle _button _right" onclick="taggle_state(this.parentElement.nextElementSibling)">
-						<i class="fa">&#xf0c9;</i>
-					</p>
-				</div>
-				<div class="navigation _container">
-					<p class="_button _white_text _uppercase _noselect" onclick="small_goat('languages_i_have_dealt_with', this.parentElement)">
-						Languages I have dealt with
-					</p>
-					<p class="_button _white_text _uppercase _noselect" onclick="small_goat('books_i_found_interesting', this.parentElement)">
-						Books I Found Interesting
-					</p>
-					<p class="_button _white_text _uppercase _noselect" onclick="small_goat('some_of_the_projects_i_have_worked_on', this.parentElement)">
-						Projects I have worked on
-					</p>
-					<p class="_button _white_text _uppercase _noselect" onclick="small_goat('interesting_other_things', this.parentElement)">
-						Interesting other things
-					</p>
-					<p class="_button _white_text _uppercase _noselect" onclick="small_goat('links_ive_gathered', this.parentElement)">
-						Links I've gathered
-					</p>
-				</div>
-			</nav>
-			<div class="self_image_small" id="self_image">
-				<!-- <img src="dp_image.jpg" alt="dp_image"/> -->
-			</div>
-			<div class="main_content _container" id="main_content">
-				<h1 class="_uppercase">Some Material</h1>
-				
-				<div class="languages_i_have_dealt_with" id="languages_i_have_dealt_with">
-					<h2 class="_uppercase">
-						Languages I have dealt with
-					</h2>
+			<div class="languages_i_have_dealt_with main_content_section _full_w" id="languages_i_have_dealt_with">
+				<p class="main_content_section_heading _heading _uppercase">
+					Languages I have dealt with
+				</p>
+				<div class="_sub">
 					<div class="main_languages_desc_container _space_between_items">
 						<p class="main_languages_desc _justified_text">
-							I have written programs in many different languages. Some of them are very easy 
+							I have written programs in many different languages. Some of them are very easy
 							to deal with while others are harder. My intention to deal with those languages was
-							not to write programs in them but to understand computing from the perspective 
+							not to write programs in them but to understand computing from the perspective
 							of that language.
 						</p>
 
@@ -173,91 +202,133 @@
 							</div>
 						</div>
 					</div>
-					<div class="_flex_column _space_between_items _centerV_items">
-						<p class="_fill_available">
-							Some of the other languages, libraries, frameworks, etc. that I have used and tried to master.
+					<div class="_flex_column _space_between_items _center_items_v">
+						<p class="_fill_w">
+							Some of the other languages, libraries, frameworks, etc. that I have used and tried to
+							master.
 						</p>
 
-						<div class="_flex_row_wrap animated_small_card">
-								<p class="small_card">HTML</p>
-								<p class="small_card">XML</p>
-								<p class="small_card">CSS</p>
-								<p class="small_card">JSON</p>
-								<p class="small_card">Django</p>
-								<p class="small_card">Django Session Engine</p>
-								<p class="small_card">Django Template Engine</p>
-								<p class="small_card">OAuth</p>
-								<p class="small_card">Auth0 Authentication API</p>
-								<p class="small_card">Auth0 Managament API</p>
-								<p class="small_card">GCP Firestore API: Python, JS</p>
-								<p class="small_card">GCP Storage API: Python</p>
-								<p class="small_card">GCP Places API: Python</p>
-								<p class="small_card">Unity</p>
-								<p class="small_card">C#</p>
-								<p class="small_card">node.js</p>
-								<p class="small_card">Tkinter</p>
-								<p class="small_card">PyOt5</p>
+						<div class="other_languages_container animated_small_card _space_between_items_h">
+							<p class="small_card">HTML</p>
+							<p class="small_card">XML</p>
+							<p class="small_card">CSS</p>
+							<p class="small_card">JSON</p>
+							<p class="small_card">Django</p>
+							<p class="small_card">Django Session Engine</p>
+							<p class="small_card">Django Template Engine</p>
+							<p class="small_card">GCP Firestore: Python, JS</p>
+							<p class="small_card">GCP Storage: Python</p>
+							<p class="small_card">GCP Places API: Python</p>
+							<p class="small_card">GCP App Engine</p>
+							<p class="small_card">OAuth</p>
+							<p class="small_card">Auth0 Authentication API</p>
+							<p class="small_card">Auth0 Managament API</p>
+							<p class="small_card">Unity</p>
+							<p class="small_card">C#</p>
+							<p class="small_card">node.js</p>
+							<p class="small_card">Tkinter</p>
+							<p class="small_card">PyOt5</p>
 							</ul>
 						</div>
 					</div>
-		
 				</div>
-				<div class="books_i_found_interesting" id="books_i_found_interesting">
-					<h2 class="_uppercase">
-						Books I Found Interesting
-					</h2>
-		
-					<div class="_container">
-						<div class="_container">
-							<p class="heading_3 _expander _centerV_items  _cursor_pointer _noselect _fill_available" onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
+
+			</div>
+
+			<div class="books_i_found_interesting main_content_section _full_w" id="books_i_found_interesting">
+				<p class="main_content_section_heading _heading _uppercase">
+					Books I Found Interesting
+				</p>
+
+				<div class="_sub">
+					<p class="_justified_text">
+						Being a geek, I mostly read documentation and manuals primarily on Mathematics,
+						Physics and Computers (this one has the highest priority). I have not read many
+						books, but here are some that I have enjoyed reading.
+					</p>
+
+					<div class="_sub _container">
+						<div class="_expandable_container _container">
+							<p class="_fill_w _no_margin _expander _center_items_v _space_between_items_h _cursor_pointer _no_select"
+								onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
 								The C Programming Language - K&R
 								<i class="fa _rotatable _right">&#xf107;</i>
 							</p>
 							<div class="_expandable _container _sub">
 								<p class="_justified_text">
-									This book is a great source to learn C as well as computing. The examples are very 
+									This book is a great source to learn C as well as computing. The examples are very
 									much helpful and generate sophisticated programs. After using Research UNIX, I think
-									most of the examples are the stripped-down source code of UNIX commands. As described 
-									the book, pointers are central to C, and this book explains them clearly. Along with 
+									most of the examples are the stripped-down source code of UNIX commands. As
+									described
+									the book, pointers are central to C, and this book explains them clearly. Along with
 									C, chapter 8 describes Research UNIX's system designs.
-									
+
 								</p>
-								<a class="_link" href="http://s3-us-west-2.amazonaws.com/belllabs-microsite-dritchie/cbook/index.html" target="_blank">Link</a>
+								<a class="_link" href="https://en.wikipedia.org/wiki/The_C_Programming_Language"
+									target="_blank">CPL on Wikipedia</a>
 							</div>
 						</div>
-						<div class="_container">
-							<p class="heading_3 _expander _centerV_items  _cursor_pointer _noselect _fill_available" onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
+						<div class="_expandable_container _container">
+							<p class="_fill_w _no_margin _expander _center_items_v _space_between_items_h _cursor_pointer _no_select"
+								onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
+								The Unix Programming Environment - bwk & rob
+								<i class="fa _rotatable _right">&#xf107;</i>
+							</p>
+							<div class="_expandable _container _sub">
+								<p class="_justified_text">
+									An excellent book explaining Unix, as well as computing. While reading
+									this book, I mostly enjoyed knowing how Unix works and I was amazed by it.
+								</p>
+								<a class="_link" href="https://en.wikipedia.org/wiki/The_Unix_Programming_Environment"
+									target="_blank">UPE on Wikipedia</a>
+							</div>
+						</div>
+						<div class="_expandable_container _container">
+							<p class="_fill_w _no_margin _expander _center_items_v _space_between_items_h _cursor_pointer _no_select"
+								onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
 								The Art of Assembly Language - Randall Hyde
 								<i class="fa _rotatable _right">&#xf107;</i>
 							</p>
 							<div class="_expandable _container _sub">
 								<p class="_justified_text">
-									This book is very informative. The first chapter describes different numeral systems, which was
-									interesting to me. Chapter 2 and 3 explains how the system works and the later chapters explain
-									Intel 80x86 assembly language. The analogies of assembly and other high-level languages made the
+									This book is very informative. The first chapter describes different numeral
+									systems, which was
+									interesting to me. Chapter 2 and 3 explains how the system works and the later
+									chapters explain
+									Intel 80x86 assembly language. The analogies of assembly and other high-level
+									languages made the
 									assembly codes are easy to understand.
 								</p>
 								<p class="_note">
-									I have not finished reading this book yet (moved to another assembly language). But, based on what
+									I have not finished reading this book yet (moved to another assembly language). But,
+									based on what
 									I have read so far, this book is awesome.
 								</p>
-								<a class="_link" href="https://www.goodreads.com/book/show/1063680.The_Art_of_Assembly_Language" target="_blank">Link</a>
+								<a class="_link"
+									href="https://www.goodreads.com/book/show/1063680.The_Art_of_Assembly_Language"
+									target="_blank">AAL on Goodreads</a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="some_of_the_projects_i_have_worked_on" id="some_of_the_projects_i_have_worked_on">
-					<h2 class="_uppercase">
-						Projects I have worked on
-					</h2>
-		
+			</div>
+
+			<div class="some_of_the_projects_i_have_worked_on main_content_section _full_w"
+				id="some_of_the_projects_i_have_worked_on">
+				<p class="main_content_section_heading _heading _uppercase">
+					Projects I have worked on
+				</p>
+
+				<div class="_sub">
 					<p class="_justified_text">
-						I have worked on different projects along with my friends. Most of them are in C and Python with Django. They are organized chronologically.
+						I have worked on different projects along with my friends. Most of them are in C and Python with
+						Django. They are organized chronologically.
 					</p>
-		
-					<div class="_container">
-						<div class="_container">
-							<p class="heading_3 _expander _centerV_items  _cursor_pointer _noselect _fill_available" onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
+
+					<div class="_sub _container">
+						<div class="_expandable_container _container">
+							<p class="_fill_w _no_margin _expander _center_items_v _space_between_items_h _cursor_pointer _no_select"
+								onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
 								Bizleash
 								<i class="fa _rotatable _right">&#xf107;</i>
 							</p>
@@ -276,16 +347,20 @@
 								</p>
 							</div>
 						</div>
-						<div class="_container">
-							<p class="heading_3 _expander _centerV_items  _cursor_pointer _noselect _fill_available" onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
+						<div class="_expandable_container _container">
+							<p class="_fill_w _no_margin _expander _center_items_v _space_between_items_h _cursor_pointer _no_select"
+								onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
 								PC Price Tracker
 								<i class="fa _rotatable _right">&#xf107;</i>
 							</p>
 							<div class="_expandable _container _sub">
 								<p class="_justified_text">
-									This program tracks the prices of PC parts as time goes on so that people can see the changes
-									over time and make their buying and selling decisions. The program that tracks the price
-									periodically is written in Python using BeautifulSoup. The front-end code is in plain JavaScript
+									This program tracks the prices of PC parts as time goes on so that people can see
+									the changes
+									over time and make their buying and selling decisions. The program that tracks the
+									price
+									periodically is written in Python using BeautifulSoup. The front-end code is in
+									plain JavaScript
 									and is hosted in Firebase Hosting.
 								</p>
 								<p>
@@ -294,29 +369,36 @@
 									</a>
 								</p>
 								<p>
-									<a class="_link" href="http://price-tracker-391417.uc.r.appspot.com/price_tracker/" target="_blank">
+									<a class="_link" href="http://price-tracker-391417.uc.r.appspot.com/price_tracker/"
+										target="_blank">
 										Link to the current development server
 									</a>
 								</p>
 							</div>
 						</div>
-						<div class="_container">
-							<p class="heading_3 _expander _centerV_items  _cursor_pointer _noselect _fill_available" onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
+						<div class="_expandable_container _container">
+							<p class="_fill_w _no_margin _expander _center_items_v _space_between_items_h _cursor_pointer _no_select"
+								onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
 								A CMS
 								<i class="fa _rotatable _right">&#xf107;</i>
 							</p>
 							<div class="_expandable _container _sub">
 								<p class="_justified_text">
-									I made this to manage my website. In mid-2020, I was learning Django, and it seemed very
-									easy to make a <b>C</b>ontent <b>M</b>anagement <b>S</b>ystem with Django. So I started
-									designing one, but after successfully making the plan and writing some code, I moved on to
-									another work, and in 2021 I started working on it again and completed this CMS in mid-2021.
-									It is currently hosted on Heroku free server but not managing any website. 
+									I made this to manage my website. In mid-2020, I was learning Django, and it seemed
+									very
+									easy to make a <b>C</b>ontent <b>M</b>anagement <b>S</b>ystem with Django. So I
+									started
+									designing one, but after successfully making the plan and writing some code, I moved
+									on to
+									another work, and in 2021 I started working on it again and completed this CMS in
+									mid-2021.
+									It is currently hosted on Heroku free server but not managing any website.
 								</p>
 							</div>
 						</div>
-						<div class="_container">
-							<p class="heading_3 _expander _centerV_items  _cursor_pointer _noselect _fill_available" onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
+						<div class="_expandable_container _container">
+							<p class="_fill_w _no_margin _expander _center_items_v _space_between_items_h _cursor_pointer _no_select"
+								onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
 								Spacend Digital
 								<i class="fa _rotatable _right">&#xf107;</i>
 							</p>
@@ -334,35 +416,42 @@
 							</div>
 						</div>
 					</div>
-		
 				</div>
-				<div class="interesting_other_things" id="interesting_other_things">
-					<h2 class="_uppercase">
-						Interesting other things
-					</h2>
-		
+			</div>
+
+			<div class="interesting_other_things main_content_section _full_w" id="interesting_other_things">
+				<p class="main_content_section_heading _heading _uppercase">
+					Interesting other things
+				</p>
+
+				<div class="_sub">
 					<p class="_justified_text">
-						I have done some other things that are not parts of any projects but maybe they are the best source of
+						I have done some other things that are not parts of any projects but maybe they are the best
+						source of
 						experience. They are organized randomly and linked to the respective GitHub repository.
 					</p>
-		
-					<div class="_container">
-						<div class="_container">
-							<p class="heading_3 _expander _centerV_items  _cursor_pointer _noselect _fill_available" onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
+
+					<div class="_sub _container">
+						<div class="_expandable_container _container">
+							<p class="_fill_w _no_margin _expander _center_items_v _space_between_items_h _cursor_pointer _no_select"
+								onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
 								dump.c
 								<i class="fa _rotatable _right">&#xf107;</i>
 							</p>
 							<div class="_expandable _container _sub">
 								<p class="_justified_text">
-									This is a converter of different numeral systems. I started the program with dozens of functions
+									This is a converter of different numeral systems. I started the program with dozens
+									of functions
 									working separately to perform the conversion. Then
-									<a title="GitHub Profile" class="_link"href="https://github.com/unixwizard107">Clem Cole</a> guided me to improve
-									the code. I ended up writing a short program with fewer functions. The program is now
+									<a title="GitHub Profile" class="_link" href="https://github.com/unixwizard107">Clem
+										Cole</a> guided me to improve
+									the code. I ended up writing a short program with fewer functions. The program is
+									now
 									working more smartly.
 								</p>
-	
+
 								<p>A more detailed description is in the README.md file of the GitHub repository</p>
-	
+
 								<p>
 									GitHub repository:
 									<a class="_link" href="https://github.com/resun-c/dump.c" target="_blank">
@@ -372,14 +461,16 @@
 								</p>
 							</div>
 						</div>
-						<div class="_container">
-							<p class="heading_3 _expander _centerV_items  _cursor_pointer _noselect _fill_available" onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
+						<div class="_expandable_container _container">
+							<p class="_fill_w _no_margin _expander _center_items_v _space_between_items_h _cursor_pointer _no_select"
+								onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
 								Evan's Studi.py
 								<i class="fa _rotatable _right">&#xf107;</i>
 							</p>
 							<div class="_expandable _container _sub">
 								<p class="_justified_text">
-									Evan wrote a program to count the study time. It was a fun project but it taught him a lot.
+									Evan wrote a program to count the study time. It was a fun project but it taught him
+									a lot.
 								</p>
 								<p>
 									GitHub repository:
@@ -389,8 +480,9 @@
 								</p>
 							</div>
 						</div>
-						<div class="_container">
-							<p class="heading_3 _expander _centerV_items  _cursor_pointer _noselect _fill_available" onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
+						<div class="_expandable_container _container">
+							<p class="_fill_w _no_margin _expander _center_items_v _space_between_items_h _cursor_pointer _no_select"
+								onclick="col_exp(this.nextElementSibling, this.querySelector('i'))">
 								Django Firestore Session Engine
 								<i class="fa _rotatable _right">&#xf107;</i>
 							</p>
@@ -401,11 +493,13 @@
 									or other Session Engines. Google Cloud App Engine, for example, requires you to use
 									Cloud SQL to use Database, which is costly. On the other hand, Cloud Firestore is
 									free up to a limit, and it is not as expensive as Cloud SQL on paid plans. So if you
-									use App Engine and need a cost-effective solution for session cookies, this can be useful.
+									use App Engine and need a cost-effective solution for session cookies, this can be
+									useful.
 								</p>
 								<p>
 									GitHub repository:
-									<a class="_link" href="https://github.com/resun-c/Django-Firestore-Session-Engine" target="_blank">
+									<a class="_link" href="https://github.com/resun-c/Django-Firestore-Session-Engine"
+										target="_blank">
 										Link
 									</a>
 								</p>
@@ -413,110 +507,122 @@
 						</div>
 					</div>
 				</div>
-				<div class="links_ive_gathered" id="links_ive_gathered">
-					<h2 class="_uppercase">
-						Links I've gathered
-					</h2>
-		
-					<div class="_container">
-						<p>
-							<a href="https://www.bell-labs.com/usr/dmr/www/" class="_link" target="_blank">
-								Dennis Ritchie's Home Page
-							</a>
-						</p>
-						<p>
-							<a href="https://www.tuhs.org/" class="_link" target="_blank">
-								The Unix Heritage Society
-							</a>
-						</p>
-						<p>
-							<a href="https://www.cs.dartmouth.edu/~doug/"  class="_link" target="_blank">
-								M. Douglas McIlroy's Home Page
-							</a>
-							: This page contains computing with mathematics. This is one of the most interesting things to me.
-						</p>
-						<p>
-							<a href="https://www.cs.princeton.edu/~bwk/Prince/princecols.html"  class="_link" target="_blank">
-								Hello, World!
-							</a>
-							: Opinion columns from The Daily Princetonian
-						</p>
-						<p>
-							<a href="https://youtu.be/u4ZoJKF_VuA" class="_link" target="_blank">
-								Start with why - Simon Sinek 
-							</a>
-						</p>
-						<p>
-							<a href="https://www.youtube.com/watch?v=nyqLJSclNb4&list=PLKE1cHfDcXsxi-Lusw4zo4_6Au0zfhidk&index=15" class="_link" target="_blank">
-								How do you measure success - Simon Sinek 
-							</a>
-						</p>
-						<p>
-							<a href="http://babyjossy.blogspot.com/2013/03/the-programmer-dress-code.html"  class="_link" target="_blank">
-								The Programmer Dress Code
-							</a>
-							: Really funny remarks on programmers' dresses.
-						</p>
-					</div>
+
+			</div>
+			<div class="links_ive_gathered main_content_section _full_w" id="links_ive_gathered">
+				<p class="main_content_section_heading _heading _uppercase">
+					Links I've gathered
+				</p>
+
+				<div class="_container _sub">
+					<p>
+						<a href="https://www.bell-labs.com/usr/dmr/www/" class="_link" target="_blank">
+							Dennis Ritchie's Home Page
+						</a>
+					</p>
+					<p>
+						<a href="https://www.tuhs.org/" class="_link" target="_blank">
+							The Unix Heritage Society
+						</a>
+					</p>
+					<p>
+						<a href="https://www.cs.dartmouth.edu/~doug/" class="_link" target="_blank">
+							M. Douglas McIlroy's Home Page
+						</a>
+						: This page contains computing with mathematics. This is one of the most interesting things to
+						me.
+					</p>
+					<p>
+						<a href="https://www.cs.princeton.edu/~bwk/Prince/princecols.html" class="_link"
+							target="_blank">
+							Hello, World!
+						</a>
+						: Opinion columns from The Daily Princetonian
+					</p>
+					<p>
+						<a href="https://youtu.be/u4ZoJKF_VuA" class="_link" target="_blank">
+							Start with why - Simon Sinek
+						</a>
+					</p>
+					<p>
+						<a href="https://www.youtube.com/watch?v=nyqLJSclNb4&list=PLKE1cHfDcXsxi-Lusw4zo4_6Au0zfhidk&index=15"
+							class="_link" target="_blank">
+							How do you measure success - Simon Sinek
+						</a>
+					</p>
+					<p>
+						<a href="http://babyjossy.blogspot.com/2013/03/the-programmer-dress-code.html" class="_link"
+							target="_blank">
+							The Programmer Dress Code
+						</a>
+						: Really funny remarks on programmers' dresses.
+					</p>
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<footer>
+	<footer>
+	</footer>
 
-		</footer>
+	<!-- Load external JavaScript -->
+	<script src="index.js"></script>
+	<script>
+		window.onload = async () => {
+			await sleep(500);
+			await tw_print(100, "hello, world\\n", document.getElementById("greating_text"), true);
+			await sleep(500);
+			// document.getElementById("greating_text").classList.add("active");
+			// await sleep(500);
+			document.getElementById("about_me").classList.add("active");
 
-		<!-- Load external JavaScript -->
-		<script src="index.js"></script>
-		<script>
-			window.onload = async () => {
-				await sleep(500);
-				await tw_print(100, "_resun", document.getElementById("title"), true);
-				await sleep(500);
-				await tw_print(100, "hello, world\\n", document.getElementById("greating_text"));
-				await sleep(500);
-				await tw_print(50, "I am Saif. I am an Optimist, and I love UNIX and C.", document.getElementById("about_me"));
+			await sleep(500);
+			document.getElementById("nav_large").classList.add("active");
+			document.getElementById("nav_small").classList.add("active");
 
-				await sleep(500);
-				document.getElementById("account_links").className += " active";
-				await sleep(500);
-				document.getElementById("nav_large").classList.add("active");
-				document.getElementById("nav_small").classList.add("active");
+			document.getElementById("main").classList.remove("wide");
+			await sleep(600);
+			document.getElementById("account_links").classList.add("active");
 
-				document.getElementById("main").classList.remove("wide");
-				await sleep(600);
-				let main_content = document.getElementById("main_content");
-				let self_image = document.getElementById("self_image");
-				
-				self_image.classList.add("active");
-				await sleep(500);				
-				self_image.querySelector("img").classList.add("active");
+			let main_content = document.getElementById("main_content");
+			let self_image = document.getElementById("self_image");
+			let point_down_anim_container = document.getElementById("point_down_anim_container");
 
-				await sleep(600);
-				//continuously_fit_height(main_content);
-				main_content.classList.add("active");
-				
-				document.querySelectorAll(".underline_animator_group").forEach((underline_animator_group) => {
-					on_visible(underline_animator_group, (tag) => {
-						tag.querySelectorAll(".underline_animator").forEach(async (underline_animator) =>{
-							if (!underline_animator.classList.contains("active")) {
-								underline_animator.classList.add("active");
-								await sleep(3000);
-							}
-						});
+			self_image.classList.add("active");
+			// await sleep(500);				
+			self_image.querySelector("img").classList.add("active");
+
+			// await sleep(600);
+			//continuously_fit_height(main_content);
+			main_content.classList.add("active");
+
+			point_down_anim_container.querySelectorAll(".point_down").forEach(async point_down => {
+				point_down.classList.add("active");
+				await sleep(100);
+			})
+
+			document.querySelectorAll(".underline_animator_group").forEach((underline_animator_group) => {
+				on_visible(underline_animator_group, (tag) => {
+					tag.querySelectorAll(".underline_animator").forEach(async (underline_animator) => {
+						if (!underline_animator.classList.contains("active")) {
+							underline_animator.classList.add("active");
+							await sleep(3000);
+						}
 					});
 				});
-				document.querySelectorAll(".animated_small_card").forEach((animated_small_card) => {
-					on_visible(animated_small_card, (tag) => {
-					 tag.querySelectorAll(".small_card").forEach(async (small_card) =>{
-							if (!small_card.classList.contains("active")) {
-								small_card.classList.add("active");
-								await sleep(3000);
-							}
-						});
+			});
+			document.querySelectorAll(".animated_small_card").forEach((animated_small_card) => {
+				on_visible(animated_small_card, (tag) => {
+					tag.querySelectorAll(".small_card").forEach(async (small_card) => {
+						if (!small_card.classList.contains("active")) {
+							small_card.classList.add("active");
+							await sleep(3000);
+						}
 					});
 				});
-			}
-		</script>
-	</body>
+			});
+		}
+	</script>
+</body>
+
 </html>
