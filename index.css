@@ -472,6 +472,11 @@ i.fa {
 	.other_languages_container .small_card {
 		width: fit-content !important;
 	}
+
+	._expandable {
+		margin-left: 2rem;
+		margin-right: 2rem;
+	}
 }
 
 .typed-cursor {
