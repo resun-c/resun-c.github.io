@@ -31,11 +31,11 @@
 	--heading_text_color: var(--sc_white);
 
 	/* some_material */
-	--some_material_font: 400 3rem var(--font_1);
+	--some_material_font: 500 3rem var(--font_0);
 
 
 	/* main_content */
-	--main_content_section_heading_font: 600 1.5rem var(--font_1);
+	--main_content_section_heading_font: 400 1.3rem var(--font_0);
 
 	--input_font: var(--font_0);
 	--input_text_color: #fff;
@@ -126,7 +126,7 @@
 		--nav_height: 100%;
 		--nav_width: 25%;
 		--main_width: 75%;
-		--button_padding: 0.5rem 1rem;
+		--button_padding: 0.6rem 1rem;
 		--button_font: 1.2rem var(--font_0);
 		--navigation_element_font: 500 1.1rem var(--font_0);
 		--title_font: var(--medium_font_weight) 5rem var(--font_0);
@@ -752,7 +752,12 @@ nav {
 .main_languages_desc_container .language_list {
 	width: 100%;
 }
-
+.language_list_language_container {
+	margin: 1rem 0;
+}
+.language_list_language {
+	margin: 0.5rem 0;
+}
 .other_languages_container {
 	display: flex;
 	flex-direction: column;
