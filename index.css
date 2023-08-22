@@ -45,6 +45,7 @@
 	--button_hover_bg_color: #fff;
 	--button_hover_text_color: var(--inverted_text_color);
 	--note_background_color: #e1e1e1;
+	--note_border_left: 0.2rem solid #fc4445;
 	--button_font: 1rem var(--font_0);
 	--button_padding: 0.25rem 0.5rem;
 	--note_font: 1rem var(--font_0);
@@ -64,6 +65,8 @@
 	--text_font: var(--regular_font_weight) var(--text_font_size) var(--font_0);
 	--about_me_font: 100 1.4rem var(--content_font_family);
 	--link_font: var(--regular_font_weight) var(--text_font_size) var(--font_0);
+	--link_color: #80bfff;
+	--link_hover_color: #fd8181;
 	--selected_text_bg_color: var(--sc_white);
 	--selected_text_color: var(--sc_dark_blue);
 	--main_width: 100%;
@@ -292,7 +295,7 @@ p {
 	padding: 0.5rem;
 	color: var(--note_color);
 	border: 0;
-	border-left: 0.2rem solid #1e90ff;
+	border-left: var(--note_border_left);
 }
 
 ._note p {
@@ -301,11 +304,11 @@ p {
 
 ._link {
 	font: var(--link_font);
-	color: #1e90ff;
+	color: var(--link_color);
 }
 
 ._link:hover {
-	color: #ccc;
+	color: var(--link_hover_color);
 }
 
 ._not_link {
