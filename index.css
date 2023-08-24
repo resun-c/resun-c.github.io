@@ -545,11 +545,13 @@ header {
 	font: var(--greeting_text_font);
 	color: var(--heading_text_color);
 	line-height: 1;
+	white-space: nowrap;
 }
 
 .greeting_text * {
 	font: var(--greeting_text_font);
 	color: var(--heading_text_color);
+	white-space: nowrap;
 }
 
 .about_me {
