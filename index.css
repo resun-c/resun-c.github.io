@@ -6,7 +6,7 @@
 :root {
 	font-size: 14px;
 	font-family: 'Space Grotesk', sans-serif;
-	--font_0: 'Space Grotesk', sans-serif;
+	--font_0: Courier;
 	--font_1: Courier;
 	--body_bg_color: #0e0e0e;
 	--inverted_body_bg_color: #fefefe;
