@@ -22,6 +22,24 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" href="index.css">
 
+	<style>
+		.header_content_container {
+			position: relative;
+			z-index: 3;
+		}
+		.fluid_canvas_container {
+			position: absolute;
+			top: 0;
+			z-index: 0;
+			/* width: calc(100%);
+			height: calc(100%); */
+		}
+		#fluid_simulation_canvas {
+			position: absolute;
+			top: 0;
+			z-index: -1;
+		}
+	</style>
 </head>
 
 <body class="_flex_column">
@@ -103,38 +121,47 @@
 	</nav>
 
 	<div class="main wide" id="main">
-		<header class="_flex_column _center_items">
-			<!-- <div class="title_container _center_items">
-					<h1 class="title _centerH _centerV" id="title">
-						
-					</h1>
-				</div> -->
+		<header>
+			<div id="header_content_container" class="header_content_container _full_w _full_h _flex_column _center_items">
+				<!-- <div class="title_container _center_items">
+						<h1 class="title _centerH _centerV" id="title">
+							
+						</h1>
+					</div> -->
 
-			<p class="greeting_text" id="greeting_text">
-			</p>
-
-			<p class="about_me" id="about_me">
-				I am Saif / _resun. I am an Optimist, and I love UNIX and C.
-			</p>
-
-			<div class="point_down_anim_container _cursor_pointer" id="point_down_anim_container">
-				<!-- <p class="point_down _bar_arrow">
-					<svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
-						<path
-							d="M479.858-160Q460-160 446-174.142q-14-14.141-14-34Q432-228 446.142-242q14.141-14 34-14Q500-256 514-241.858q14 14.141 14 34Q528-188 513.858-174q-14.141 14-34 14Zm0-272Q460-432 446-446.142q-14-14.141-14-34Q432-500 446.142-514q14.141-14 34-14Q500-528 514-513.858q14 14.141 14 34Q528-460 513.858-446q-14.141 14-34 14Zm0-272Q460-704 446-718.142q-14-14.141-14-34Q432-772 446.142-786q14.141-14 34-14Q500-800 514-785.858q14 14.141 14 34Q528-732 513.858-718q-14.141 14-34 14Z" />
-					</svg>
-				</p> -->
-				<p class="point_down _arrow_1">
-					<svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
-						<path d="M480-344 240-584l43-43 197 197 197-197 43 43-240 240Z" />
-					</svg>
+				<p class="greeting_text" id="greeting_text">
 				</p>
-				<p class="point_down _arrow_2">
-					<svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
-						<path d="M480-344 240-584l43-43 197 197 197-197 43 43-240 240Z" />
-					</svg>
+
+				<p class="about_me" id="about_me">
+					I am Saif / _resun. I am an Optimist, and I love UNIX and C.
 				</p>
+
+				<div class="point_down_anim_container _cursor_pointer" id="point_down_anim_container">
+					<!-- <p class="point_down _bar_arrow">
+						<svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+							<path
+								d="M479.858-160Q460-160 446-174.142q-14-14.141-14-34Q432-228 446.142-242q14.141-14 34-14Q500-256 514-241.858q14 14.141 14 34Q528-188 513.858-174q-14.141 14-34 14Zm0-272Q460-432 446-446.142q-14-14.141-14-34Q432-500 446.142-514q14.141-14 34-14Q500-528 514-513.858q14 14.141 14 34Q528-460 513.858-446q-14.141 14-34 14Zm0-272Q460-704 446-718.142q-14-14.141-14-34Q432-772 446.142-786q14.141-14 34-14Q500-800 514-785.858q14 14.141 14 34Q528-732 513.858-718q-14.141 14-34 14Z" />
+						</svg>
+					</p> -->
+					<p class="point_down _arrow_1">
+						<svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+							<path d="M480-344 240-584l43-43 197 197 197-197 43 43-240 240Z" />
+						</svg>
+					</p>
+					<p class="point_down _arrow_2">
+						<svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+							<path d="M480-344 240-584l43-43 197 197 197-197 43 43-240 240Z" />
+						</svg>
+					</p>
+				</div>
 			</div>
+			<div class="fluid_canvas_container _fill_w _fill_h">
+				<canvas class="_full_w _full_h" id="fluid_simulation_canvas">
+
+				</canvas>
+				<script src="WebGL_fluid_simulation.js"></script>
+			</div>
+
 		</header>
 		<nav class="nav_small _flex_column" id="nav_small">
 			<div class="nav_small_content _center_items_v _space_between_items_h">
@@ -382,8 +409,7 @@
 				</div>
 			</div>
 
-			<div class="things_i_tried_to_build main_content_section _full_w"
-				id="things_i_tried_to_build">
+			<div class="things_i_tried_to_build main_content_section _full_w" id="things_i_tried_to_build">
 				<p class="main_content_section_heading _heading _uppercase">
 					Things I tried to build
 				</p>
@@ -393,7 +419,8 @@
 						My friend
 						<a class="_link" href="https://tanbinislam35.github.io">Asif</a>,
 						<a class="_link" href="https://github.com/iaevan">Evan</a>,
-						<a class="_link" href="https://github.com/MohtadiIbtesum">Yusha</a>, and I have tried to build many things. Here is one of them.
+						<a class="_link" href="https://github.com/MohtadiIbtesum">Yusha</a>, and I have tried to build
+						many things. Here is one of them.
 					</p>
 					<div class="_sub _container">
 						<div class="_expandable_container _container">
@@ -409,9 +436,11 @@
 									school, we were stuck at home due to the COVID-19 pandemic and had nothing to do.
 									At that moment, we decided to do something bigger than ourselves, something that
 									could serve people. We had some skills in programming and design, so we (primarily
-									Evan and Asif) started doing some market research based on our skills. After a couple
+									Evan and Asif) started doing some market research based on our skills. After a
+									couple
 									of months of trying different things, we decided to create this agency to sell
-									customized websites and web apps. In the past few years, we have created a few websites
+									customized websites and web apps. In the past few years, we have created a few
+									websites
 									and graphics designs for some local and global businesses.
 								</p>
 								<p>
@@ -601,8 +630,7 @@
 									and Python files colourfully!
 								</p>
 								<p>
-									<a class="_link" href="https://github.com/resun-c/colourful-cat"
-										target="_blank">
+									<a class="_link" href="https://github.com/resun-c/colourful-cat" target="_blank">
 										GitHub / resun-c / colourful-cat
 									</a>
 								</p>
@@ -706,7 +734,7 @@
 				await sleep(100);
 			});
 
-			point_down_anim_container.addEventListener("click", () => {goat_id("some_material")});
+			point_down_anim_container.addEventListener("click", () => { goat_id("some_material") });
 
 			document.querySelectorAll(".underline_animator_group").forEach((underline_animator_group) => {
 				on_visible(underline_animator_group, (tag) => {
