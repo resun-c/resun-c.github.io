@@ -57,7 +57,7 @@ const canvas = document.getElementById('fluid_simulation_canvas');
 resizeCanvas();
 
 let config = {
-    SIM_RESOLUTION: "256",
+    SIM_RESOLUTION: 256,
     DYE_RESOLUTION: 1024,
     CAPTURE_RESOLUTION: 512,
     DENSITY_DISSIPATION: 1,
