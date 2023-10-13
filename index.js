@@ -12,29 +12,6 @@ const selected_text_colors = [
 const selected_text_colors_len = selected_text_colors.length;
 var current_selected_text_color_index;
 
-window.onload = async function () {
-	document.querySelectorAll(".underline_animator_group").forEach((underline_animator_group) => {
-		on_visibile(underline_animator_group, (tag) => {
-			tag.querySelectorAll(".underline_animator").forEach(async (underline_animator) =>{
-				if (!underline_animator.classList.contains("active")) {
-					underline_animator.classList.add("active");
-					await sleep(3000);
-				}
-			});
-		});
-	});
-	document.querySelectorAll(".animated_small_card").forEach((animated_small_card) => {
-		on_visibile(animated_small_card, (tag) => {
-		 tag.querySelectorAll(".small_card").forEach(async (small_card) =>{
-				if (!small_card.classList.contains("active")) {
-					small_card.classList.add("active");
-					await sleep(3000);
-				}
-			});
-		});
-	});
-}
-
 function change_selected_text_color() {
 	let i = Math.floor(Math.random() * (selected_text_colors_len));
 	while (i == current_selected_text_color_index) {
@@ -57,8 +34,8 @@ function goat_id(id) {
 function col_exp(tag, rtt_tag) {
 	taggle_state(tag);
 	rtt_tag.classList.toggle("_rotation_active");
-	}
-	
+}
+
 function fit_height(tag) {
 	let current_h = getComputedStyle(tag).height;
 	tag.style.height = "fit-content";
@@ -69,16 +46,16 @@ function fit_height(tag) {
 }
 function on_visible(tag, callback) {
 
-    let observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            if ((entry.intersectionRatio > 0)){
-                callback(tag);
-            }
-        }
-    });
-  }, {root: document.window});
-  observer.observe(tag);
+	let observer = new IntersectionObserver((entries, observer) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				if ((entry.intersectionRatio > 0)) {
+					callback(tag);
+				}
+			}
+		});
+	}, { root: document.window });
+	observer.observe(tag);
 }
 function small_goat(id, tag) {
 	let gtag = document.getElementById(id);
@@ -90,7 +67,7 @@ function small_goat(id, tag) {
 	});
 	taggle_state(tag);
 }
-	
+
 function taggle_state(tag) {
 	if (tag.classList.contains("active")) {
 		tag.style.height = 0;
@@ -100,17 +77,17 @@ function taggle_state(tag) {
 		tag.classList.add("active");
 	}
 }
-function isElement(o){
+function isElement(o) {
 	return (
-	  typeof HTMLElement === "object" ? o instanceof HTMLElement : //DOM2
-	  o && typeof o === "object" && o !== null && o.nodeType === 1 && typeof o.nodeName==="string"
-  );
+		typeof HTMLElement === "object" ? o instanceof HTMLElement : //DOM2
+			o && typeof o === "object" && o !== null && o.nodeType === 1 && typeof o.nodeName === "string"
+	);
 }
-async function tw_print(ms, s, tag, keep_cursor=false) {
-    	let tag_isElement = await isElement(tag);
-    	if (!tag_isElement) {
-        	tag = document.getElementById(tag);
-    	}
+async function tw_print(ms, s, tag, keep_cursor = false) {
+	let tag_isElement = await isElement(tag);
+	if (!tag_isElement) {
+		tag = document.getElementById(tag);
+	}
 	const s_len = s.length;
 	tag.innerHTML = "";
 
@@ -118,7 +95,7 @@ async function tw_print(ms, s, tag, keep_cursor=false) {
 	var cursor = document.createElement("span");
 	cursor.innerHTML = "|";
 	cursor.setAttribute("class", "typed-cursor typed-cursor--blink");
-	
+
 	tag.appendChild(text);
 	tag.appendChild(cursor);
 
