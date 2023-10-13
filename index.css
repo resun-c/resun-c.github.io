@@ -704,11 +704,11 @@ nav {
 	heigh: 100%;
 }
 
-.self_image.active img.active {
+/* .self_image.active img.active {
 	animation-name: rotate_repeatedly;
 	animation-duration: 8s;
 	animation-iteration-count: infinite;
-}
+} */
 
 .self_image,
 .self_image_small {
