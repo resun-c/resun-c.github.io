@@ -242,6 +242,14 @@
 	height: 50%;
 }
 
+._three_quarters_h {
+	height: 75%;
+}
+
+._three_quarters_w {
+	width: 75%;
+}
+
 ._force_half_w {
 	width: 50% !important;
 }
@@ -327,4 +335,87 @@
 	/* center the element horizontally */
 	margin-left: auto !important;
 	margin-right: auto !important;
+}
+
+
+._padding_2 {
+	padding: 2rem;
+}
+
+._padding_h_2 {
+	padding: 0 2rem;
+}
+
+._padding_v_2 {
+	padding: 0 2rem;
+}
+
+._padding_1 {
+	padding: 1rem;
+}
+
+._padding_h_1 {
+	padding: 0 1rem;
+}
+
+._padding_v_1 {
+	padding: 0 1rem;
+}
+
+._margin_3 {
+	margin: 3rem;
+}
+
+._margin_h_3 {
+	margin: 0 3rem;
+}
+
+._margin_v_3 {
+	margin: 0 3rem;
+}
+
+._margin_v_2_5r {
+	margin-top: 2.5rem;
+	margin-bottom: 2.5rem;
+}
+
+._margin_h_2_5r {
+	margin-left: 2.5rem;
+	margin-right: 2.5rem;
+}
+
+._margin_2 {
+	margin: 2rem;
+}
+
+._margin_h_2 {
+	margin: 0 2rem;
+}
+
+._margin_v_2 {
+	margin: 0 2rem;
+}
+
+._margin_1 {
+	margin: 1rem;
+}
+
+._margin_h_1 {
+	margin: 0 1rem;
+}
+
+._margin_v_1 {
+	margin: 0 1rem;
+}
+
+._border_rad_3 {
+	border-radius: 4rem;
+}
+
+._border_rad_2 {
+	border-radius: 3rem;
+}
+
+._border_rad_1 {
+	border-radius: 1rem;
 }

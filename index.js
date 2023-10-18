@@ -36,6 +36,30 @@ function col_exp(tag, rtt_tag) {
 	rtt_tag.classList.toggle("_rotation_active");
 }
 
+function get_img_ratio(img) {
+
+    const w = img.naturalWidth;
+    const h = img.naturalHeight;
+
+    let aspectRatio;
+
+    if (w > h) {
+        aspectRatio = {
+			w: w / w,
+			h: w / h,
+		};
+    } else {
+		aspectRatio = {
+			w: h / w,
+			h: h / h,
+		};
+    }
+
+    return aspectRatio;
+
+};
+
+
 function fit_height(tag) {
 	let current_h = getComputedStyle(tag).height;
 	tag.style.height = "fit-content";
@@ -43,6 +67,14 @@ function fit_height(tag) {
 	tag.style.height = current_h;
 	tag.offsetHeight;
 	tag.style.height = actual_h;
+}
+function fit_width(tag) {
+	let current_w = getComputedStyle(tag).width;
+	tag.style.width = "fit-content";
+	let actual_w = getComputedStyle(tag).width;
+	tag.style.width = current_w;
+	tag.offsetWidth;
+	tag.style.width = actual_w;
 }
 function on_visible(tag, callback) {
 

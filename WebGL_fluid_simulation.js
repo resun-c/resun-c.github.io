@@ -53,6 +53,9 @@ SOFTWARE.
 
 // Simulation section
 
+let body_bg = (window.getComputedStyle(document.body)).getPropertyValue("background-color");
+let parsed_body_bg = body_bg.match(/\d+/g).map(Number);
+
 const canvas = document.getElementById('fluid_simulation_canvas');
 resizeCanvas();
 
@@ -71,7 +74,7 @@ let config = {
     COLORFUL: true,
     COLOR_UPDATE_SPEED: 10,
     PAUSED: false,
-    BACK_COLOR: { r: 14, g: 14, b: 14 },
+    BACK_COLOR: { r: parsed_body_bg[0], g: parsed_body_bg[1], b: parsed_body_bg[2] },
     TRANSPARENT: false,
     BLOOM: false,
     BLOOM_ITERATIONS: 8,
