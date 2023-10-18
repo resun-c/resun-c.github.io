@@ -109,7 +109,7 @@
 
 	--point_down_svg_color: var(--sc_light_red);
 
-	--navigation_element_font: 500 0.8rem var(--font_0);
+	--navigation_element_font: 400 1rem var(--font_0);
 	--navigation_element_color: var(--sc_white_75);
 	--content_font_family: var(--font_0);
 
@@ -160,8 +160,8 @@
 	--social_link: ;
 	--social_link_height: 1.5rem;
 	--social_link_width: 1.5rem;
-	--social_link_padding: 0.5rem;
-	--social_link_margin: 0.5rem;
+	--social_link_padding: 0.25rem 0.5rem;
+	--social_link_margin: 0.25rem 0.5rem;
 	--social_link_color: var(--sc_gray);
 	--social_link_hover_color: var(--sc_light_red);
 }
@@ -209,7 +209,6 @@
 		--main_width: 75%;
 		--button_padding: 0.5rem 1rem;
 		--button_font: 1.2rem var(--font_0);
-		--navigation_element_font: 500 1.1rem var(--font_0);
 		--title_font: var(--medium_font_weight) 5rem var(--font_0);
 	}
 
@@ -823,7 +822,8 @@ nav {
 
 .self_image.active img {
 	width: 100%;
-	/* height: 100%; */
+	height: 100%;
+	object-fit: contain;
 }
 
 /* .self_image.active img.active {
@@ -869,14 +869,13 @@ nav {
 .navigation p {
 	font: var(--navigation_element_font) !important;
 	color: var(--navigation_element_color);
-	margin: 0.25rem 0;
+	margin: 0;
 	padding: var(--button_padding);
 	transition: all 0.3s ease-in-out;
 }
 .navigation p:hover {
 	background-color: var(--button_hover_bg_color);
 	color: var(--button_hover_text_color);
-	margin: 0.25rem 0;
 }
 .nav_resun {
 	font: var(--nav_resun_font);
@@ -984,7 +983,7 @@ nav {
 }
 
 .social_links {
-	margin-bottom: 3rem;
+	margin-bottom: auto;
 }
 
 .social_links_small {
