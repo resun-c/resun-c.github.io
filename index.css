@@ -67,7 +67,8 @@
 	--button_text_color: var(--text_color);
 	--button_hover_bg_color: var(--sc_light_red);
 	--button_hover_text_color: var(--sc_white);
-	--note_background_color: var(--sc_dark_blue_10);
+	--note_background_color: var(--sc_white_75);
+	--note_color: var(--sc_white);
 	--note_border_left: 4px solid var(--sc_light_red);
 	--note_border_radius: 0;
 	--button_font: 1rem var(--font_0);
@@ -379,8 +380,7 @@ p {
 	transition: height 0.s, width 0.8s;
 } */
 
-._expander_sign {
-}
+._expander_sign {}
 
 ._expander_text {}
 
@@ -389,6 +389,7 @@ p {
 	font: var(--expander_font);
 	color: var(--expander_color);
 }
+
 ._expander * {
 	font: var(--expander_font) !important;
 	color: var(--expander_color) !important;
@@ -873,10 +874,12 @@ nav {
 	padding: var(--button_padding);
 	transition: all 0.3s ease-in-out;
 }
+
 .navigation p:hover {
 	background-color: var(--button_hover_bg_color);
 	color: var(--button_hover_text_color);
 }
+
 .nav_resun {
 	font: var(--nav_resun_font);
 	margin: 0.5rem auto 1.5rem auto;
