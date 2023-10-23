@@ -31,6 +31,8 @@
 	--sc_dark_blue_50: #20212480;
 	--sc_dark_blue_75: #202124bf;
 	--sc_light_red: #fc4445;
+	--sc_light_lavender: #4544fc;
+	--sc_light_blue: #45affc;
 
 
 	--selected_text_bg_color: var(--sc_white_25);
@@ -90,7 +92,7 @@
 	--text_font_size: 18px;
 	--text_font: var(--light_font_weight) var(--text_font_size) var(--font_0);
 	--link_font: var(--light_font_weight) var(--text_font_size) var(--font_0);
-	--link_color: #26afe6;
+	--link_color: var(--sc_light_blue);
 	--link_hover_color: var(--sc_light_red);
 	--main_width: 100%;
 	--title_font: var(--medium_font_weight) 4rem var(--font_0);
