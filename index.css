@@ -35,6 +35,10 @@
 	--sc_light_blue: #45affc;
 
 
+	--body_h_indent: 16px;
+	--body_v_indent: 16px;
+
+
 	--selected_text_bg_color: var(--sc_white_25);
 	--selected_text_color: var(--sc_white);
 
@@ -57,7 +61,7 @@
 	--heading_text_color: var(--sc_pure_white);
 
 	/* some_material */
-	--some_material_font: 700 3rem var(--font_0);
+	--some_material_font: 600 3rem var(--font_0);
 
 	/* main_content */
 	--main_content_section_heading_font: 500 1.3rem var(--font_0);
@@ -205,8 +209,11 @@
 	}
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1080px) {
 	:root {
+		--body_h_indent: 32px;
+		--body_v_indent: 32px;
+		
 		--nav_height: 100%;
 		--nav_width: 25%;
 		--main_width: 75%;
@@ -262,6 +269,11 @@
 body {
 	background-color: var(--body_bg_color);
 	margin: 0;
+}
+
+body.preload {
+	height: 100%;
+	overflow: hidden;
 }
 
 body * {
@@ -510,6 +522,10 @@ p {
 	color: #ffffff;
 }
 
+._gap_body_h_indent {
+	gap: var(--body_h_indent);
+}
+
 .underline_animator {
 	background: var(--underline_animator_bg);
 	width: 0;
@@ -546,122 +562,6 @@ p {
 
 .animated_small_card .small_card.active {
 	opacity: 1;
-}
-
-@media only screen and (max-width: 768px) {
-	.navigation p {
-		padding-left: 0;
-	}
-
-	.nav_large {
-		display: none !important;
-	}
-}
-
-@media only screen and (min-width: 768px) {
-	._input {
-		width: 25rem;
-	}
-
-	.greeting_text {
-		font-size: var(--greeting_text_font_size) !important;
-	}
-
-	.about_me {
-		font-size: var(--about_me_font_size) !important;
-	}
-
-
-	.main {
-		width: var(--main_width);
-		margin-left: auto;
-		margin-right: 0;
-		transition: width 0.3s;
-	}
-
-	.main.wide {
-		width: 100% !important;
-	}
-
-	nav {
-		overflow: hidden;
-		position: fixed !important;
-		top: 0;
-	}
-
-	.nav_large {
-		display: flex !important;
-		transform: scaleX(0);
-		transform-origin: left;
-		transition: transform 0.6s;
-		transition-timing-function: ease-in-out;
-	}
-
-	.nav_large.active {
-		transform: scaleX(1);
-		transform-origin: left;
-		transition: transform 0.6s;
-		transition-timing-function: ease-in-out;
-	}
-
-	.nav_small,
-	.nav_small.active {
-		display: none !important;
-	}
-
-	.self_image_small {
-		display: none;
-	}
-
-	.self_image {
-		overflow: hidden;
-	}
-
-	.social_links_small {
-		display: none !important;
-	}
-
-	.navigation {
-		display: block !important;
-		padding: 0.1rem 0rem !important;
-	}
-
-	.navigation p {
-		width: -webkit-fill-available !important;
-		margin: 0.5rem 1rem;
-	}
-
-	.social_link {
-		padding: var(--social_link_padding) !important;
-		margin: var(--social_link_margin) !important;
-	}
-
-	.main_content {
-		padding: 0 2rem !important;
-	}
-
-	.main_languages_desc_container {
-		display: flex;
-		flex-direction: row !important;
-	}
-
-	.main_languages_desc {
-		width: 40% !important;
-	}
-
-	.main_languages_desc_container .language_list {
-		width: 40% !important;
-	}
-
-	._expandable {}
-
-
-
-	.project_list,
-	.other_thing_list {
-		display: grid !important;
-		grid-template-columns: auto auto !important;
-	}
 }
 
 .typed-cursor {
@@ -817,31 +717,18 @@ nav {
 	transition: all 0.3s ease-in-out;
 }
 
-.self_image img {
-	width: 0;
-	height: 0;
-	transition: all 0.3s ease-in-out;
-}
-
-.self_image.active img {
+.self_image {
 	width: 100%;
-	height: 100%;
+	height: auto;
 	object-fit: contain;
+	overflow: hidden;
 }
 
-/* .self_image.active img.active {
-	animation-name: rotate_repeatedly;
-	animation-duration: 8s;
-	animation-iteration-count: infinite;
-} */
-
-.self_image,
 .self_image_small {
 	width: 100%;
 	overflow: hidden;
 }
 
-.self_image img,
 .self_image_small img {
 	height: 100%;
 	width: 100%;
@@ -892,16 +779,11 @@ nav {
 } */
 
 .main_content {
-	padding: 0 1rem;
-	height: 0;
+	padding: var(--body_v_indent) var(--body_h_indent);
 	width: -webkit-fill-available !important;
 	overflow: hidden;
 	transition: height 0.3s;
 	transition-timing-function: ease-in-out;
-}
-
-.main_content.active {
-	height: fit-content !important;
 }
 
 .main_content_section {
@@ -962,6 +844,11 @@ nav {
 	flex-direction: column;
 }
 
+.project_list_vertical_section,
+.other_thing_vertical_section {
+	width: 100%;
+}
+
 .social_link {
 	padding: 0.3rem;
 	margin: 0 0.3rem;
@@ -1014,4 +901,127 @@ nav {
 
 footer {
 	/* height: 5rem; */
+}
+
+@media only screen and (max-width: 768px) {
+	.navigation p {
+		padding-left: 0;
+	}
+
+	.nav_large {
+		display: none !important;
+	}
+}
+
+
+@media only screen and (min-width: 1080px) {
+	._input {
+		width: 25rem;
+	}
+
+	.greeting_text {
+		font-size: var(--greeting_text_font_size) !important;
+	}
+
+	.about_me {
+		font-size: var(--about_me_font_size) !important;
+	}
+
+
+	.main {
+		width: var(--main_width);
+		margin-left: auto;
+		margin-right: 0;
+		transition: width 0.3s;
+	}
+
+	.main.wide {
+		width: 100% !important;
+	}
+
+	nav {
+		overflow: hidden;
+		position: fixed !important;
+		top: 0;
+	}
+
+	.nav_large {
+		display: flex !important;
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: transform 0.6s;
+		transition-timing-function: ease-in-out;
+	}
+
+	.nav_large.active {
+		transform: scaleX(1);
+		transform-origin: left;
+		transition: transform 0.6s;
+		transition-timing-function: ease-in-out;
+	}
+
+	.nav_small,
+	.nav_small.active {
+		display: none !important;
+	}
+
+	.self_image_small {
+		display: none;
+	}
+
+	.self_image {
+		overflow: hidden;
+	}
+
+	.social_links_small {
+		display: none !important;
+	}
+
+	.navigation {
+		display: block !important;
+		padding: 0.1rem 0rem !important;
+	}
+
+	.navigation p {
+		width: -webkit-fill-available !important;
+	}
+
+	.social_link {
+		padding: var(--social_link_padding) !important;
+		margin: var(--social_link_margin) !important;
+	}
+
+	.main_content {
+		padding: 0 2rem !important;
+	}
+
+	.main_languages_desc_container {
+		display: flex;
+		flex-direction: row !important;
+	}
+
+	.main_languages_desc {
+		width: 40% !important;
+	}
+
+	.main_languages_desc_container .language_list {
+		width: 40% !important;
+	}
+
+	._expandable {}
+
+
+
+	.project_list,
+	.other_thing_list {
+		flex-direction: row;
+	}
+}
+
+@media only screen and (min-width: 1400px) {
+
+	.project_list_vertical_section,
+	.other_thing_vertical_section {
+		width: 50%;
+	}
 }

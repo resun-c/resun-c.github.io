@@ -46,21 +46,16 @@
 	</style>
 </head>
 
-<body class="_flex_column">
+<body class="preload">
 	<nav class="nav_large _flex_column _space_between_items_v" id="nav_large">
-		<div class="self_image" id="self_image">
-			<img src="dp_image.png" alt="dp_image" title="Give me some time to sleep!" />
-		</div>
+		<img class="self_image" id="self_image" src="dp_image.png" alt="dp_image" title="Give me some time to sleep!" />
 
 		<div class="navigation _fit_h _container">
 			<p class="_fit_w  _uppercase _no_select" onclick="goat_id('languages_i_have_dealt_with')">
 				Languages I have dealt with
 			</p>
 			<p class="_fit_w  _uppercase _no_select" onclick="goat_id('some_of_the_projects_i_have_worked_on')">
-				Projects I have worked on
-			</p>
-			<p class="_fit_w  _uppercase _no_select" onclick="goat_id('things_i_tried_to_build')">
-				Things I tried to build
+				Things I have worked on
 			</p>
 			<p class="_fit_w  _uppercase _no_select" onclick="goat_id('books_i_found_interesting')">
 				Books I Found Interesting
@@ -175,22 +170,15 @@
 				</p>
 				<p class="_uppercase _no_select"
 					onclick="small_goat('some_of_the_projects_i_have_worked_on', this.parentElement)">
-					Projects I have worked on
+					Things I have worked on
 				</p>
-				<p class="_uppercase _no_select"
-					onclick="small_goat('things_i_tried_to_build', this.parentElement)">
-					Things I tried to build
-				</p>
-				<p class="_uppercase _no_select"
-					onclick="small_goat('books_i_found_interesting', this.parentElement)">
+				<p class="_uppercase _no_select" onclick="small_goat('books_i_found_interesting', this.parentElement)">
 					Books I Found Interesting
 				</p>
-				<p class="_uppercase _no_select"
-					onclick="small_goat('interesting_other_things', this.parentElement)">
+				<p class="_uppercase _no_select" onclick="small_goat('interesting_other_things', this.parentElement)">
 					Interesting other things
 				</p>
-				<p class="_uppercase _no_select"
-					onclick="small_goat('links_ive_gathered', this.parentElement)">
+				<p class="_uppercase _no_select" onclick="small_goat('links_ive_gathered', this.parentElement)">
 					Links I've gathered
 				</p>
 			</div>
@@ -292,14 +280,15 @@
 							<p class="small_card">CSS</p>
 							<p class="small_card">JSON</p>
 							<p class="small_card">Django</p>
-							<p class="small_card">Django Inner Modules (Improvement & Development)</p>
+							<p class="small_card">Django Internals</p>
 							<p class="small_card">GCP (overall)</p>
 							<p class="small_card">GCP Places API</p>
 							<p class="small_card">OAuth</p>
 							<p class="small_card">Auth0 (overall)</p>
 							<p class="small_card">Unity</p>
 							<p class="small_card">C#</p>
-							<p class="small_card">node.js</p>
+							<p class="small_card">Node.js</p>
+							<p class="small_card">THREE.js</p>
 							<p class="small_card">Tkinter</p>
 							<p class="small_card">PyOt5</p>
 							<p class="small_card">BeautifulSoup</p>
@@ -308,8 +297,6 @@
 							<p class="small_card">Git</p>
 							<p class="small_card">REST</p>
 							<p class="small_card">APIs</p>
-							<p class="small_card">SEO</p>
-							</ul>
 						</div>
 					</div>
 				</div>
@@ -319,103 +306,117 @@
 			<div class="some_of_the_projects_i_have_worked_on main_content_section _full_w"
 				id="some_of_the_projects_i_have_worked_on">
 				<p class="main_content_section_heading _heading _uppercase">
-					Projects I have worked on
+					Things I have worked on
 				</p>
 
 				<div class="_sub">
 					<p class="_justified_text">
-						I have worked on different projects along with my friends. Most of them are in C and Python with
-						Django. They are organized chronologically.
+						I have worked on different projects along with my friends. Here are some of them
+						organized chronologically.
 					</p>
 
-					<div class="project_list _sub _gap_2_5r _margin_v_2_5r">
-						<div class="_expandable _with_header_image _fill_w _fit_h">
-							<p
-								class="_expander _full_w _no_margin _center_h _center_items _space_between_items_h _cursor_pointer _no_select">
-								<span class="_expander_text">
-									renderwork.studio
-								</span>
-								<svg class="_icon _expander_sign _rotatable" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
-									<path
-										d="M480-358.463 253.847-584.615 296-626.768l184 184 184-184 42.153 42.153L480-358.463Z" />
-								</svg>
-							</p>
-							<div class="_expandable_header _fill_w _flex_column _center_items_h">
-								<img class="_expansion_image _center_h" src="/pictures/renderwork.studio.png">
-							</div>
-							<div class="_expandable_body">
-								<div class="_expansion">
-									<p class="_justified_text">
-										I made this website for a German-based creative agency, Renderwork in late 2023. It is
-										written in HTML, CSS and Vanilla JavaScript and the 3d objects in THREE.js.
-									</p>
-									<p>
-										<a class="_link" href="https://renderwork.studio/" target="_blank">
-											renderwork.studio
-										</a>
-									</p>
+					<div class="project_list _sub _gap_body_h_indent _margin_v_2_5r">
+						<div class="project_list_vertical_section _flex_column _gap_body_h_indent">
+							<div class="_expandable _with_header_image _fit_h">
+								<p
+									class="_expander _full_w _no_margin _center_h _center_items _space_between_items_h _cursor_pointer _no_select">
+									<span class="_expander_text">
+										renderwork.studio
+									</span>
+									<svg class="_icon _expander_sign _rotatable" xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 -960 960 960">
+										<path
+											d="M480-358.463 253.847-584.615 296-626.768l184 184 184-184 42.153 42.153L480-358.463Z" />
+									</svg>
+								</p>
+								<div class="_expandable_header _fill_w _flex_column _center_items_h">
+									<img class="_expansion_image _center_h" src="/pictures/renderwork.studio.png">
+								</div>
+								<div class="_expandable_body">
+									<div class="_expansion">
+										<p class="_justified_text">
+											I made this website for a German-based creative agency, Renderwork in late
+											2023. It is
+											written in HTML, CSS and Vanilla JavaScript and the 3d objects in THREE.js.
+										</p>
+										<p>
+											<a class="_link" href="https://renderwork.studio/" target="_blank">
+												renderwork.studio
+											</a>
+										</p>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="_expandable _with_header_image _fill_w _fit_h">
-							<p
-								class="_expander _full_w _no_margin _center_h _center_items _space_between_items_h _cursor_pointer _no_select">
-								<span class="_expander_text">
-									PC Price Tracker
-								</span>
-								<svg class="_icon _expander_sign _rotatable" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
-									<path
-										d="M480-358.463 253.847-584.615 296-626.768l184 184 184-184 42.153 42.153L480-358.463Z" />
-								</svg>
-							</p>
-							<div class="_expandable_header _fill_w _flex_column _center_items_h">
-								<img class="_expansion_image _center_h" src="/pictures/pcpricetracker.png">
-							</div>
-							<div class="_expandable_body">
-								<div class="_expansion">
-									<p class="_justified_text">
-										This program tracks the prices of PC parts as time goes on so that people can
-										see the changes over time and make their buying and selling decisions. The
-										program that tracks
-										the price periodically is written in Python using BeautifulSoup. The front-end
-										code is in
-										plain JavaScript and is hosted in Firebase Hosting.
-									</p>
-									<p>
-										<a class="_link" href="http://pcpricetracker.site/" target="_blank">
-											Link
-										</a>
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="_expandable _fill_w _fit_h">
-							<p
-								class="_expander _full_w _no_margin _center_h _center_items _space_between_items_h _cursor_pointer _no_select">
-								<span class="_expander_text">
-									A CMS
-								</span>
-								<svg class="_icon _expander_sign _rotatable" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
-									<path
-										d="M480-358.463 253.847-584.615 296-626.768l184 184 184-184 42.153 42.153L480-358.463Z" />
-								</svg>
-							</p>
-							<div class="_expandable_body">
+							<div class="_expandable _fit_h">
+								<p
+									class="_expander _full_w _no_margin _center_h _center_items _space_between_items_h _cursor_pointer _no_select">
+									<span class="_expander_text">
+										A CMS
+									</span>
+									<svg class="_icon _expander_sign _rotatable" xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 -960 960 960">
+										<path
+											d="M480-358.463 253.847-584.615 296-626.768l184 184 184-184 42.153 42.153L480-358.463Z" />
+									</svg>
+								</p>
+								<div class="_expandable_body">
 
-								<div class="_expansion">
-									<p class="_justified_text">
-										I made this to manage my website. In mid-2020, I was learning Django, and it
-										seemed very easy to make a <b>C</b>ontent <b>M</b>anagement <b>S</b>ystem with
-										Django. So I started designing one, but after successfully making the plan and
-										writing some code, I moved on to another work, and in 2021 I started working on
-										it again and completed this CMS in mid-2021. It is currently hosted on Heroku
-										free server but not managing any website.
-									</p>
-									<p>
-										<a class="_link" href="http://pcpricetracker.site/" target="_blank">
-											Link
-										</a>
-									</p>
+									<div class="_expansion">
+										<p class="_justified_text">
+											I made this to manage my website. In mid-2020, I was learning Django, and it
+											seemed very easy to make a <b>C</b>ontent <b>M</b>anagement <b>S</b>ystem
+											with
+											Django. So I started designing one, but after successfully making the plan
+											and
+											writing some code, I moved on to another work, and in 2021 I started working
+											on
+											it again and completed this CMS in mid-2021. It is currently hosted on
+											Heroku
+											free server but not managing any website.
+										</p>
+										<p>
+											<a class="_link" href="http://pcpricetracker.site/" target="_blank">
+												Link
+											</a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="project_list_vertical_section _flex_column _gap_body_h_indent">
+							<div class="_expandable _with_header_image _fit_h">
+								<p
+									class="_expander _full_w _no_margin _center_h _center_items _space_between_items_h _cursor_pointer _no_select">
+									<span class="_expander_text">
+										PC Price Tracker
+									</span>
+									<svg class="_icon _expander_sign _rotatable" xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 -960 960 960">
+										<path
+											d="M480-358.463 253.847-584.615 296-626.768l184 184 184-184 42.153 42.153L480-358.463Z" />
+									</svg>
+								</p>
+								<div class="_expandable_header _fill_w _flex_column _center_items_h">
+									<img class="_expansion_image _center_h" src="/pictures/pcpricetracker.png">
+								</div>
+								<div class="_expandable_body">
+									<div class="_expansion">
+										<p class="_justified_text">
+											This program tracks the prices of PC parts as time goes on so that people
+											can
+											see the changes over time and make their buying and selling decisions. The
+											program that tracks
+											the price periodically is written in Python using BeautifulSoup. The
+											front-end
+											code is in
+											plain JavaScript and is hosted in Firebase Hosting.
+										</p>
+										<p>
+											<a class="_link" href="http://pcpricetracker.site/" target="_blank">
+												Link
+											</a>
+										</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -442,7 +443,8 @@
 								<span class="_expander_text">
 									The C Programming Language - k & r
 								</span>
-								<svg class="_icon _expander_sign _rotatable" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+								<svg class="_icon _expander_sign _rotatable" xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 -960 960 960">
 									<path
 										d="M480-358.463 253.847-584.615 296-626.768l184 184 184-184 42.153 42.153L480-358.463Z" />
 								</svg>
@@ -472,7 +474,8 @@
 								<span class="_expander_text">
 									The Unix Programming Environment - bwk & rob
 								</span>
-								<svg class="_icon _expander_sign _rotatable" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+								<svg class="_icon _expander_sign _rotatable" xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 -960 960 960">
 									<path
 										d="M480-358.463 253.847-584.615 296-626.768l184 184 184-184 42.153 42.153L480-358.463Z" />
 								</svg>
@@ -499,7 +502,8 @@
 								<span class="_expander_text">
 									The Art of Assembly Language - Randall Hyde
 								</span>
-								<svg class="_icon _expander_sign _rotatable" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+								<svg class="_icon _expander_sign _rotatable" xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 -960 960 960">
 									<path
 										d="M480-358.463 253.847-584.615 296-626.768l184 184 184-184 42.153 42.153L480-358.463Z" />
 								</svg>
@@ -540,146 +544,136 @@
 
 				<div class="_sub">
 					<p class="_justified_text">
-						I have done some other things that are not parts of any projects but maybe they are the
+						I have worked on some other things that are not parts of any projects but maybe they are the
 						best source of experience. The majority of them are written to C along with
 						some in Python. They are organized randomly and linked to the respective GitHub repository.
 					</p>
 
-					<div class="other_thing_list _sub _fill_w _margin_v_2_5r _gap_2_5r">
-						<div class="_expandable _fill_w _fit_h">
-							<p
-								class="_expander _full_w _no_margin _center_h _center_items _space_between_items_h _cursor_pointer _no_select">
-								<span class="_expander_text">
-									dump.c
-								</span>
-								<svg class="_icon _expander_sign _rotatable" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
-									<path
-										d="M480-358.463 253.847-584.615 296-626.768l184 184 184-184 42.153 42.153L480-358.463Z" />
-								</svg>
-							</p>
-							<div class="_expandable_body">
-								<div class="_expansion">
-									<p class="_justified_text">
-										This is a converter of different numeral systems. I started the program with
-										dozens
-										of functions
-										working separately to perform the conversion. Then
-										<a title="GitHub Profile" class="_link"
-											href="https://github.com/unixwizard107">Clem
-											Cole</a> guided me to improve
-										the code. I ended up writing a short program with fewer functions. The program
-										is
-										now
-										working more smartly.
-									</p>
+					<div class="other_thing_list _sub _fill_w _margin_v_2_5r _gap_body_h_indent">
+						<div class="other_thing_vertical_section _flex_column _gap_body_h_indent">
+							<div class="_expandable _fill_w _fit_h">
+								<p
+									class="_expander _full_w _no_margin _center_h _center_items _space_between_items_h _cursor_pointer _no_select">
+									<span class="_expander_text">
+										dump.c
+									</span>
+									<svg class="_icon _expander_sign _rotatable" xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 -960 960 960">
+										<path
+											d="M480-358.463 253.847-584.615 296-626.768l184 184 184-184 42.153 42.153L480-358.463Z" />
+									</svg>
+								</p>
+								<div class="_expandable_body">
+									<div class="_expansion">
+										<p class="_justified_text">
+											This is a converter of different numeral systems. I started the program with
+											dozens
+											of functions
+											working separately to perform the conversion. Then
+											<a title="GitHub Profile" class="_link"
+												href="https://github.com/unixwizard107">Clem
+												Cole</a> guided me to improve
+											the code. I ended up writing a short program with fewer functions. The
+											program
+											is
+											now
+											working more smartly.
+										</p>
 
-									<p>A more detailed description is in the README.md file of the GitHub repository</p>
+										<p>A more detailed description is in the README.md file of the GitHub repository
+										</p>
 
-									<p>
-										<a class="_link" href="https://github.com/resun-c/dump.c" target="_blank">
-											GitHub / resun-c / dump.c
-										</a>
-									</p>
+										<p>
+											<a class="_link" href="https://github.com/resun-c/dump.c" target="_blank">
+												GitHub / resun-c / dump.c
+											</a>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="_expandable _fill_w _fit_h">
+								<p
+									class="_expander _full_w _no_margin _center_h _center_items _space_between_items_h _cursor_pointer _no_select">
+									<span class="_expander_text">
+										Django Firestore Session Engine
+									</span>
+									<svg class="_icon _expander_sign _rotatable" xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 -960 960 960">
+										<path
+											d="M480-358.463 253.847-584.615 296-626.768l184 184 184-184 42.153 42.153L480-358.463Z" />
+									</svg>
+								</p>
+								<div class="_expandable_body">
+									<div class="_expansion">
+										<p class="_justified_text">
+											This is a simple Django Session Engine that uses Firestore as the database
+											to
+											store session data. This can be useful if you can't use Django's Database
+											Engines
+											or other Session Engines. Google Cloud App Engine, for example, requires you
+											to
+											use
+											Cloud SQL to use Database, which is costly. On the other hand, Cloud
+											Firestore
+											is
+											free up to a limit, and it is not as expensive as Cloud SQL on paid plans.
+											So if
+											you
+											use App Engine and need a cost-effective solution for session cookies, this
+											can
+											be
+											useful.
+										</p>
+										<p>
+											<a class="_link"
+												href="https://github.com/resun-c/Django-Firestore-Session-Engine"
+												target="_blank">
+												GitHub / resun-c / Django-Firestore-Session-Engine
+											</a>
+										</p>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="_expandable _fill_w _fit_h">
-							<p
-								class="_expander _full_w _no_margin _center_h _center_items _space_between_items_h _cursor_pointer _no_select">
-								<span class="_expander_text">
-									Evan's Studi.py
-								</span>
-								<svg class="_icon _expander_sign _rotatable" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
-									<path
-										d="M480-358.463 253.847-584.615 296-626.768l184 184 184-184 42.153 42.153L480-358.463Z" />
-								</svg>
-							</p>
-							<div class="_expandable_body">
-								<div class="_expansion">
-									<p class="_justified_text">
-										Evan wrote this program to count the study time. It was a fun project and it
-										taught him a lot. It is kind of like a Pomodoro clock. I am not sure if he has
-										used this or not, but it helped me before my high school finals.
-									</p>
-									<p>
-										<a class="_link" href="https://github.com/iaevan/Studi" target="_blank">
-											GitHub / iaevan / Studi
-										</a>
-									</p>
+						<div class="other_thing_vertical_section _flex_column _gap_body_h_indent">
+							<div class="_expandable _with_header_image _fill_w _fit_h">
+								<p
+									class="_expander _full_w _no_margin _center_h _center_items _space_between_items_h _cursor_pointer _no_select">
+									<span class="_expander_text">
+										Colourful Cat
+									</span>
+									<svg class="_icon _expander_sign _rotatable" xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 -960 960 960">
+										<path
+											d="M480-358.463 253.847-584.615 296-626.768l184 184 184-184 42.153 42.153L480-358.463Z" />
+									</svg>
+								</p>
+								<div class="_expandable_header _fill_w _flex_column _center_items_h">
+									<img class="_expansion_image _center_h" src="/pictures/colourful_cat.png">
 								</div>
-							</div>
-						</div>
-						<div class="_expandable _fill_w _fit_h">
-							<p
-								class="_expander _full_w _no_margin _center_h _center_items _space_between_items_h _cursor_pointer _no_select">
-								<span class="_expander_text">
-									Django Firestore Session Engine
-								</span>
-								<svg class="_icon _expander_sign _rotatable" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
-									<path
-										d="M480-358.463 253.847-584.615 296-626.768l184 184 184-184 42.153 42.153L480-358.463Z" />
-								</svg>
-							</p>
-							<div class="_expandable_body">
-								<div class="_expansion">
-									<p class="_justified_text">
-										This is a simple Django Session Engine that uses Firestore as the database to
-										store session data. This can be useful if you can't use Django's Database
-										Engines
-										or other Session Engines. Google Cloud App Engine, for example, requires you to
-										use
-										Cloud SQL to use Database, which is costly. On the other hand, Cloud Firestore
-										is
-										free up to a limit, and it is not as expensive as Cloud SQL on paid plans. So if
-										you
-										use App Engine and need a cost-effective solution for session cookies, this can
-										be
-										useful.
-									</p>
-									<p>
-										<a class="_link"
-											href="https://github.com/resun-c/Django-Firestore-Session-Engine"
-											target="_blank">
-											GitHub / resun-c / Django-Firestore-Session-Engine
-										</a>
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="_expandable _with_header_image _fill_w _fit_h">
-							<p
-								class="_expander _full_w _no_margin _center_h _center_items _space_between_items_h _cursor_pointer _no_select">
-								<span class="_expander_text">
-									Colourful Cat
-								</span>
-								<svg class="_icon _expander_sign _rotatable" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
-									<path
-										d="M480-358.463 253.847-584.615 296-626.768l184 184 184-184 42.153 42.153L480-358.463Z" />
-								</svg>
-							</p>
-							<div class="_expandable_header _fill_w _flex_column _center_items_h">
-								<img class="_expansion_image _center_h" src="/pictures/colourful_cat.png">
-							</div>
-							<div class="_expandable_body">
-								<div class="_expansion">
-									<p class="_justified_text">
-										I love to cat files in the terminal rather than opening them with a text editor
-										(ed is a different case). But it seems daunting to find something from a large
-										source file when printed in the default colour. So I wrote a cat that prints C
-										and Python files colourfully!
-									</p>
-									<p>
-										<a class="_link" href="https://github.com/resun-c/colourful-cat"
-											target="_blank">
-											GitHub / resun-c / colourful-cat
-										</a>
-									</p>
+								<div class="_expandable_body">
+									<div class="_expansion">
+										<p class="_justified_text">
+											I love to cat files in the terminal rather than opening them with a text
+											editor
+											(ed is a different case). But it seems daunting to find something from a
+											large
+											source file when printed in the default colour. So I wrote a cat that prints
+											C
+											and Python files colourfully!
+										</p>
+										<p>
+											<a class="_link" href="https://github.com/resun-c/colourful-cat"
+												target="_blank">
+												GitHub / resun-c / colourful-cat
+											</a>
+										</p>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-
 			</div>
 
 			<div class="links_ive_gathered main_content_section _full_w" id="links_ive_gathered">
@@ -761,17 +755,16 @@
 			document.getElementById("social_links").classList.add("active");
 			document.getElementById("social_links_small").classList.add("active");
 
-			let main_content = document.getElementById("main_content");
-			let self_image = document.getElementById("self_image");
+			// let self_image = document.getElementById("self_image");
 			let point_down_anim_container = document.getElementById("point_down_anim_container");
 
-			self_image.classList.add("active");
+			// self_image.classList.add("active");
 			// await sleep(500);				
-			self_image.querySelector("img").classList.add("active");
+			// self_image.querySelector("img").classList.add("active");
 
 			// await sleep(600);
 			//continuously_fit_height(main_content);
-			main_content.classList.add("active");
+			document.body.classList.remove("preload");
 
 			point_down_anim_container.querySelectorAll(".point_down").forEach(async point_down => {
 				point_down.classList.add("active");
