@@ -1,6 +1,7 @@
 // document.onmouseup = change_selected_text_color;
 // document.onkeyup = change_selected_text_color;
 const root = document.querySelector(':root');
+const root_computed_style = getComputedStyle(root);
 const selected_text_colors = [
 	"#4dff4d",	// green
 	"#ffeb3b",	// yellow
@@ -18,6 +19,11 @@ function change_selected_text_color() {
 		i = Math.floor(Math.random() * (selected_text_colors_len));
 	}
 	root.style.setProperty("--selected_text_color", selected_text_colors[i]);
+}
+
+
+function get_css_prop(var_name) {
+	root_computed_style.getPropertyValue(var_name);
 }
 
 function goat(tag) {
