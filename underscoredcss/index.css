@@ -1,0 +1,10 @@
+@import "container.css";
+
+@import "container_items.css"; 
+
+@import "text.css";
+
+
+* {
+	box-sizing: border-box;
+}

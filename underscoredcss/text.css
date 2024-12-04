@@ -1,0 +1,60 @@
+._cursor_pointer {
+	/* set cursor to pointer */
+	cursor: pointer;
+}
+
+._no_select {
+	-webkit-touch-callout: none;
+	/* iOS Safari */
+	-webkit-user-select: none;
+	/* Safari */
+	-khtml-user-select: none;
+	/* Konqueror HTML */
+	-moz-user-select: none;
+	/* Firefox */
+	-ms-user-select: none;
+	/* Internet Explorer/Edge */
+	user-select: none;
+	/* Non-prefixed version, currently
+					supported by Chrome and Opera */
+}
+
+._uppercase {
+	text-transform: uppercase;
+}
+
+._lowercase {
+	text-transform: lowercase;
+}
+
+._capitalized {
+	text-transform: capitalize;
+}
+
+._italic {
+	font-style: italic;
+}
+
+._centered_text {
+	text-align: center;
+}
+
+._left_text {
+	text-align: left;
+}
+
+._right_text {
+	text-align: right;
+}
+
+._justified_text {
+	text-align: justify;
+}
+
+._break_word {
+	word-break: break-word;
+}
+
+._no_break_word {
+	word-break: keep-all;
+}

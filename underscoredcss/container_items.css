@@ -1,0 +1,280 @@
+._block {
+	display: block;
+}
+
+._flex {
+	display: flex;
+}
+
+._inline_block {
+	display: inline-block;
+}
+
+._inline_flex_column {
+	display: inline-flex;
+	flex-direction: column;
+}
+
+._inline_flex_row {
+	display: inline-flex;
+	flex-direction: row;
+}
+
+._force_flex {
+	display: flex!important;
+}
+
+/* ITEMS OF CONTAINER */
+
+
+/* MAIN AXIS */
+._flex_row {
+	/* organize elements in row */
+	display: flex;
+	flex-direction: row;
+}
+
+._flex_row_wrap {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+._top_items:not(._flex_column):not(._flex_column_wrap) {
+	/* top align all the elements horizontally */
+	align-items: flex-start;
+}
+
+._center_items_v:not(._flex_column):not(._flex_column_wrap) {
+	/* center all the elements vertically */
+	align-items: center;
+}
+
+._bottom_items:not(._flex_column):not(._flex_column_wrap) {
+	/* bottom align all the elements horizontally */
+	align-items: flex-end;
+}
+
+._left_items:not(._flex_column):not(._flex_column_wrap) {
+	/* left align all the elements horizontally */
+	justify-content: flex-start;
+}
+
+._center_items_h:not(._flex_column):not(._flex_column_wrap) {
+	/* center all the elements horizontally */
+	justify-content: center;
+}
+
+._right_items:not(._flex_column):not(._flex_column_wrap) {
+	/* right align all the elements horizontally */
+	justify-content: flex-end;
+}
+
+._space_between_items_h:not(._flex_column):not(._flex_column_wrap) {
+	/* align items with space between thems */
+	justify-content: space-between;
+}
+
+._space_around_items_h:not(._flex_column):not(._flex_column_wrap) {
+	/* align items with space around thems */
+	justify-content: space-around;
+}
+
+._space_evenly_items_h:not(._flex_column):not(._flex_column_wrap) {
+	/* align items with space evenly */
+	justify-content: space-evenly;
+}
+
+._stretch_items_h:not(._flex_column):not(._flex_column_wrap) {
+	justify-items: stretch;
+}
+
+._space_between_items_v:not(._flex_column):not(._flex_column_wrap) {
+	/* align items with space between thems */
+	align-items: space-between;
+}
+
+._space_around_items_v:not(._flex_column):not(._flex_column_wrap) {
+	/* align items with space around thems */
+	align-items: space-around;
+}
+
+._space_evenly_items_v:not(._flex_column):not(._flex_column_wrap) {
+	/* align items with space evenly */
+	align-items: space-evenly;
+}
+
+._stretch_items_v:not(._flex_column):not(._flex_column_wrap) {
+	align-items: stretch;
+}
+
+
+
+/* CROSS AXIS */
+._flex_column {
+	/* organize elements in column */
+	display: flex;
+	flex-direction: column;
+}
+
+._flex_column_wrap {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+._flex_column._top_items,
+._flex_column_wrap._top_items {
+	/* top align all the elements horizontally */
+	justify-content: flex-start;
+}
+
+._flex_column._center_items_v,
+._flex_column_wrap._center_items_v {
+	/* center all the elements vertically */
+	justify-content: center;
+}
+
+._flex_column._bottom_items,
+._flex_column_wrap._bottom_items {
+	/* bottom align all the elements horizontally */
+	justify-content: flex-end;
+}
+
+._flex_column._left_items,
+._flex_column_wrap._left_items {
+	/* left align all the elements horizontally */
+	align-items: flex-start;
+}
+
+._flex_column._center_items_h,
+._flex_column_wrap._center_items_h {
+	/* center all the elements horizontally */
+	align-items: center;
+}
+
+._flex_column._right_items,
+._flex_column_wrap._right_items {
+	/* right align all the elements horizontally */
+	align-items: flex-end;
+}
+
+._flex_column._space_between_items_h,
+._flex_column_wrap._space_between_items_h {
+	/* align items with space between thems */
+	align-items: space-between;
+}
+
+._flex_column._space_around_items_h,
+._flex_column_wrap._space_around_items_h {
+	/* align items with space around thems */
+	align-items: space-around;
+}
+
+._flex_column._space_evenly_items_h,
+._flex_column_wrap._space_evenly_items_h {
+	/* align items with space evenly */
+	align-items: space-evenly;
+}
+
+._flex_column._stretch_items_h,
+._flex_column_wrap._stretch_items_h {
+	align-items: stretch;
+}
+
+._flex_column._space_between_items_v,
+._flex_column_wrap._space_between_items_v {
+	/* align items with space between thems */
+	justify-content: space-between;
+}
+
+._flex_column._space_around_items_v,
+._flex_column_wrap._space_around_items_v {
+	/* align items with space around thems */
+	justify-content: space-around;
+}
+
+._flex_column._space_evenly_items_v,
+._flex_column_wrap._space_evenly_items_v {
+	/* align items with space evenly */
+	justify-content: space-evenly;
+}
+
+._flex_column._stretch_items_v,
+._flex_column_wrap._stretch_items_v {
+	justify-items: stretch;
+}
+
+._flex_column._baseline_items {
+	align-items: baseline;
+}
+
+
+
+._flex_row_nowrap {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+
+
+/* BOTH AXIS */
+._center_items {
+	/* center items */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+._space_between_items {
+	/* align items with space between thems */
+	display: flex;
+	justify-content: space-between;
+	align-items: space-between;
+}
+
+._space_around_items {
+	/* align items with space around thems */
+	justify-content: space-around;
+	align-items: space-around;
+}
+
+._space_evenly_items {
+	/* align items with space evenly */
+	justify-content: space-evenly;
+	align-items: space-evenly;
+}
+
+._stretch_items {
+	/* stretch items */
+	justify-content: stretch;
+	align-items: stretch;
+}
+
+
+
+/* gap between items 1 - 2 */
+
+._gap_1r {
+	gap: 1rem;
+}
+
+._gap_2r {
+	gap: 2rem;
+}
+
+._gap_1r_h {
+	row-gap: 1rem;
+}
+
+._gap_2r_h {
+	row-gap: 2rem;
+}
+._gap_1r_v {
+	column-gap: 1rem;
+}
+
+._gap_2r_v {
+	column-gap: 2rem;
+}

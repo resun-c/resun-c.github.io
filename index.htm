@@ -1,0 +1,827 @@
+<html>
+
+<head>
+	<title>_resun</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="keywords" content="_resun, resun, r3sun, _r3sun, saif, saif resun, underscore resun">
+	<meta content="https://resun-c.github.io/favicon/dp_image.png" property="og:image" />
+	<meta content="I am Saif. I am an Optimist, and I love UNIX and C." property="og:description" />
+	<meta content="https://resun-c.github.io/" property="og:url" />
+	<meta content="_resun" property="og:title" />
+
+	<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon_96x96.png">
+	<link rel="icon" type="image/x-icon" sizes="96x96" href="favicon/favicon_96x96.ico">
+	<link rel="apple-touch-icon" type="image/png" sizes="167x167" href="favicon/favicon_167x167.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="favicon/favicon_180x180.png">
+	
+	<link rel="stylesheet" href="underscoredcss/index.css">
+	<script src="irr_element/IrrElement.js"></script>
+	<script src="pre-load.js"></script>
+	
+	<script>
+		ROOT.style.setProperty("--window_h", `${window.innerHeight}px`);
+	</script>
+	
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+		
+		:root {
+			color: #202124;
+			font-family: "IBM Plex Sans";
+			
+			--colour: #202124;
+			
+			--point_down_svg_color: #fc4444;
+			
+			--hello_world_fs: 36px;
+			--hello_world_fs_d: 128px;
+			
+			--picture_br: 24px 24px 0px 0px;
+			--picture_br_d: 0px 32px 32px 0px;
+			
+			--about_me_fs: 20px;
+			--about_me_fs_d: 32px;
+			
+			--column_container_pad: 24px;
+			--column_container_gap: 24px;
+			
+			--column_container_pad_d: 64px;
+			--column_container_gap_d: 64px;
+			
+			--content_pad: 24px 0px;
+			--content_pad_d: 64px 0px;
+			
+			--content_gap: 24px;
+			--content_gap_d: 32px;
+			
+			--r_card_br: 24px;
+			--r_card_br_d: 32px;
+			
+			--r_card_description_container_pad: 0px 24px 24px 24px;
+			--r_card_description_container_pad_d: 0px 32px 32px 32px;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+		
+		b {
+			font-weight: 500;
+		}
+		
+		body {
+			padding: 0;
+			margin: 0;
+			background-color: #f8f8f8;
+		}
+
+		header {
+			height: var(--window_h);
+		}
+		
+		.point_down_anim_container {
+			height: 0 !important;
+			overflow: visible;
+		}
+
+		.point_down {
+			position: relative;
+			opacity: 0;
+			transition: margin 1200ms, opacity 0.2s;
+		}
+		
+		.point_down.active {
+			opacity: 1;
+		}
+		
+		
+		.point_down._bar_arrow {
+			margin-top: 0;
+		}
+		
+		.point_down._bar_arrow.active {
+			margin-top: 2rem;
+		}
+		
+		.point_down._arrow_1 {
+			margin-top: 0;
+		}
+		
+		.point_down._arrow_1.active {
+			margin-top: 15vh;
+		}
+		
+		.point_down._arrow_2 {
+			margin-top: -6rem;
+		}
+		
+		.point_down._arrow_2.active {
+			margin-top: -3rem;
+		}
+		
+		.point_down svg {
+			fill: var(--point_down_svg_color);
+		}
+
+		.hello_world_container {
+			padding: var(--column_container_pad);
+			gap: var(--column_container_gap);
+		}
+
+		.hello_world {
+			font-family: "Courier Prime";
+			font-size: var(--hello_world_fs);
+			font-weight: 700;
+		}
+		
+		.typed-cursor {
+			opacity: 1;
+		}
+		
+		.typed-cursor.typed-cursor--blink {
+			animation: typed_cursor_blink 0.8s infinite;
+			-webkit-animation: typed_cursor_blink 0.8s infinite;
+		}
+		
+		@keyframes typed_cursor_blink {
+			50% {
+				opacity: 0.0;
+			}
+		}
+		
+		@-webkit-keyframes typed_cursor_blink {
+			50% {
+				opacity: 0.0;
+			}
+		}
+
+		.about_me {
+			font-family: "Courier Prime";
+			font-size: var(--about_me_fs);
+			font-style: italic;
+			font-weight: 400;
+			translate: 0 150%;
+			opacity: 0;
+			transition: all 1200ms;
+		}
+		
+		.about_me.active {
+			translate: 0 0;
+			opacity: 1;
+		}
+
+		.who {
+			flex-direction: column;
+			gap: var(--column_container_gap);
+		}
+		
+		.picture {
+			border-radius: var(--picture_br);
+			width: 100%;
+			overflow: hidden;
+			box-shadow: 0px 0px 32px 1px rgba(32, 33, 36, 0.10);
+			translate: -120% 0;
+			filter: blur(8px);
+			transition: all 1000ms ease;
+		}
+		
+		.who.active .picture {
+			translate: 0 0;
+			filter: blur(0);
+		}
+
+		.me {
+			height: 562.398px;
+			background: url(<path-to-image>) lightgray 0px -33.137px / 100% 127.784% no-repeat;
+			object-fit: cover;
+		}
+
+		.content {
+			padding: var(--content_pad);
+			gap: var(--content_gap);
+		}
+		
+		.who_content {
+			padding-right: var(--column_container_pad);
+			padding-left: var(--column_container_pad);
+		}
+
+		.heading {
+			font-family: "Courier Prime";
+			font-size: 36px;
+			font-weight: 700;
+		}
+		
+		.content.active .heading_word {
+			transform: translateY(0);
+			opacity: 1;
+			/* filter: blur(0); */
+		}
+		
+		.heading_word {
+			display: inline-block;
+			transform: translateY(calc(125% + (var(--wc) * 10%)));
+			transition: all 1s ease;
+			transition-delay: calc(var(--wc) * 100ms);
+			opacity: 0;
+			/* filter: blur(8px); */
+		}
+		
+		
+		.content.active .description {
+			transform: translateY(0);
+			opacity: 1;
+		}
+
+		.description {
+			font-size: 20px;
+			font-weight: 300;
+			transform: translateY(calc(125% + (var(--pc) * 10%)));
+			transition: all 1s ease;
+			transition-delay: calc(400ms + (var(--pc) * 50ms));
+			opacity: 0;
+		}
+		
+		.work,
+		.more,
+		.books {
+			padding: var(--column_container_pad);
+			gap: var(--column_container_gap);
+		}
+		
+		.r_column {
+			width: 100%;
+			gap: 32px;
+		}
+
+		.r_card {
+			border-radius: var(--r_card_br);
+			background: #FFF;
+			box-shadow: 0px 0px 32px 1px rgba(32, 33, 36, 0.10);
+			background-color: #ffffff;
+			overflow: hidden;
+			translate: 0 20%;
+			opacity: 0;
+			transition: all 1000ms ease;
+		}
+		
+		.r_card.active {
+			translate: 0 0;
+			opacity: 1;
+		}
+
+		.r_card_image_container img {
+			object-fit: contain;
+		}
+
+		.renderwork_studio_img {
+			background: url(<path-to-image>) lightgray 0px -444.711px / 100% 269.829% no-repeat;
+		}
+
+		.r_card_title_container {
+			padding: 32px;
+			background: #FFF;
+			background-color: #ffffff;
+		}
+
+		.r_card_title {
+			font-size: 24px;
+			font-weight: 500;
+		}
+
+		.r_card_description_container {
+			padding: var(--r_card_description_container_pad);
+		}
+
+		.r_card_description {
+			font-size: 20px;
+			font-weight: 300;
+		}
+		
+		.work,
+		.books {
+			flex-direction: column;
+		}
+		
+		.more {
+			flex-direction: column-reverse;
+		}
+
+		.books_column_content_container {
+			gap: 64px;
+		}
+		
+		.books_column_2 {
+			
+		}
+
+		.socials_content {
+		}
+
+		.social_links {
+			gap: 32px;
+		}
+		
+		.social_link {
+			text-decoration: none;
+			color: var(--colour);
+			translate: calc(100% + (var(--count) * 7%)) 0;
+			opacity: 0;
+			transition: all 1s ease;
+			transition-delay: calc(var(--count) * 50ms);
+		}
+		
+		.socials_content.active .social_link {
+			translate: 0 0;
+			opacity: 1;
+		}
+		
+		@media only screen and (min-width: 1024px) {
+			.r_column {
+				width: calc(50% - (var(--column_container_gap_d) / 2));
+				gap: var(--column_container_gap_d);
+			}
+			
+			.r_card {
+				border-radius: var(--r_card_br_d);
+			}
+			
+			.r_card_description_container {
+				padding: var(--r_card_description_container_pad_d);
+			}
+			
+			.content {
+				padding: var(--content_pad_d);
+				gap: var(--content_gap_d);
+			}
+			
+			.hello_world {
+				font-size: var(--hello_world_fs_d);
+			}
+
+			.about_me {
+				font-size: var(--about_me_fs_d);
+			}
+			
+			.work,
+			.more,
+			.books {
+				padding: var(--column_container_pad_d);
+				gap: var(--column_container_gap_d);
+			}
+			
+			.who,
+			.work,
+			.more,
+			.books {
+				flex-direction: row;
+			}
+			
+			.who {
+				gap: var(--column_container_gap_d);
+			}
+			
+			.picture {
+				border-radius: var(--picture_br_d);
+				width: calc(50% - (var(--column_container_gap_d) / 2));
+			}
+			
+			.who_content {
+				width: calc(50% - (var(--column_container_gap_d) / 2));
+			}
+			
+			.books_column_2 {
+				min-height: fit-content;
+				height: -webkit-fill-available;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<header class="_full_w _flex_column _center_items">
+		<div class="hello_world_container _fit_w _fit_h _flex_column _top_items _center_items">
+			<p id="hello_world" class="hello_world _fit dl_text_c _no_margin">
+				
+			</p>
+			<p id="about_me" class="about_me _full_w _fit_h dl_text_c _centered_text _no_margin">
+				I am _resun. I am an Optimist, and I love UNIX.
+			</p>
+		</div>
+		<div class="point_down_anim_container _cursor_pointer" id="point_down_anim_container">
+			<p class="point_down _arrow_1">
+				<svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+					<path d="M480-344 240-584l43-43 197 197 197-197 43 43-240 240Z" />
+				</svg>
+			</p>
+			<p class="point_down _arrow_2">
+				<svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+					<path d="M480-344 240-584l43-43 197 197 197-197 43 43-240 240Z" />
+				</svg>
+			</p>
+		</div>
+	</header>
+	<div id="who" class="who _full_w _fit_h _flex _center_items_h _center_items_v">
+		<div class="picture _full_w _flex_row _center_items_h _center_items_v"><img
+				class="me _full_w" src="me.png"></div>
+		<div class="content who_content _full_w _fit_h _flex_column _center_items_v _left_items">
+			<p class="heading who_heading _fit_w _fit_h _right_text _no_margin _no_select">
+				<span class="heading_word" style="--wc: 1">
+					Who
+				</span>
+			</p>
+			<p class="description who_description _full_w _fit_h _no_margin" style="--pc: 1">
+				I am a programmer with a keen interest in low-level programming, old operating systems,
+				and Web Development. Currently, I am an undergraduate of Computer Science and Engineering
+				at North South University.
+			</p>
+		</div>
+	</div>
+	<div class="work _full_w _fit_h _flex _left_items _top_items">
+		<div class="work_column_1 r_column _flex_column _center_items_v _center_items_h">
+			<div class="content work_content _full_w _fit_h _flex_column _center_items_v _right_items">
+				<p class="heading work_heading _fit_w _fit_h _right_text _no_margin _no_select">
+					<span class="heading_word" style="--wc: 1">
+						Works
+					</span>
+				</p>
+				
+				<p class="description work_description _full_w _fit_h _right_text _no_margin" style="--pc: 1">
+					Apart from that, I have learned a modest amount of technology for Web
+					Development and Software Design and have worked on many web applications,
+					and softwires.
+				</p>
+				
+				<p class="description work_description _full_w _fit_h _right_text _no_margin" style="--pc: 2">
+					Furthermore, I have tried to build and monetize a SaaS
+					(on the right) of my own.
+				</p>
+			</div>
+			<div class="r_card renderworkstudio _full_w _fit_h _flex_column _top_items _center_items_h">
+				<div class="r_card_image_container _full_w _fit_h _flex_row _center_items_h _center_items_v">
+					<img class="renderwork_studio_img _full_w" src="renderwork_studio.png">
+				</div>
+				<div class="r_card_title_container _full_w _fit_h _flex_row _space_between_items_h _center_items_v">
+					<p class="r_card_title _no_margin _fit_w _fit_h">
+						Renderwork.Studio
+					</p>
+				</div>
+				<div class="r_card_description_container _full_w _fit_h">
+					<p class="r_card_description _full_w _fit_h _justified_text _no_margin_top">
+						I made this 3D website for a German-based creative agency, Renderwork. The
+						creative approach to showcase their works helped them target a wide range of
+						audience. It is written in vanilla JavaScript and uses THREE.js.
+					</p>
+					
+					<p class="r_card_description _full_w _fit_h _justified_text _no_margin_bottom">
+						<a href="https://renderworkstudio.web.app/">
+							renderwork.studio
+						</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="work_column_2 r_column _fit_h _flex_column _top_items _left_items">
+			<div class="r_card reachbridge _full_w _fit_h _flex_column _top_items _center_items_h">
+				<div class="r_card_image_container _full_w _fit_h _flex_row _center_items_h _center_items_v">
+					<img class="reachbridge_img _full_w" src="reachbridge.png">
+				</div>
+				<div class="r_card_title_container _full_w _fit_h _flex_row _space_between_items_h _center_items_v">
+					<p class="r_card_title _no_margin _fit_w _fit_h">
+						ReachBridge
+					</p>
+				</div>
+				<div class="r_card_description_container _full_w _fit_h">
+					<p class="r_card_description _full_w _fit_h _justified_text _no_margin_top">
+						It provides solutions for contact form for websites. Using the FormBuilder
+						editor anyone can visually design a form and use it on any websites, whether
+						it's custom made or one built using Shopify, Squarespace, or WordPress etc.
+					</p>
+					
+					<p class="r_card_description _full_w _fit_h _justified_text">
+						<b>
+							N.B.
+						</b>
+						<i>
+							It's not published it!
+						</i>
+					</p>
+					
+					<p class="r_card_description _full_w _fit_h _justified_text _no_margin_bottom">
+						<a  href="https://reachbridge.uc.r.appspot.com/">
+							Link
+						</a>
+					</p>
+				</div>
+			</div>
+			<div class="r_card pcpricetracker _full_w _fit_h _flex_column _top_items _center_items_h">
+				<div class="r_card_image_container _full_w _fit_h _flex_row _center_items_h _center_items_v"><img
+						class="pcpricetracker_1 _full_w" src="pcpricetracker.png"></div>
+				<div class="r_card_title_container _full_w _fit_h _flex_row _space_between_items_h _center_items_v">
+					<p class="r_card_title _no_margin _fit_w _fit_h">
+						PC Price Tracker
+					</p>
+				</div>
+				<div class="r_card_description_container _full_w _fit_h">
+					<p class="r_card_description _full_w _fit_h _justified_text _no_margin_top">
+						This program tracks the prices of PC parts as time goes on so that people can see
+						the changes over time and make their buying and selling decisions. The program that
+						tracks the price periodically is written in Python using BeautifulSoup. The front-end
+						code is in plain JavaScript and is hosted in Firebase Hosting.
+					</p>
+					
+					<p class="r_card_description _full_w _fit_h _justified_text _no_margin_bottom">
+						<a href="https://pcpricetracker.web.app">
+							Link
+						</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="more _full_w _fit_h _flex _center_items_h _top_items">
+		<div class="more_column_2 r_column _fit_h _flex_column _top_items _center_items_h">
+			<div class="r_card colourfulcat _full_w _fit_h _flex_column _top_items _center_items_h">
+				<div class="r_card_image_container _full_w _fit_h _flex_row _center_items_h _center_items_v"><img
+						class="image_1 _full_w" src="colourful_cat.png"></div>
+				<div class="r_card_title_container _full_w _fit_h _flex_row _space_between_items_h _center_items_v">
+					<p class="r_card_title _no_margin _fit_w _fit_h">
+						Colourful Cat
+					</p>
+				</div>
+				<div class="r_card_description_container _full_w _fit_h">
+					<p class="r_card_description _full_w _fit_h _justified_text _no_margin_top">
+						I love to cat files in the terminal rather than opening them with a text editor
+						(<i>ed</i> is a different case). However, it seems daunting to find something from a
+						large source file when printed in the default colour. So I wrote a cat that prints
+						C and Python files colourfully!
+					</p>
+					
+					<p class="r_card_description _full_w _fit_h _justified_text _no_margin_bottom">
+						<a href="https://github.com/resun-c/colourful-cat">
+							GitHub / resun-c / colourful-cat
+						</a>
+					</p>
+				</div>
+			</div>
+			<div class="r_card dump _full_w _fit_h _flex_column _top_items _center_items_h">
+				<div class="r_card_title_container _full_w _fit_h _flex_row _space_between_items_h _center_items_v">
+					<p class="r_card_title _no_margin _fit_w _fit_h">
+						dump
+					</p>
+				</div>
+				<div class="r_card_description_container _full_w _fit_h">
+					<p class="r_card_description _full_w _fit_h _justified_text _no_margin_top">
+						This is identical to Unix command `od`. I started off with dozens of functions
+						working separately for each base. Then with guidance of a, I ended up with a very
+						fewer functions that deals with all bases.
+					</p>
+					
+					<p class="r_card_description _full_w _fit_h _justified_text _no_margin_bottom">
+						<a href="https://github.com/resun-c/dump">
+							GitHub / resun-c / dump
+						</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="more_column_1 r_column _fit_h _flex_column _top_items _center_items_h">
+			<div class="content more_content _full_w _fit_h _flex_column _center_items_v _left_items">
+				<p class="heading more_heading _fit_w _fit_h _right_text _no_margin _no_select">
+					<span class="heading_word" style="--wc: 1">
+						More
+					</span>
+				</p>
+				<p class="description more_description _full_w _fit_h _no_margin" style="--pc: 1">
+					Here are some of the low-level things I have built. In a sense of creating
+					value, they might not be significant. However, they are great sources of
+					knowledge and experience.
+				</p>
+			</div>
+			<div class="r_card djangofirestoresessionengine _full_w _fit_h _flex_column _top_items _center_items_h">
+				<div class="r_card_title_container _full_w _fit_h _flex_row _space_between_items_h _center_items_v">
+					<p class="r_card_title _no_margin _fit_w _fit_h">
+						Django Firestore Session Engine
+					</p>
+				</div>
+				<div class="r_card_description_container _full_w _fit_h">
+					<p class="r_card_description _full_w _fit_h _justified_text _no_margin_top">
+						This is a Django Session Engine that uses Firestore as the database to store session
+						data. This can be useful if you can't use Django's Database Engines or any other
+						Session Engines.
+					</p>
+					
+					<p class="r_card_description _full_w _fit_h _justified_text">
+						Google Cloud App Engine, for example, requires you to use Cloud SQL to use Database,
+						which is costly. On the other hand, Cloud Firestore is relatively cheap; even it is
+						free up to a limit. This might be a cost-effective solution for such situations.
+					</p>
+					
+					<p class="r_card_description _full_w _fit_h _justified_text _no_margin_bottom">
+						<a href="https://github.com/resun-c/django-firestore-session-engine">
+							GitHub / resun-c / Django-Firestore-Session-Engine
+						</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="books _full_w _fit_h _flex _center_items_h _center_items_v">
+		<div class="books_column_1 r_column _full_h _flex_column _space_between_items_v _left_items">
+			<div class="content books_content _full_w _fit_h _flex_column _center_items_v _right_items">
+				<p class="heading books_heading _fit_w _fit_h _right_text _no_margin _no_select">
+					<span class="heading_word" style="--wc: 1">
+						Books
+					</span>
+					<span class="heading_word" style="--wc: 2">
+						I
+					</span>
+					<span class="heading_word" style="--wc: 3">
+						Loved
+					</span>
+				</p>
+				<p class="description books_description _full_w _fit_h _right_text _no_margin" style="--pc: 1">
+					I mostly read documentation and manuals. However, I have read a few books
+					on business too. A few of them that shaped me over the years.
+				</p>
+			</div>
+			<div class="r_card theartofassemblylanguage _full_w _fit_h _flex_column _top_items _center_items_h">
+				<div class="r_card_title_container _full_w _fit_h _flex_row _space_between_items_h _center_items_v">
+					<p class="r_card_title _no_margin _fit_w _fit_h">
+						The Art of Assembly Language &mdash; Randall Hyde
+					</p>
+				</div>
+				<div class="r_card_description_container _full_w _fit_h">
+					<p class="r_card_description _full_w _fit_h _justified_text _no_margin_top">
+						This is a very informative one. The explanation of different number systems,
+						the mechanism of computers was particularly interesting to me. The similarities
+						to 80x86 assembly and other high-level languages made the assembly codes understandable.
+					</p>
+					
+					<p class="r_card_description _full_w _fit_h _justified_text _no_margin_bottom">
+						<a href="https://www.goodreads.com/book/show/1063680.The_Art_of_Assembly_Language">
+							AAL on Goodreads
+						</a>
+					</p>
+				</div>
+			</div>
+			<div class="r_card theunixprogrammingenvironment _full_w _fit_h _flex_column _top_items _center_items_h">
+				<div class="r_card_title_container _full_w _fit_h _flex_row _space_between_items_h _center_items_v">
+					<p class="r_card_title _no_margin _fit_w _fit_h">
+						The Unix Programming Environment &mdash; bwk &amp; rob
+					</p>
+				</div>
+				<div class="r_card_description_container _full_w _fit_h">
+					<p class="r_card_description _full_w _fit_h _justified_text _no_margin_top">
+						An excellent book on Unix, as well as computing. While reading this book, I mostly
+						enjoyed knowing how Unix works and I was amazed by it.
+					</p>
+					
+					<p class="r_card_description _full_w _fit_h _justified_text _no_margin_bottom">
+						<a href="https://en.wikipedia.org/wiki/The_Unix_Programming_Environment">
+							UPE on Wikipedia
+						</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="books_column_2 r_column _flex_column _top_items _left_items">
+			<div class="r_card theinfinitegame _full_w _fit_h _flex_column _top_items _center_items_h">
+				<div class="r_card_title_container _full_w _fit_h _flex_row _space_between_items_h _center_items_v">
+						<p class="r_card_title _no_margin _fit_h">
+							The Infinite Game &mdash; Simon Sinek
+						</p>
+				</div>
+				<div class="r_card_description_container _full_w _fit_h">
+					<p class="r_card_description _full_w _fit_h _justified_text _no_margin_top">
+						This books helped to shift my mindset toward adopting an Infinite approach for
+						everything. With examples, it emphasised the importance of long-term purpose rather
+						than short-term gains, whether in business, leadership, or personal growth.
+					</p>
+					
+					<p class="r_card_description _full_w _fit_h _justified_text _no_margin_bottom">
+						<a href="https://simonsinek.com/books/the-infinite-game/e">
+							The Infinite Game on simonsinek.com
+						</a>
+					</p>
+				</div>
+			</div>
+			<div class="r_card thecprogramminglanguage _full_w _fit_h _flex_column _top_items _center_items_h">
+				<div class="r_card_title_container _full_w _fit_h _flex_row _space_between_items_h _center_items_v">
+					<p class="r_card_title _no_margin _fit_w _fit_h">
+						The C Programming Language &mdash; k &amp; r
+					</p>
+				</div>
+				<div class="r_card_description_container _full_w _fit_h">
+					<p class="r_card_description _full_w _fit_h _justified_text _no_margin_top">
+						This book is a great source to learn C as well as computing. The examples are very
+						helpful and generate sophisticated programs. After using Research UNIX, I think most
+						of the examples are the stripped-down source code of UNIX commands. As described in
+						the book, pointers are central to C, and this book explains them clearly. Along with
+						C, chapter 8 describes Research UNIX's system designs.
+					</p>
+					
+					<p class="r_card_description _full_w _fit_h _justified_text _no_margin_bottom">
+						<a href="https://en.wikipedia.org/wiki/The_C_Programming_Language">
+							CPL on Wikipedia
+						</a>
+					</p>
+				</div>
+			</div>
+			<div class="content socials_content _full_w _fit_h _bottom _flex_column _top_items _left_items">
+				<p class="heading socials_heading _fit_w _fit_h _right_text _no_margin _no_select">
+					<span class="heading_word" style="--wc: 1">
+						Socials
+					</span>
+				</p>
+				<div class="social_links _fit_w _fit_h _flex_row_wrap _left_items _top_items">
+					<a class="social_link" style="--count: 1" href="mailto:saif.resun@outlook.com">
+						<svg class="email" width="33" height="32" viewbox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill="black" fill-rule="evenodd" clip-rule="evenodd" d="M5.07001 4.69981e-09H27.93C30.5 -8.71122e-10 32.5 2 32.5 4.57V27.43C32.5 30 30.5 32 27.93 32H5.07001C2.5 32 0.5 30 0.5 27.43L0.500008 4.57C0.500008 2 2.50001 -0.000111959 5.07001 4.69981e-09ZM5.9375 6.25C4.5918 6.25 3.5 7.3418 3.5 8.6875C3.5 9.4543 3.86055 10.1754 4.475 10.6375L15.525 18.925C16.1039 19.3566 16.8961 19.3566 17.475 18.925L28.525 10.6375C29.1395 10.1754 29.5 9.4543 29.5 8.6875C29.5 7.3418 28.4082 6.25 27.0625 6.25H5.9375ZM3.5 22.5V11.9375L14.55 20.225C15.7078 21.0934 17.2922 21.0934 18.45 20.225L29.5 11.9375V22.5C29.5 24.2926 28.0426 25.75 26.25 25.75H6.75C4.95742 25.75 3.5 24.2926 3.5 22.5Z"></path>
+						</svg>
+					</a>
+					<a class="social_link" style="--count: 2" href="https://github.com/resun-c">	
+						<svg class="github" width="33" height="32" viewbox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill="black" d="M32.5 4.57143C32.5 2.05 30.45 0 27.9286 0H5.07143C2.55 0 0.5 2.05 0.5 4.57143V27.4286C0.5 29.95 2.55 32 5.07143 32H27.9286C30.45 32 32.5 29.95 32.5 27.4286V4.57143ZM19.4857 26.8357C19.4857 26.7071 19.4857 26.4071 19.4929 26.0071C19.5 25.1929 19.5 23.95 19.5 22.8857C19.5 21.7714 19.1286 21.0643 18.6929 20.6929C21.3357 20.4 24.1214 20.0357 24.1214 15.4714C24.1214 14.1714 23.6571 13.5214 22.9 12.6857C23.0214 12.3786 23.4286 11.1143 22.7786 9.47143C21.7857 9.16429 19.5143 10.75 19.5143 10.75C18.5714 10.4857 17.55 10.35 16.5429 10.35C15.5357 10.35 14.5143 10.4857 13.5714 10.75C13.5714 10.75 11.3 9.16429 10.3071 9.47143C9.65714 11.1071 10.0571 12.3714 10.1857 12.6857C9.42857 13.5214 9.07143 14.1714 9.07143 15.4714C9.07143 20.0143 11.7357 20.4 14.3786 20.6929C14.0357 21 13.7286 21.5286 13.6214 22.2857C12.9429 22.5929 11.2071 23.1214 10.1714 21.2929C9.52143 20.1643 8.35 20.0714 8.35 20.0714C7.19286 20.0571 8.27143 20.8 8.27143 20.8C9.04286 21.1571 9.58571 22.5286 9.58571 22.5286C10.2786 24.65 13.5929 23.9357 13.5929 23.9357C13.5929 24.5786 13.6 25.4857 13.6 26.1214C13.6 26.4643 13.6071 26.7357 13.6071 26.8357C13.6071 27.1429 13.3929 27.5143 12.7857 27.4071C8.07143 25.8286 4.77143 21.3429 4.77143 16.1C4.77143 9.54286 9.78571 4.56429 16.3429 4.56429C22.9 4.56429 28.2143 9.54286 28.2143 16.1C28.2214 21.3429 25.0214 25.8357 20.3071 27.4071C19.7071 27.5143 19.4857 27.1429 19.4857 26.8357ZM13.0214 22.9214C13.0071 22.8143 13.1 22.7214 13.2357 22.6929C13.3714 22.6786 13.5 22.7357 13.5143 22.8286C13.5357 22.9214 13.4429 23.0143 13.3 23.0429C13.1643 23.0714 13.0357 23.0143 13.0214 22.9214ZM12.3714 23.15C12.2143 23.1643 12.1071 23.0857 12.1071 22.9786C12.1071 22.8857 12.2143 22.8071 12.3571 22.8071C12.4929 22.7929 12.6214 22.8714 12.6214 22.9786C12.6214 23.0714 12.5143 23.15 12.3714 23.15ZM11.35 22.9929C11.2143 22.9643 11.1214 22.8571 11.15 22.7643C11.1786 22.6714 11.3214 22.6286 11.4429 22.6571C11.5857 22.7 11.6786 22.8071 11.6429 22.9C11.6143 22.9929 11.4714 23.0357 11.35 22.9929ZM10.4571 22.4714C10.35 22.3786 10.3214 22.2429 10.3929 22.1786C10.4571 22.1 10.5929 22.1143 10.7 22.2214C10.7929 22.3143 10.8286 22.4571 10.7643 22.5143C10.7 22.5929 10.5643 22.5786 10.4571 22.4714ZM9.85 21.7571C9.77143 21.65 9.77143 21.5286 9.85 21.4786C9.92857 21.4143 10.05 21.4643 10.1143 21.5714C10.1929 21.6786 10.1929 21.8071 10.1143 21.8643C10.05 21.9071 9.92857 21.8643 9.85 21.7571ZM9.4 21.1286C9.32143 21.0357 9.30714 20.9286 9.37143 20.8786C9.43571 20.8143 9.54286 20.85 9.62143 20.9214C9.7 21.0143 9.71429 21.1214 9.65 21.1714C9.58572 21.2357 9.47857 21.2 9.4 21.1286ZM8.97143 20.6714C8.87857 20.6286 8.83571 20.55 8.86429 20.4857C8.89286 20.4429 8.97143 20.4214 9.06429 20.4571C9.15714 20.5071 9.2 20.5857 9.17143 20.6429C9.14286 20.7071 9.05 20.7214 8.97143 20.6714Z"></path>
+						</svg>
+					</a>
+					<a class="social_link" style="--count: 3" href="https://www.reddit.com/user/_resun">
+						<svg class="reddit" width="33" height="32" viewbox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill="black" d="M5.07143 0H27.9286C30.45 0 32.5 2.05 32.5 4.57143V27.4286C32.5 29.95 30.45 32 27.9286 32H5.07143C2.55 32 0.5 29.95 0.5 27.4286V4.57143C0.5 2.05 2.55 0 5.07143 0ZM22.35 9.6C23.8214 9.6 25.0143 8.40714 25.0143 6.93572C25.0143 5.46429 23.8214 4.27143 22.35 4.27143C21.0643 4.27143 19.9857 5.18571 19.7357 6.4C17.5786 6.62857 15.8929 8.45714 15.8929 10.6786V10.6929C13.55 10.7929 11.4071 11.4571 9.70714 12.5143C9.07857 12.0286 8.28571 11.7357 7.42143 11.7357C5.35714 11.7357 3.68571 13.4071 3.68571 15.4714C3.68571 16.9714 4.56429 18.2571 5.83571 18.8571C5.95714 23.1929 10.6857 26.6857 16.5 26.6857C22.3143 26.6857 27.0429 23.1929 27.1643 18.85C28.4286 18.25 29.3 16.9643 29.3 15.4714C29.3 13.4071 27.6286 11.7357 25.5643 11.7357C24.7071 11.7357 23.9214 12.0214 23.2857 12.5071C21.5714 11.4429 19.4071 10.7786 17.0357 10.6929V10.6857C17.0357 9.1 18.2143 7.77857 19.7429 7.56429C20.0214 8.74286 21.0786 9.61429 22.3357 9.61429L22.35 9.6ZM11.5714 15.4357C12.6143 15.4357 13.4143 16.5357 13.3571 17.8929C13.3 19.25 12.5143 19.7429 11.4643 19.7429C10.4143 19.7429 9.5 19.1929 9.56429 17.8357C9.62857 16.4786 10.5286 15.4429 11.5714 15.4429V15.4357ZM23.4571 17.8286C23.5214 19.1857 22.6 19.7357 21.5571 19.7357C20.5143 19.7357 19.7286 19.2429 19.6643 17.8857C19.6 16.5286 20.4 15.4286 21.45 15.4286C22.5 15.4286 23.4 16.4714 23.4571 17.8214V17.8286ZM20.45 21.3714C19.8071 22.9071 18.2857 23.9929 16.5143 23.9929C14.7429 23.9929 13.2214 22.9143 12.5786 21.3714C12.5 21.1857 12.6286 20.9857 12.8214 20.9643C13.9714 20.85 15.2143 20.7857 16.5143 20.7857C17.8143 20.7857 19.0571 20.85 20.2071 20.9643C20.4 20.9857 20.5286 21.1857 20.45 21.3714Z"></path>
+						</svg>
+					</a>
+					<a class="social_link" style="--count: 4" href="https://www.facebook.com/resun.sh">
+						<svg class="facebook" width="33" height="32" viewbox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill="black" d="M5.07143 0C2.55 0 0.5 2.05 0.5 4.57143V27.4286C0.5 29.95 2.55 32 5.07143 32H12.0857V21.5857H8.31429V16H12.0857V13.5929C12.0857 7.37143 14.9 4.48571 21.0143 4.48571C22.1714 4.48571 24.1714 4.71429 24.9929 4.94286V10C24.5643 9.95714 23.8143 9.92857 22.8786 9.92857C19.8786 9.92857 18.7214 11.0643 18.7214 14.0143V16H24.6929L23.6643 21.5857H18.7143V32H27.9286C30.45 32 32.5 29.95 32.5 27.4286V4.57143C32.5 2.05 30.45 0 27.9286 0H5.07143Z"></path>
+						</svg>
+					</a>
+					<a class="social_link" style="--count: 5" href="https://discord.com/users/_resun">
+						<svg class="discord" width="33" height="32" viewbox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill="black" fill-rule="evenodd" clip-rule="evenodd" d="M27.93 0H5.07C2.5 0 0.5 2 0.5 4.57V27.43C0.5 30 2.5 32 5.07 32H27.93C30.5 32 32.5 30 32.5 27.43V4.57C32.5 2 30.5 0 27.93 0ZM25.5069 7.64172C25.522 7.64737 25.5346 7.65838 25.5422 7.67267C28.4782 11.9926 29.9285 16.8608 29.389 22.463C29.388 22.4752 29.3843 22.4871 29.3782 22.4978C29.3721 22.5085 29.3637 22.5178 29.3537 22.5249C27.3865 23.9796 25.1853 25.0876 22.845 25.8013C22.8283 25.8065 22.8103 25.8063 22.7936 25.8007C22.777 25.7952 22.7625 25.7845 22.7522 25.7703C22.2579 25.0845 21.8145 24.3633 21.4257 23.6126C21.4206 23.6022 21.4177 23.5909 21.4172 23.5793C21.4167 23.5678 21.4186 23.5562 21.4227 23.5454C21.4269 23.5347 21.4332 23.5248 21.4413 23.5166C21.4495 23.5084 21.4592 23.5019 21.4699 23.4976C22.1724 23.234 22.8513 22.9116 23.4994 22.5337C23.5109 22.5267 23.5205 22.517 23.5275 22.5055C23.5345 22.4939 23.5385 22.4809 23.5394 22.4675C23.5403 22.454 23.5379 22.4406 23.5325 22.4282C23.5271 22.4159 23.5188 22.4051 23.5083 22.3966C23.3712 22.2949 23.2341 22.1844 23.1059 22.0783C23.0942 22.0691 23.08 22.0634 23.0652 22.0618C23.0503 22.0602 23.0353 22.0629 23.0219 22.0694C18.817 24.0105 14.2096 24.0105 9.95605 22.0694C9.94223 22.0635 9.927 22.0616 9.91213 22.0639C9.89726 22.0663 9.88336 22.0728 9.87204 22.0827C9.74382 22.1888 9.60674 22.2949 9.46968 22.3966C9.45919 22.4051 9.45089 22.4159 9.44547 22.4282C9.44006 22.4406 9.43768 22.454 9.43855 22.4675C9.43941 22.4809 9.4435 22.4939 9.45045 22.5055C9.45741 22.517 9.46704 22.5267 9.47852 22.5337C10.1284 22.9096 10.807 23.2334 11.508 23.502C11.5188 23.5063 11.5285 23.5128 11.5366 23.521C11.5447 23.5293 11.5511 23.5391 11.5552 23.5499C11.5594 23.5607 11.5613 23.5722 11.5607 23.5837C11.5602 23.5953 11.5573 23.6066 11.5523 23.617C11.1701 24.3715 10.7264 25.0931 10.2258 25.7747C10.2155 25.789 10.201 25.7996 10.1843 25.8051C10.1677 25.8107 10.1497 25.8109 10.1329 25.8057C7.79942 25.0888 5.60459 23.9809 3.64199 22.5293C3.63212 22.522 3.62388 22.5127 3.61779 22.5021C3.6117 22.4914 3.6079 22.4796 3.60662 22.4674C3.15562 17.6169 4.07973 12.7089 7.449 7.67267C7.45718 7.65884 7.46958 7.64799 7.48437 7.64172C9.1714 6.86736 10.9521 6.31592 12.7815 6.0013C12.7978 5.99893 12.8145 6.00145 12.8295 6.00852C12.8444 6.0156 12.8569 6.02693 12.8655 6.0411C13.1127 6.47948 13.3356 6.93117 13.5331 7.39411C15.5027 7.09515 17.5062 7.09515 19.4758 7.39411C19.6725 6.93231 19.8924 6.48074 20.1346 6.0411C20.1427 6.0265 20.1551 6.0148 20.1702 6.00766C20.1853 6.00052 20.2022 5.9983 20.2186 6.0013C22.0448 6.31734 23.8224 6.86874 25.5069 7.64172ZM12.189 19.5137C10.9067 19.5137 9.85435 18.3376 9.85435 16.8961C9.85435 15.4547 10.889 14.2741 12.189 14.2741C13.5022 14.2741 14.5457 15.4591 14.5236 16.8917C14.5236 18.3376 13.4889 19.5137 12.189 19.5137ZM20.8288 19.5137C19.5465 19.5137 18.4942 18.3376 18.4942 16.8961C18.4942 15.4547 19.5244 14.2741 20.8288 14.2741C22.142 14.2741 23.1855 15.4591 23.1634 16.8917C23.1634 18.3376 22.1376 19.5137 20.8288 19.5137Z"></path>
+						</svg>
+					</a>
+					<a class="social_link" style="--count: 6" href="https://www.linkedin.com/in/resun-c">
+						<svg class="linkedin" width="33" height="32" viewbox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill="black" d="M27.93 0H5.07C2.5 0 0.5 2 0.5 4.57V27.43C0.5 30 2.5 32 5.07 32H27.93C30.5 32 32.5 30 32.5 27.43V4.57C32.5 2 30.5 0 27.93 0ZM10.1714 27.4286H5.42857V12.1571H10.1786V27.4286H10.1714ZM7.8 10.0714C6.27857 10.0714 5.05 8.83571 5.05 7.32143C5.05 5.80714 6.27857 4.57143 7.8 4.57143C9.31429 4.57143 10.55 5.80714 10.55 7.32143C10.55 8.84286 9.32143 10.0714 7.8 10.0714ZM27.95 27.4286H23.2071V20C23.2071 18.2286 23.1714 15.95 20.7429 15.95C18.2714 15.95 17.8929 17.8786 17.8929 19.8714V27.4286H13.15V12.1571H17.7V14.2429H17.7643C18.4 13.0429 19.95 11.7786 22.2571 11.7786C27.0571 11.7786 27.95 14.9429 27.95 19.0571V27.4286Z"></path>
+						</svg>
+					</a>
+					<a class="social_link" style="--count: 7" href="https://www.instagram.com/_resun.c">
+						<svg class="instagram" width="33" height="32" viewbox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill="black" d="M14.3857 12.8357C13.9697 13.1138 13.6126 13.4712 13.3346 13.8873C13.0567 14.3035 12.8635 14.7703 12.766 15.2611C12.5691 16.2524 12.774 17.2813 13.3357 18.1214C13.8974 18.9616 14.7698 19.5442 15.7611 19.7411C16.7524 19.9381 17.7813 19.7331 18.6214 19.1714C19.4616 18.6097 20.0442 17.7373 20.2411 16.746C20.4381 15.7548 20.2331 14.7259 19.6714 13.8857C19.1097 13.0455 18.2373 12.4629 17.246 12.266C16.2548 12.0691 15.2259 12.274 14.3857 12.8357ZM24.55 7.95C24.1786 7.57857 23.7286 7.28571 23.2357 7.09286C21.9429 6.58571 19.1214 6.60714 17.3 6.62857C17.0071 6.62857 16.7357 6.63571 16.5 6.63571C16.2643 6.63571 15.9857 6.63571 15.6857 6.62857C13.8643 6.60714 11.0571 6.57857 9.76429 7.09286C9.27143 7.28571 8.82857 7.57857 8.45 7.95C8.07143 8.32143 7.78571 8.77143 7.59286 9.26429C7.08571 10.5571 7.11429 13.3857 7.12857 15.2071C7.12857 15.5 7.13571 15.7714 7.13571 16C7.13571 16.2286 7.13571 16.5 7.12857 16.7929C7.11429 18.6143 7.08571 21.4429 7.59286 22.7357C7.78571 23.2286 8.07857 23.6714 8.45 24.05C8.82143 24.4286 9.27143 24.7143 9.76429 24.9071C11.0571 25.4143 13.8786 25.3929 15.7 25.3714C15.9929 25.3714 16.2643 25.3643 16.5 25.3643C16.7357 25.3643 17.0143 25.3643 17.3143 25.3714C19.1357 25.3929 21.9429 25.4214 23.2357 24.9071C23.7286 24.7143 24.1714 24.4214 24.55 24.05C24.9286 23.6786 25.2143 23.2286 25.4071 22.7357C25.9214 21.45 25.8929 18.6357 25.8714 16.8071C25.8714 16.5071 25.8643 16.2286 25.8643 15.9929C25.8643 15.7571 25.8643 15.4857 25.8714 15.1786C25.8929 13.3571 25.9214 10.5429 25.4071 9.25C25.2143 8.75714 24.9214 8.31429 24.55 7.93572V7.95ZM19.7571 11.1286C21.0491 11.9924 21.945 13.3341 22.2478 14.8585C22.5505 16.3829 22.2353 17.9652 21.3714 19.2571C20.9437 19.8969 20.3941 20.4461 19.7542 20.8734C19.1142 21.3008 18.3963 21.5979 17.6415 21.7478C16.1171 22.0505 14.5348 21.7353 13.2429 20.8714C11.9509 20.0085 11.0546 18.6677 10.7512 17.144C10.4478 15.6203 10.7621 14.0384 11.625 12.7464C12.4879 11.4544 13.8287 10.5582 15.3524 10.2548C16.8762 9.95135 18.458 10.2657 19.75 11.1286H19.7571ZM21.8429 11.0357C21.6214 10.8857 21.4429 10.6714 21.3357 10.4214C21.2286 10.1714 21.2071 9.9 21.2571 9.62857C21.3071 9.35714 21.4429 9.12143 21.6286 8.92857C21.8143 8.73571 22.0643 8.60714 22.3286 8.55714C22.5929 8.50714 22.8714 8.52857 23.1214 8.63571C23.3714 8.74286 23.5857 8.91429 23.7357 9.13571C23.8857 9.35714 23.9643 9.62143 23.9643 9.89286C23.9643 10.0714 23.9286 10.25 23.8643 10.4143C23.8 10.5786 23.6929 10.7286 23.5714 10.8571C23.45 10.9857 23.2929 11.0857 23.1286 11.1571C22.9643 11.2286 22.7857 11.2643 22.6071 11.2643C22.3357 11.2643 22.0714 11.1857 21.85 11.0357H21.8429ZM32.5 4.57143C32.5 2.05 30.45 0 27.9286 0H5.07143C2.55 0 0.5 2.05 0.5 4.57143V27.4286C0.5 29.95 2.55 32 5.07143 32H27.9286C30.45 32 32.5 29.95 32.5 27.4286V4.57143ZM26 25.5C24.6643 26.8357 23.0429 27.2571 21.2143 27.35C19.3286 27.4571 13.6714 27.4571 11.7857 27.35C9.95714 27.2571 8.33571 26.8357 7 25.5C5.66429 24.1643 5.24286 22.5429 5.15714 20.7143C5.05 18.8286 5.05 13.1714 5.15714 11.2857C5.25 9.45714 5.66429 7.83571 7 6.5C8.33571 5.16429 9.96429 4.74286 11.7857 4.65714C13.6714 4.55 19.3286 4.55 21.2143 4.65714C23.0429 4.75 24.6643 5.16429 26 6.5C27.3357 7.83571 27.7571 9.45714 27.8429 11.2857C27.95 13.1643 27.95 18.8143 27.8429 20.7071C27.75 22.5357 27.3357 24.1571 26 25.4929V25.5Z"></path>
+						</svg>
+					</a>
+					<a class="social_link" style="--count: 8" href="https://x.com/_resun">
+						<svg class="x" width="33" height="32" viewbox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill="black" d="M5.07143 0C2.55 0 0.5 2.05 0.5 4.57143V27.4286C0.5 29.95 2.55 32 5.07143 32H27.9286C30.45 32 32.5 29.95 32.5 27.4286V4.57143C32.5 2.05 30.45 0 27.9286 0H5.07143ZM26.2929 6L18.8786 14.4714L27.6 26H20.7714L15.4286 19.0071L9.30714 26H5.91429L13.8429 16.9357L5.47857 6H12.4786L17.3143 12.3929L22.9 6H26.2929ZM23.5929 23.9714L11.4571 7.92143H9.43571L21.7071 23.9714H23.5857H23.5929Z"></path>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		const hello_world = IrrElement.get(null, "hello_world");
+		const about_me = IrrElement.get(null, "about_me");
+		const point_down_anim_container = IrrElement.get(null, "point_down_anim_container");
+		const all_point_down = point_down_anim_container.query_all(".point_down");
+		const who = IrrElement.get(null, "who");
+		
+		const all_content = IrrElement.query_all(".content");
+		const all_r_card = IrrElement.query_all(".r_card");
+		
+		who.ononetenthvisible = () => {
+			who.class.add("active");
+		}
+		
+		all_content.forEach(async content => {
+			content.ononetenthvisible = () => {
+				content.class.add("active");
+			}
+		});
+		
+		all_r_card.forEach(async r_card => {
+			r_card.ononetenthvisible = () => {
+				r_card.class.add("active");
+			}
+		});
+		
+		window.onload = async () => {
+			await tw_print(100, "hello, world\\n", hello_world.element, true);
+			await sleep(500);
+			about_me.class.add("active");
+			
+			all_point_down.forEach(async point_down => {
+				point_down.class.add("active");
+				await window.sleep(100);
+			});
+			
+			point_down_anim_container.ael("click", () => { window.goat(who.element) });
+		}
+		
+	</script>
+</body>
+
+</html>
