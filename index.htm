@@ -33,6 +33,11 @@
 			--window_h: 100vh;
 			
 			--colour: #202124;
+			--colour_1a: #2021241a;
+			--colour_40: #20212440;
+			--colour_80: #20212480;
+			
+			--primary_colour: #fc4444;
 			
 			--point_down_svg_color: #fc4444;
 			
@@ -277,10 +282,6 @@
 			object-fit: contain;
 		}
 
-		.renderwork_studio_img {
-			background: url(<path-to-image>) lightgray 0px -444.711px / 100% 269.829% no-repeat;
-		}
-
 		.r_card_title_container {
 			padding: 32px;
 			background: #FFF;
@@ -299,6 +300,56 @@
 		.r_card_description {
 			font-size: 20px;
 			font-weight: 300;
+		}
+		
+		.r_carousel_navigation_container {
+			width: 0;
+			height: 0;
+			overflow: visible;
+			z-index: 5;
+		}
+		
+		.r_carousel_navigation.right {
+			translate: calc(-100% - 8px) 0;
+		}
+		
+		.r_carousel_navigation.left {
+			translate: 8px 0;
+		}
+		
+		.r_carousel_navigation {
+			background-color: transparent;
+			height: 40px;
+			width: 40px;
+			border-radius: 100%;
+			padding: 4px;
+			transition: all 300ms ease;
+			cursor: pointer;
+		}
+		
+		.r_carousel_navigation:hover {
+			background-color: var(--colour_40);
+		}
+		
+		.r_carousel_navigation svg {
+			width: fit-content;
+			height: fit-content;
+			fill: var(--primary_colour)
+		}
+		
+		.carousel_image_container {
+			height: 100%;
+			width: 0;
+			overflow: hidden;
+			transition: all 400ms ease;
+		}
+		
+		.carousel_image_container.active {
+			width: 100%;
+		}
+		
+		.r_carousel_container img {
+			object-fit: cover;
 		}
 		
 		.work,
@@ -337,6 +388,22 @@
 		.socials_content.active .social_link {
 			translate: 0 0;
 			opacity: 1;
+		}
+		
+		.reachbridge .r_card_image_container {
+			aspect-ratio: 1440 / 1440;
+		}
+		
+		.renderworkstudio .r_card_image_container {
+			aspect-ratio: 1440 / 1024;
+		}
+		
+		.pcpricetracker .r_card_image_container {
+			aspect-ratio: 1440 / 1024;
+		}
+		
+		.colourfulcat .r_card_image_container {
+			aspect-ratio: 1366 / 768;
 		}
 		
 		@media only screen and (min-width: 1024px) {
@@ -462,8 +529,26 @@
 				</p>
 			</div>
 			<div class="r_card renderworkstudio _full_w _fit_h _flex_column _top_items _center_items_h">
-				<div class="r_card_image_container _full_w _fit_h _flex_row _center_items_h _center_items_v">
-					<img class="renderwork_studio_img _full_w" src="renderwork_studio.png">
+				<div class="r_carousel_container _full_w _fit_h _flex_row _center_items_h _center_items_v">
+					<div class="r_carousel_navigation_container">
+						<p class="r_carousel_navigation left _flex _center_items" onclick="carousel(this.parentElement.parentElement, -1)">
+							<svg width="12" height="21" viewBox="0 0 12 21" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10 20.5L0 10.5L10 0.5L11.775 2.275L3.55 10.5L11.775 18.725L10 20.5Z"/>
+							</svg>
+						</p>
+					</div>
+					<div class="r_card_image_container carousel_images_container _full_w _fit_h _flex_row _center_items_h _center_items_v">
+						<img class="renderwork_studio_img carousel_image_container active _full_w" src="pictures/renderwork_studio.png">
+						<img class="renderwork_studio_img carousel_image_container _full_w" src="pictures/renderwork_studio_1.png">
+						<img class="renderwork_studio_img carousel_image_container _full_w" src="pictures/renderwork_studio_2.png">
+					</div>
+					<div class="r_carousel_navigation_container">
+						<p class="r_carousel_navigation right  _flex _center_items" onclick="carousel(this.parentElement.parentElement, +1)">
+							<svg width="12" height="21" viewBox="0 0 12 21" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.775 20.5L0 18.725L8.225 10.5L0 2.275L1.775 0.5L11.775 10.5L1.775 20.5Z"/>
+							</svg>
+						</p>
+					</div>
 				</div>
 				<div class="r_card_title_container _full_w _fit_h _flex_row _space_between_items_h _center_items_v">
 					<p class="r_card_title _no_margin _fit_w _fit_h">
@@ -487,8 +572,25 @@
 		</div>
 		<div class="work_column_2 r_column _fit_h _flex_column _top_items _left_items">
 			<div class="r_card reachbridge _full_w _fit_h _flex_column _top_items _center_items_h">
-				<div class="r_card_image_container _full_w _fit_h _flex_row _center_items_h _center_items_v">
-					<img class="reachbridge_img _full_w" src="reachbridge.png">
+				<div class="r_carousel_container _full_w _fit_h _flex_row _center_items_h _center_items_v">
+					<div class="r_carousel_navigation_container">
+						<p class="r_carousel_navigation left _flex _center_items" onclick="carousel(this.parentElement.parentElement, -1)">
+							<svg width="12" height="21" viewBox="0 0 12 21" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10 20.5L0 10.5L10 0.5L11.775 2.275L3.55 10.5L11.775 18.725L10 20.5Z"/>
+							</svg>
+						</p>
+					</div>
+					<div class="r_card_image_container carousel_images_container _full_w _fit_h _flex_row _center_items_h _center_items_v">
+						<img class="reachbridge_img carousel_image_container active _full_w" src="pictures/reachbridge.png">
+						<img class="reachbridge_img carousel_image_container _full_w" src="pictures/reachbridge_1.png">
+					</div>
+					<div class="r_carousel_navigation_container">
+						<p class="r_carousel_navigation right  _flex _center_items" onclick="carousel(this.parentElement.parentElement, +1)">
+							<svg width="12" height="21" viewBox="0 0 12 21" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.775 20.5L0 18.725L8.225 10.5L0 2.275L1.775 0.5L11.775 10.5L1.775 20.5Z"/>
+							</svg>
+						</p>
+					</div>
 				</div>
 				<div class="r_card_title_container _full_w _fit_h _flex_row _space_between_items_h _center_items_v">
 					<p class="r_card_title _no_margin _fit_w _fit_h">
@@ -507,7 +609,7 @@
 							N.B.
 						</b>
 						<i>
-							It's not published it!
+							Beta Version!
 						</i>
 					</p>
 					
@@ -519,8 +621,26 @@
 				</div>
 			</div>
 			<div class="r_card pcpricetracker _full_w _fit_h _flex_column _top_items _center_items_h">
-				<div class="r_card_image_container _full_w _fit_h _flex_row _center_items_h _center_items_v"><img
-						class="pcpricetracker_1 _full_w" src="pcpricetracker.png"></div>
+				<div class="r_carousel_container _full_w _fit_h _flex_row _center_items_h _center_items_v">
+					<div class="r_carousel_navigation_container">
+						<p class="r_carousel_navigation left _flex _center_items" onclick="carousel(this.parentElement.parentElement, -1)">
+							<svg width="12" height="21" viewBox="0 0 12 21" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10 20.5L0 10.5L10 0.5L11.775 2.275L3.55 10.5L11.775 18.725L10 20.5Z"/>
+							</svg>
+						</p>
+					</div>
+					<div class="r_card_image_container carousel_images_container _full_w _fit_h _flex_row _center_items_h _center_items_v">
+						<img class="pcpricetracker_1 carousel_image_container active _full_w" src="pictures/pcpricetracker.png">
+						<img class="pcpricetracker_2 carousel_image_container _full_w" src="pictures/pcpricetracker_1.png">
+					</div>
+					<div class="r_carousel_navigation_container">
+						<p class="r_carousel_navigation right  _flex _center_items" onclick="carousel(this.parentElement.parentElement, +1)">
+							<svg width="12" height="21" viewBox="0 0 12 21" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.775 20.5L0 18.725L8.225 10.5L0 2.275L1.775 0.5L11.775 10.5L1.775 20.5Z"/>
+							</svg>
+						</p>
+					</div>
+				</div>
 				<div class="r_card_title_container _full_w _fit_h _flex_row _space_between_items_h _center_items_v">
 					<p class="r_card_title _no_margin _fit_w _fit_h">
 						PC Price Tracker
@@ -546,8 +666,9 @@
 	<div class="more _full_w _fit_h _flex _center_items_h _top_items">
 		<div class="more_column_2 r_column _fit_h _flex_column _top_items _center_items_h">
 			<div class="r_card colourfulcat _full_w _fit_h _flex_column _top_items _center_items_h">
-				<div class="r_card_image_container _full_w _fit_h _flex_row _center_items_h _center_items_v"><img
-						class="image_1 _full_w" src="colourful_cat.png"></div>
+				<div class="r_card_image_container _full_w _fit_h _flex_row _center_items_h _center_items_v">
+					<img class="colourful_cat_1 _full_w" src="pictures/colourful_cat.png">
+				</div>
 				<div class="r_card_title_container _full_w _fit_h _flex_row _space_between_items_h _center_items_v">
 					<p class="r_card_title _no_margin _fit_w _fit_h">
 						Colourful Cat
@@ -762,6 +883,11 @@
 					<a class="social_link" style="--count: 5" href="https://discord.com/users/_resun" target="_blank">
 						<svg class="discord" width="33" height="32" viewbox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path fill="black" fill-rule="evenodd" clip-rule="evenodd" d="M27.93 0H5.07C2.5 0 0.5 2 0.5 4.57V27.43C0.5 30 2.5 32 5.07 32H27.93C30.5 32 32.5 30 32.5 27.43V4.57C32.5 2 30.5 0 27.93 0ZM25.5069 7.64172C25.522 7.64737 25.5346 7.65838 25.5422 7.67267C28.4782 11.9926 29.9285 16.8608 29.389 22.463C29.388 22.4752 29.3843 22.4871 29.3782 22.4978C29.3721 22.5085 29.3637 22.5178 29.3537 22.5249C27.3865 23.9796 25.1853 25.0876 22.845 25.8013C22.8283 25.8065 22.8103 25.8063 22.7936 25.8007C22.777 25.7952 22.7625 25.7845 22.7522 25.7703C22.2579 25.0845 21.8145 24.3633 21.4257 23.6126C21.4206 23.6022 21.4177 23.5909 21.4172 23.5793C21.4167 23.5678 21.4186 23.5562 21.4227 23.5454C21.4269 23.5347 21.4332 23.5248 21.4413 23.5166C21.4495 23.5084 21.4592 23.5019 21.4699 23.4976C22.1724 23.234 22.8513 22.9116 23.4994 22.5337C23.5109 22.5267 23.5205 22.517 23.5275 22.5055C23.5345 22.4939 23.5385 22.4809 23.5394 22.4675C23.5403 22.454 23.5379 22.4406 23.5325 22.4282C23.5271 22.4159 23.5188 22.4051 23.5083 22.3966C23.3712 22.2949 23.2341 22.1844 23.1059 22.0783C23.0942 22.0691 23.08 22.0634 23.0652 22.0618C23.0503 22.0602 23.0353 22.0629 23.0219 22.0694C18.817 24.0105 14.2096 24.0105 9.95605 22.0694C9.94223 22.0635 9.927 22.0616 9.91213 22.0639C9.89726 22.0663 9.88336 22.0728 9.87204 22.0827C9.74382 22.1888 9.60674 22.2949 9.46968 22.3966C9.45919 22.4051 9.45089 22.4159 9.44547 22.4282C9.44006 22.4406 9.43768 22.454 9.43855 22.4675C9.43941 22.4809 9.4435 22.4939 9.45045 22.5055C9.45741 22.517 9.46704 22.5267 9.47852 22.5337C10.1284 22.9096 10.807 23.2334 11.508 23.502C11.5188 23.5063 11.5285 23.5128 11.5366 23.521C11.5447 23.5293 11.5511 23.5391 11.5552 23.5499C11.5594 23.5607 11.5613 23.5722 11.5607 23.5837C11.5602 23.5953 11.5573 23.6066 11.5523 23.617C11.1701 24.3715 10.7264 25.0931 10.2258 25.7747C10.2155 25.789 10.201 25.7996 10.1843 25.8051C10.1677 25.8107 10.1497 25.8109 10.1329 25.8057C7.79942 25.0888 5.60459 23.9809 3.64199 22.5293C3.63212 22.522 3.62388 22.5127 3.61779 22.5021C3.6117 22.4914 3.6079 22.4796 3.60662 22.4674C3.15562 17.6169 4.07973 12.7089 7.449 7.67267C7.45718 7.65884 7.46958 7.64799 7.48437 7.64172C9.1714 6.86736 10.9521 6.31592 12.7815 6.0013C12.7978 5.99893 12.8145 6.00145 12.8295 6.00852C12.8444 6.0156 12.8569 6.02693 12.8655 6.0411C13.1127 6.47948 13.3356 6.93117 13.5331 7.39411C15.5027 7.09515 17.5062 7.09515 19.4758 7.39411C19.6725 6.93231 19.8924 6.48074 20.1346 6.0411C20.1427 6.0265 20.1551 6.0148 20.1702 6.00766C20.1853 6.00052 20.2022 5.9983 20.2186 6.0013C22.0448 6.31734 23.8224 6.86874 25.5069 7.64172ZM12.189 19.5137C10.9067 19.5137 9.85435 18.3376 9.85435 16.8961C9.85435 15.4547 10.889 14.2741 12.189 14.2741C13.5022 14.2741 14.5457 15.4591 14.5236 16.8917C14.5236 18.3376 13.4889 19.5137 12.189 19.5137ZM20.8288 19.5137C19.5465 19.5137 18.4942 18.3376 18.4942 16.8961C18.4942 15.4547 19.5244 14.2741 20.8288 14.2741C22.142 14.2741 23.1855 15.4591 23.1634 16.8917C23.1634 18.3376 22.1376 19.5137 20.8288 19.5137Z"></path>
+						</svg>
+					</a>
+					<a class="social_link" style="--count: 8" href="https://join.skype.com/invite/v8ixRvivHv8U" target="_blank">
+						<svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M5.07 0C2.5 0 0.500056 2 0.5 4.57V27.43C0.5 30 2.5 32 5.07 32H27.93C30.5 32 32.5 30 32.5 27.43V4.57C32.5 2 30.5 -5.57094e-09 27.93 0H5.07ZM28.4261 16.0029C28.4261 16.8678 28.3216 17.7328 28.1533 18.5454C29.0008 19.6426 29.5058 21.0125 29.5 22.4985C29.5 26.086 26.586 29 22.9985 29C21.5125 29 20.1426 28.495 19.0396 27.6475C18.2211 27.8216 17.362 27.9203 16.4971 27.9203C9.91438 27.9203 4.57971 22.5914 4.57971 16.0029C4.57971 15.138 4.68419 14.2731 4.85253 13.4604C4.00502 12.3633 3.5 10.9933 3.5 9.50145C3.5 5.91404 6.41404 3 10.0015 3C11.4933 3 12.8633 3.50502 13.9662 4.35834C14.7847 4.18419 15.6438 4.08551 16.5087 4.08551C23.0914 4.08551 28.4261 9.41438 28.4261 16.0029ZM16.857 23.8569C13.049 23.8569 9.86213 22.1619 9.86213 20.0837C9.86213 19.1549 10.3846 18.3074 11.5746 18.3074C12.3567 18.3074 12.8325 18.7935 13.3731 19.3459C14.0843 20.0725 14.9077 20.9138 16.6887 20.9138C18.1805 20.9138 19.1441 20.2521 19.1441 19.3871C19.1441 18.357 18.3077 18.1528 16.9325 17.8172C16.8585 17.7992 16.7831 17.7807 16.7061 17.7618C16.379 17.6812 16.0554 17.6048 15.7372 17.5296C12.5254 16.7711 9.86794 16.1435 9.86794 12.6999C9.86794 9.26345 13.2696 7.99219 16.201 7.99219C19.3995 7.99219 22.6328 9.26345 22.6328 11.2081C22.6328 12.1891 21.9711 13.054 20.874 13.054C20.151 13.054 19.736 12.6774 19.2714 12.2556C18.6804 11.719 18.0089 11.1094 16.5203 11.1094C15.0285 11.1094 14.0823 11.5157 14.0823 12.4155C14.0823 13.4284 15.0199 13.6388 17.1614 14.1194C17.45 14.1842 17.7605 14.2539 18.0934 14.3311C20.4967 14.871 23.3585 15.8868 23.3585 18.8357C23.3585 22.2664 20.0439 23.8569 16.857 23.8569Z" fill="black"/>
 						</svg>
 					</a>
 					<a class="social_link" style="--count: 6" href="https://www.linkedin.com/in/resun-c" target="_blank">

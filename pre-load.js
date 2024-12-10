@@ -231,3 +231,32 @@ async function tw_print(ms, s, tag, keep_cursor = false) {
 		cursor.remove();
 	}
 }
+
+function carousel(carousel_container, direction) {
+	carousel_container = IrrElement.sinit(carousel_container);
+	let carousel_images_container = carousel_container.query(".carousel_images_container");
+	
+	let all_images = carousel_images_container.query_all(".carousel_image_container");
+	
+	let active_image = carousel_images_container.query(".carousel_image_container.active");
+	let active_image_index = -2;											// -2 + 1 = -1 !>= 0
+	
+	console.log(all_images);
+	
+	for (let i = 0; i < all_images.length; i++) {
+		if (all_images[i].__eq__(active_image)) {
+			active_image_index = i;
+		}
+	}
+	
+	console.log(active_image_index);
+	
+	let next_active_image_index = active_image_index + direction;
+	
+	if (next_active_image_index >= 0 && next_active_image_index < all_images.length) {
+		for (let i = 0; i < all_images.length; i++) {
+			all_images[i].class.remove("active");
+		}
+		all_images[next_active_image_index].class.add("active");
+	}
+}
