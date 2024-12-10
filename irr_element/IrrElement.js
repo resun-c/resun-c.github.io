@@ -37,6 +37,10 @@ class IrrElement {
 		return this._element ? true : false;
 	}
 	
+	__eq__(__value) {
+		return this.element === __value.element ? true : false;
+	}
+	
 	get __repr__ () {
 		if (!this.__bool__) return {};
 		
