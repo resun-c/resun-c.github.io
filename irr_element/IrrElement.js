@@ -302,12 +302,12 @@ class IrrElement {
 	}
 	
 	/* set onvisible event listener */
-	_on_visible(callback, ratio = 0.01, threshold = 0) {
+	_on_visible(callback, ratio = 0, threshold = 0) {
 		this._iobserver = new IntersectionObserver((entries, observer) => {
 			// callback(this);
 			entries.forEach(entry => {
 				if (entry.isIntersecting) {
-					if ((entry.intersectionRatio >= ratio)) {
+					if (entry.intersectionRatio >= ratio) {
 						callback(this);
 					}
 				}
