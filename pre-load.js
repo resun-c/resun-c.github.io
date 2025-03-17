@@ -56,6 +56,7 @@ window.goat = (tag) => {
 		behavior: 'smooth'
 	});
 }
+
 window.goat_id = (id) => {
 	let tag = document.getElementById(id);
 	goat(tag);
